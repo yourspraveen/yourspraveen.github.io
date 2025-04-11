@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Recognizations
+custom_css: achievement
 ---
 
 [![GitHub Achievements](https://img.shields.io/badge/GitHub-Achievements-blue)](https://github.com/yourspraveen?tab=achievements)
