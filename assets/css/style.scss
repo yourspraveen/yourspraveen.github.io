@@ -1,0 +1,21 @@
+.achievement {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.achievement img {
+  height: 60px;
+  width: auto;
+}
+
+.achievement p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #24292e;
+}
