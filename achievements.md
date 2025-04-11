@@ -3,7 +3,7 @@ layout: page
 title: Badges
 ---
 
-[![GitHub Achievements](https://img.shields.io/badge/GitHub-Achievements-blue)](https://github.com/yourspraveen?tab=achievements&achievement=arctic-code-vault-contributor)
+[![GitHub Achievements](https://img.shields.io/badge/GitHub-Achievements-blue)](https://github.com/yourspraveen?tab=achievements)
 
 {% raw %}
 <div class="achievement">
