@@ -1,0 +1,10 @@
+#appointments-section {
+    font-size: 1.1875rem;
+    margin-top: 1.25rem;
+    width: 100%;
+}
+
+#appointments-section #inline-widget-meet-with-praveen-palaniswamy {
+    min-height: 600px;
+    width: 100%;
+}
