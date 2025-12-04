@@ -22,7 +22,7 @@ author: Praveen K Palaniswamy
 navbar-links:
   Appointments: "appointments"
   About Me: "aboutme"
-  Recognition: "achievements"
+  Recognitions: "achievements"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
