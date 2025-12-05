@@ -28,9 +28,6 @@ navbar-links:
   Appointments: "appointments"
   Recognitions: "achievements"
   Contact: "contact"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
 
 ################
 # --- Logo --- #
