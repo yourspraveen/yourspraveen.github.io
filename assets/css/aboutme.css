@@ -8,10 +8,28 @@
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
 
 #contactme-section {
     margin-top: 3.75rem;
+}
+
+/* Ensure sections align with page content width */
+@media (min-width: 1200px) {
+    #aboutme-section,
+    #contactme-section {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #aboutme-section,
+    #contactme-section {
+        max-width: 100%;
+    }
 }
 
 .about-text {
