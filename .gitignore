@@ -1,13 +1,26 @@
-# project
-_site
-.sass-cache
-.vagrant
+# -----------------------------
+# Jekyll generated / build files
+# -----------------------------
+_site/                # Generated site
+.sass-cache/          # Sass cache
+.jekyll-cache/        # Jekyll internal cache
 
-# general
-.DS_Store
-Thumbs.db
-ehthumbs.db
+# -----------------------------
+# Development / local environment
+# -----------------------------
+.vagrant/             # Vagrant environment
 
-Gemfile.lock
+# -----------------------------
+# System files
+# -----------------------------
+.DS_Store             # macOS Finder
+Thumbs.db             # Windows thumbnails
+ehthumbs.db           # Windows thumbnails
 
+# -----------------------------
+# Gems / packaging
+# -----------------------------
+# Do NOT ignore Gemfile.lock; it should be committed
+# Ignore packaged theme gems
 beautiful-jekyll-theme-*.gem
+.bundle/              # Bundler directory (optional, if used)
