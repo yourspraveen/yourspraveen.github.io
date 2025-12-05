@@ -1,10 +1,16 @@
-. achievement {
+/* Define default light mode achievement colors */
+:root {
+  --achievement-bg: #f6f8fa;
+  --achievement-border: #e1e4e8;
+}
+
+.achievement {
   display: inline-block;
   text-align: center;
   padding: 10px;
   margin: 10px;
-  background-color: #f6f8fa;
-  border: 1px solid #e1e4e8;
+  background-color: var(--achievement-bg);
+  border: 1px solid var(--achievement-border);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -17,5 +23,5 @@
 .achievement p {
   margin: 5px 0 0;
   font-size: 14px;
-  color: #24292e;
+  color: var(--text-col);
 }

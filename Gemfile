@@ -11,6 +11,10 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
-  
-gemspec
 
+# Add Jekyll and required standard-library gems for Ruby 3.4+
+gem "jekyll", "~> 4.4"
+gem "bigdecimal"
+gem "logger"
+
+gemspec

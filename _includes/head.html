@@ -2,6 +2,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Dark mode initialization - must be before styles to prevent flash -->
+  <script>
+    (function() {
+      const STORAGE_KEY = 'theme-preference';
+      const getSystemTheme = () => {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      };
+      const savedTheme = localStorage.getItem(STORAGE_KEY);
+      const theme = savedTheme || getSystemTheme();
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   {% capture pagetitle %}
     {%- if page.share-title -%}
       {{ page.share-title | strip_html | xml_escape }}

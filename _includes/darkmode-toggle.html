@@ -1,0 +1,93 @@
+<!-- Dark Mode Toggle Button -->
+<li class="nav-item">
+  <button
+    id="darkmode-toggle"
+    class="nav-link btn btn-link darkmode-toggle-btn"
+    type="button"
+    aria-label="Toggle dark mode"
+    title="Toggle dark mode">
+    <span id="darkmode-icon-moon" class="fas fa-moon" aria-hidden="true"></span>
+    <span id="darkmode-icon-sun" class="fas fa-sun" style="display: none;" aria-hidden="true"></span>
+  </button>
+</li>
+
+<style>
+/* Dark mode toggle button styling */
+.darkmode-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.125rem;
+  color: var(--navbar-text-col);
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkmode-toggle-btn:hover,
+.darkmode-toggle-btn:focus {
+  color: var(--hover-col);
+  text-decoration: none;
+  transform: scale(1.1);
+  outline: none;
+}
+
+.darkmode-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.darkmode-toggle-btn:focus-visible {
+  outline: 2px solid var(--link-col);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Icon transitions */
+.darkmode-toggle-btn .fa-moon,
+.darkmode-toggle-btn .fa-sun {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 1199px) {
+  .darkmode-toggle-btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Ensure proper spacing in navbar */
+.navbar-nav .nav-item .darkmode-toggle-btn {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .darkmode-toggle-btn {
+  color: var(--navbar-text-col);
+}
+
+[data-theme="dark"] .darkmode-toggle-btn:hover,
+[data-theme="dark"] .darkmode-toggle-btn:focus {
+  color: var(--hover-col);
+}
+
+/* Animation for icon switch */
+@keyframes iconFadeIn {
+  from {
+    opacity: 0;
+    transform: rotate(-30deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+.darkmode-toggle-btn .fa-moon,
+.darkmode-toggle-btn .fa-sun {
+  animation: iconFadeIn 0.3s ease;
+}
+</style>

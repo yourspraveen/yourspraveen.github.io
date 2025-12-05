@@ -129,6 +129,7 @@ edit_page_button: false
 navbar-var-length: false
 
 show_powered_by: false
+remove-ads: true
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
@@ -139,6 +140,7 @@ show_powered_by: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
+# Light mode colors (default)
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
@@ -150,6 +152,21 @@ footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
+
+# Dark mode colors (applied when dark mode is active)
+# These are defined in /assets/css/darkmode.css and override the light mode colors
+# You can customize these values by editing darkmode.css:
+#   - page-col: #1a1a1a (dark background)
+#   - text-col: #e0e0e0 (light text)
+#   - link-col: #64b5f6 (lighter blue links)
+#   - hover-col: #90caf9 (lighter blue hover)
+#   - navbar-col: #2d2d2d (dark navbar)
+#   - navbar-text-col: #e0e0e0 (light navbar text)
+#   - navbar-border-col: #404040 (medium gray borders)
+#   - footer-col: #2d2d2d (dark footer)
+#   - footer-text-col: #a0a0a0 (gray footer text)
+#   - footer-link-col: #e0e0e0 (light footer links)
+#   - footer-hover-col: #90caf9 (lighter blue footer hover)
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour

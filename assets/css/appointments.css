@@ -1,7 +1,14 @@
+/* Appointments section with consistent styling for both light and dark modes */
 #appointments-section {
     font-size: 1.1875rem;
     margin-top: 1.25rem;
     width: 100%;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 #appointments-section #inline-widget-meet-with-praveen-palaniswamy {
