@@ -15,6 +15,10 @@ title: Home
 # Your name to show in the footer
 author: Praveen K Palaniswamy
 
+# Website URL (used for sitemap generation and canonical URLs)
+url: "https://www.yourspraveen.com"
+baseurl: ""
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
