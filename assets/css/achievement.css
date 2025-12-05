@@ -5,23 +5,67 @@
 }
 
 .achievement {
-  display: inline-block;
-  text-align: center;
-  padding: 10px;
-  margin: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  margin: 1rem 0;
   background-color: var(--achievement-bg);
   border: 1px solid var(--achievement-border);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.achievement:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
 }
 
 .achievement img {
-  height: 60px;
-  width: auto;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 .achievement p {
-  margin: 5px 0 0;
-  font-size: 14px;
+  flex: 1;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  text-align: left;
   color: var(--text-col);
+}
+
+.achievement p strong {
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-col);
+}
+
+.achievement p em {
+  display: block;
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .achievement {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .achievement p {
+    text-align: center;
+  }
+
+  .achievement img {
+    width: 80px;
+    height: 80px;
+  }
 }
