@@ -1,16 +1,43 @@
 /* About Me and Contact sections with consistent styling for both light and dark modes */
 #aboutme-section,
 #contactme-section {
-    font-size: 1.1875rem;
+    font-size: 1.0625rem;
     border: 1px solid #e1e4e8;
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+}
+
+#aboutme-section h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-col);
+}
+
+#aboutme-section h3:first-child {
+    margin-top: 0;
+}
+
+#aboutme-section ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+#aboutme-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+#aboutme-section p {
+    margin-bottom: 0.875rem;
+    line-height: 1.7;
 }
 
 #contactme-section {
