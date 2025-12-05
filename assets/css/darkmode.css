@@ -22,6 +22,43 @@ select,
 }
 
 /* ========================================
+   AVATAR LEFT POSITIONING
+   ======================================== */
+
+/* Position avatar to the left of Home text */
+.navbar-custom .avatar-container-left {
+  position: relative;
+  display: inline-block;
+  width: 3.125rem;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+}
+
+.navbar-custom.top-nav-short .avatar-container-left {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-custom .avatar-container-left .avatar-img-border {
+  width: 100%;
+  border-radius: 50%;
+  margin: 0;
+  display: inline-block;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.navbar-custom .avatar-container-left .avatar-img {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ========================================
    LIGHT MODE ENHANCEMENTS
    ======================================== */
 

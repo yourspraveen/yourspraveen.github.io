@@ -20,9 +20,10 @@ author: Praveen K Palaniswamy
 ###############################################
 
 navbar-links:
+  Posts: "posts"
   Appointments: "appointments"
-  About Me: "aboutme"
   Recognitions: "achievements"
+  Contact: "contact"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
