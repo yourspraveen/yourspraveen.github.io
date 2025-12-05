@@ -2,6 +2,8 @@
 layout: page
 title: Recognitions
 subtitle: Professional Achievements, Badges & Certifications
+meta-title: "Professional Recognitions - Praveen K Palaniswamy | GitHub & Google Cloud Certifications"
+meta-description: "View Praveen K Palaniswamy's professional achievements including GitHub contributions (Arctic Code Vault Contributor), Google Cloud Skills badges in Generative AI, Gemini, Vertex AI, Responsible AI, and cloud transformation certifications."
 custom_css: achievement
 ---
 
