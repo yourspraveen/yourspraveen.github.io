@@ -2,6 +2,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Preconnect to external domains for faster resource loading -->
+  <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
   <!-- Dark mode initialization - must be before styles to prevent flash -->
   <script>
     (function() {
@@ -115,6 +122,52 @@
       <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
     {% endfor %}
   {% endif %}
+
+  <!-- Deferred CSS loading for non-critical styles -->
+  <script>
+    // Load CSS asynchronously
+    function loadDeferredCSS(href) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }
+
+    // Load deferred styles after page load
+    if (window.addEventListener) {
+      window.addEventListener('load', function() {
+        {% if layout.common-css-deferred %}
+          {% for css in layout.common-css-deferred %}
+        loadDeferredCSS('{{ css | relative_url }}');
+          {% endfor %}
+        {% endif %}
+        {% if layout.common-ext-css-deferred %}
+          {% for css in layout.common-ext-css-deferred %}
+        loadDeferredCSS('{{ css }}');
+          {% endfor %}
+        {% endif %}
+        {% if page.css-deferred %}
+          {% for css in page.css-deferred %}
+        loadDeferredCSS('{{ css | relative_url }}');
+          {% endfor %}
+        {% endif %}
+      });
+    }
+  </script>
+
+  <!-- Fallback for browsers without JavaScript -->
+  <noscript>
+    {% if layout.common-css-deferred %}
+      {% for css in layout.common-css-deferred %}
+    <link rel="stylesheet" href="{{ css | relative_url }}">
+      {% endfor %}
+    {% endif %}
+    {% if layout.common-ext-css-deferred %}
+      {% for css in layout.common-ext-css-deferred %}
+    <link rel="stylesheet" href="{{ css }}">
+      {% endfor %}
+    {% endif %}
+  </noscript>
 
   {% if site.fb_app_id %}
   <meta property="fb:app_id" content="{{ site.fb_app_id }}">
