@@ -11,11 +11,14 @@ This website serves as my professional portfolio and personal brand, showcasing 
 
 ### Key Features
 
+- **🌓 Dark Mode**: Full dark/light theme toggle with system preference detection and localStorage persistence
 - **Professional Profile**: Information about my role as Senior Manager at Capital One Financial Corporation and educational background
 - **Appointment Scheduling**: Integrated Koalendar widget for easy meeting booking
 - **Contact Form**: Direct contact through Formspree-powered form
 - **LinkedIn Integration**: Display of recent LinkedIn posts via SociableKit widget
 - **GitHub Achievements**: Showcase of contributions and recognitions
+- **Modern Footer**: 3-column layout with social icons, optimized spacing
+- **Enhanced Design**: Consistent box styling, filtered backgrounds, professional appearance
 - **Responsive Design**: Mobile-friendly and optimized for all devices
 - **Analytics**: Cloudflare Analytics for visitor tracking
 
@@ -38,10 +41,11 @@ This website serves as my professional portfolio and personal brand, showcasing 
 ## Technology Stack
 
 - **Static Site Generator**: Jekyll 3.9.3+
-- **Theme**: [Beautiful Jekyll](https://beautifuljekyll.com) v6.0.1
+- **Theme**: [Beautiful Jekyll](https://beautifuljekyll.com) v6.0.1 (heavily customized)
 - **Hosting**: GitHub Pages
 - **Domain**: Custom domain via CNAME
 - **Analytics**: Cloudflare Analytics
+- **Theme System**: Custom dual-mode (light/dark) implementation
 
 ### Dependencies
 
@@ -154,14 +158,51 @@ social-network-links:
 
 ## Customization
 
+### Dark Mode
+
+Toggle dark mode using the moon/sun icon in the navigation bar. Your preference is automatically saved.
+
+To customize dark mode colors, edit `/assets/css/darkmode.css`:
+```css
+[data-theme="dark"] {
+  --page-col: #1a1a1a;
+  --text-col: #e0e0e0;
+  --link-col: #64b5f6;
+  /* ... */
+}
+```
+
+See [DARKMODE_IMPLEMENTATION.md](DARKMODE_IMPLEMENTATION.md) for detailed customization options.
+
 ### Colors and Styling
 
-Modify color scheme in `_config.yml`:
+Modify light mode color scheme in `_config.yml`:
 ```yaml
+# Light mode colors
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
+```
+
+### Background Image Filtering
+
+Both light and dark modes automatically filter background images. Adjust in `/assets/css/darkmode.css`:
+
+**Light mode** (brighten):
+```css
+.navbar-custom::before,
+footer::before {
+  filter: brightness(1.15) contrast(0.95) saturate(0.9);
+}
+```
+
+**Dark mode** (darken):
+```css
+[data-theme="dark"] .navbar-custom::before,
+[data-theme="dark"] footer::before {
+  filter: brightness(0.3) contrast(1.2) grayscale(0.4);
+}
 ```
 
 ### Navigation Menu
@@ -172,6 +213,14 @@ navbar-links:
   Page Name: "pagename"
   Resources:
     - Link Name: "https://example.com"
+```
+
+### Footer Configuration
+
+The footer uses a 3-column layout. To show/hide the theme credit:
+```yaml
+remove-ads: true  # Hide "Powered by Beautiful Jekyll"
+remove-ads: false # Show theme credit
 ```
 
 ### Custom CSS
@@ -201,36 +250,51 @@ git push origin master
 
 ## Documentation
 
-For detailed feature documentation, see [requirements.md](requirements.md).
-
-For Beautiful Jekyll theme documentation, visit [beautifuljekyll.com](https://beautifuljekyll.com).
+- **[requirements.md](requirements.md)** - Comprehensive feature documentation and specifications
+- **[DARKMODE_IMPLEMENTATION.md](DARKMODE_IMPLEMENTATION.md)** - Dark mode implementation guide and customization
+- **[Beautiful Jekyll Documentation](https://beautifuljekyll.com)** - Base theme documentation
 
 ## Project Status
 
 ### Current Features
-- ✅ Professional profile page
-- ✅ Appointment scheduling
-- ✅ Contact form
-- ✅ LinkedIn posts integration
+- ✅ **Dark mode with toggle** (system preference detection, localStorage)
+- ✅ **Enhanced light mode** (improved contrast, filtered backgrounds)
+- ✅ Professional profile page with box styling
+- ✅ Appointment scheduling (Koalendar integration)
+- ✅ Contact form (Formspree integration)
+- ✅ LinkedIn posts integration (SociableKit)
 - ✅ GitHub achievements showcase
-- ✅ Responsive design
-- ✅ Analytics tracking
-- ✅ Custom domain
+- ✅ **Modern 3-column footer** (ultra-slim design)
+- ✅ **Background image filtering** (automatic light/dark adaptation)
+- ✅ Responsive design (mobile-optimized)
+- ✅ Analytics tracking (Cloudflare)
+- ✅ Custom domain (www.yourspraveen.com)
+- ✅ Accessibility features (keyboard navigation, ARIA labels)
+
+### Recent Improvements (December 2025)
+- ✅ Complete dark mode implementation
+- ✅ Footer redesign with 3-column layout
+- ✅ Background image filtering system
+- ✅ Consistent section box styling
+- ✅ Enhanced typography and shadows
+- ✅ Optimized spacing and dimensions
+- ✅ Smooth theme transitions
 
 ### Potential Enhancements
 - ⏳ Blog posts (infrastructure ready, no posts yet)
 - ⏳ Portfolio/Projects section
 - ⏳ Resume/CV download
 - ⏳ Newsletter subscription
-- ⏳ Dark mode support
 
 ## Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- ✅ Chrome/Chromium (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Edge (latest)
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+- ✅ Dark mode support in all modern browsers
+- ✅ System preference detection (prefers-color-scheme)
 
 ## License
 
@@ -247,15 +311,50 @@ Beautiful Jekyll is created by [Dean Attali](https://deanattali.com) and is lice
 - **LinkedIn**: [praveenpalaniswamy](https://linkedin.com/in/praveenpalaniswamy)
 - **GitHub**: [yourspraveen](https://github.com/yourspraveen)
 
+## Key Files
+
+### Core Configuration
+- `_config.yml` - Main Jekyll configuration (colors, social links, site settings)
+- `CNAME` - Custom domain configuration
+
+### Layouts & Templates
+- `_layouts/` - Page templates (base, page, post, home)
+- `_includes/` - Reusable components (header, footer, nav, dark mode toggle)
+
+### Styling
+- `assets/css/darkmode.css` - Dark mode and light mode enhancements
+- `assets/css/beautifuljekyll.css` - Base theme styles
+- `assets/css/aboutme.css` - About Me page styles
+- `assets/css/appointments.css` - Appointments page styles
+- `assets/css/achievement.css` - Achievements page styles
+
+### JavaScript
+- `assets/js/darkmode.js` - Dark mode toggle and persistence logic
+- `assets/js/beautifuljekyll.js` - Base theme functionality
+
+### Content Pages
+- `index.html` - Home page with LinkedIn widget
+- `aboutme.html` - Profile and contact form
+- `appointments.html` - Appointment scheduling
+- `achievements.md` - GitHub achievements
+
+### Documentation
+- `README.md` - This file
+- `requirements.md` - Detailed feature specifications
+- `DARKMODE_IMPLEMENTATION.md` - Dark mode guide
+
 ## Acknowledgments
 
-- [Beautiful Jekyll](https://beautifuljekyll.com) by Dean Attali for the excellent theme
+- [Beautiful Jekyll](https://beautifuljekyll.com) by Dean Attali for the excellent base theme
 - [Jekyll](https://jekyllrb.com) for the static site generator
 - [GitHub Pages](https://pages.github.com) for free hosting
 - [Koalendar](https://koalendar.com) for appointment scheduling
 - [SociableKit](https://sociablekit.com) for LinkedIn integration
 - [Formspree](https://formspree.io) for contact form processing
+- [Font Awesome](https://fontawesome.com) for icons
+- [Bootstrap](https://getbootstrap.com) for responsive grid system
 
 ---
 
 **Last Updated**: December 2025
+**Version**: 2.0 (with Dark Mode)

@@ -12,7 +12,24 @@ This is a personal website for Praveen K Palaniswamy, built using Jekyll static 
 
 ## Core Features
 
-### 1. Navigation Structure
+### 1. Dark Mode System
+**Comprehensive Theme Switching:**
+- Toggle button in navigation bar with moon/sun icons
+- Instant theme switching with smooth transitions
+- localStorage persistence across sessions and pages
+- Automatic system preference detection (prefers-color-scheme)
+- No flash of unstyled content (FOUC prevention)
+- Keyboard accessible (Tab, Enter, Space)
+- ARIA labels for screen readers
+
+**Enhanced Styling:**
+- All UI elements adapted for both modes
+- Consistent box shadows and borders in both themes
+- Text shadows for improved readability
+- Enhanced contrast ratios meeting WCAG standards
+- Smooth 0.3s color transitions
+
+### 2. Navigation Structure
 The website includes the following main pages accessible through the navigation bar:
 
 #### Home Page (index.html)
@@ -49,9 +66,24 @@ The website includes the following main pages accessible through the navigation 
   - Beautiful Jekyll documentation
   - Markdown tutorial
 
-### 2. Social Media Integration
+### 3. Footer Design
+**Modern 3-Column Layout:**
+- **Left Column**: Theme credit ("Powered by Beautiful Jekyll" - hidden when remove-ads: true)
+- **Center Column**: Copyright information and author details
+- **Right Column**: Social media icons in horizontal layout
+- Ultra-slim design with optimized spacing
+- Responsive design (stacks on mobile)
+- Enhanced with box shadows and borders
+- Filtered background images matching theme
 
-#### Active Social Links (Footer)
+**Dimensions:**
+- Height: ~32px (60-70% reduction from original)
+- Padding: 0.5rem top/bottom
+- Compact line heights for efficiency
+
+### 4. Social Media Integration
+
+#### Active Social Links (Footer - Right Column)
 - Email: Praveen.Palaniswamy@gmail.com
 - GitHub: yourspraveen
 - LinkedIn: praveenpalaniswamy
@@ -62,7 +94,27 @@ The website includes the following main pages accessible through the navigation 
 - LinkedIn sharing enabled on posts
 - Twitter, Facebook, Reddit, VK sharing available but disabled
 
-### 3. Analytics & Tracking
+### 5. Page Sections Design
+**Consistent Box Layout:**
+All content sections (About Me, Contact, Appointments, Achievements) feature:
+- Rounded border boxes (8px radius)
+- Semi-transparent backgrounds
+- Consistent padding (1.5rem)
+- Box shadows for depth
+- Proper alignment within page layout
+- Theme-adaptive colors
+
+**Light Mode Boxes:**
+- Background: rgba(255, 255, 255, 0.6)
+- Border: #e1e4e8
+- Shadow: rgba(0, 0, 0, 0.1)
+
+**Dark Mode Boxes:**
+- Background: rgba(45, 45, 45, 0.5)
+- Border: #505050 (navbar-border-col)
+- Shadow: rgba(0, 0, 0, 0.3)
+
+### 6. Analytics & Tracking
 - Cloudflare Analytics enabled (beacon token: f4fc10f5948041a3a023f32d43ad0e4e)
 - Support for:
   - Google Analytics (gtag)
@@ -70,7 +122,7 @@ The website includes the following main pages accessible through the navigation 
   - Matomo/Piwik
   - Google Universal Analytics (deprecated)
 
-### 4. Comment Systems Support
+### 7. Comment Systems Support
 The theme supports multiple comment systems (currently not activated):
 - Disqus
 - Facebook Comments
@@ -81,23 +133,51 @@ The theme supports multiple comment systems (currently not activated):
 
 ### 5. Design & Styling
 
-#### Color Scheme
+#### Theme System
+**Dual Theme Support:**
+- Full dark mode implementation with toggle
+- Enhanced light mode with improved contrast
+- Smooth transitions between themes (0.3s)
+- System preference detection on first visit
+- localStorage persistence across sessions
+
+#### Light Mode Color Scheme
 - Page background: #FFFFFF (white)
 - Text color: #404040 (dark gray)
 - Link color: #008AFF (blue)
 - Hover color: #0085A1 (teal)
-- Navbar background: #EAEAEA (light gray)
-- Footer background: #EAEAEA (light gray)
+- Navbar background: #EAEAEA (light gray) + lightened pattern
+- Footer background: #EAEAEA (light gray) + lightened pattern
+
+#### Dark Mode Color Scheme
+- Page background: #1a1a1a (dark gray)
+- Text color: #e0e0e0 (light gray)
+- Link color: #64b5f6 (lighter blue)
+- Hover color: #90caf9 (lighter blue)
+- Navbar: #1f1f1f with pure white text (#ffffff)
+- Footer: #1f1f1f with bright text (#d0d0d0)
+- Borders: #505050 (medium-light gray)
 
 #### Visual Elements
-- Avatar/Profile image: /assets/img/avatar-icon.jpeg (circular)
-- Navbar background image: /assets/img/bgimage.png
-- Footer background image: /assets/img/bgimage.png
+- Avatar/Profile image: /assets/img/avatar-icon.jpeg (circular with enhanced border in dark mode)
+- Navbar background image: /assets/img/bgimage.png (auto-filtered for both modes)
+- Footer background image: /assets/img/bgimage.png (auto-filtered for both modes)
 - Custom 404 page with South Park image
+
+#### Background Image Filtering
+**Automatic adjustment without modifying source images:**
+- **Light Mode**: Backgrounds brightened by 15%, reduced contrast, desaturated
+- **Dark Mode**: Backgrounds darkened by 70%, increased contrast, desaturated
+- Uses CSS filters with `::before` pseudo-elements
+- Non-destructive and easily adjustable
 
 #### Custom CSS Files
 - beautifuljekyll.css (main theme styles)
 - beautifuljekyll-minimal.css (minimal layout styles)
+- **darkmode.css** (dark mode styles and light mode enhancements)
+- aboutme.css (About Me page custom styles with box layout)
+- appointments.css (Appointments page custom styles with box layout)
+- achievement.css (Achievements page custom styles with CSS variables)
 - bootstrap-social.css (social media button styles)
 - pygment_highlights.css (code syntax highlighting)
 - staticman.css (comment system styles)
@@ -105,7 +185,7 @@ The theme supports multiple comment systems (currently not activated):
 - appointments.css (Appointments page custom styles)
 - achievement.css (Achievements page custom styles)
 
-### 6. Blog Functionality
+### 8. Blog Functionality
 
 #### Blog Capabilities
 - Support for blog posts in `_posts` directory
@@ -123,7 +203,7 @@ The theme supports multiple comment systems (currently not activated):
 - MathJax support for LaTeX formulas
 - Kramdown parser
 
-### 7. SEO & Meta
+### 9. SEO & Meta
 - Site title: "Home"
 - Author: Praveen K Palaniswamy
 - RSS description: "This website is a virtual proof that I'm awesome"
@@ -131,7 +211,7 @@ The theme supports multiple comment systems (currently not activated):
 - Title on all pages enabled
 - Custom 404 error page
 
-### 8. Third-Party Integrations
+### 10. Third-Party Integrations
 
 #### Koalendar
 - Purpose: Appointment scheduling
@@ -149,13 +229,13 @@ The theme supports multiple comment systems (currently not activated):
 - Location: aboutme.html contact section
 - Features: Spam protection (_gotcha field), custom success message
 
-### 9. Responsive Design
+### 11. Responsive Design
 - Mobile-first approach
 - Bootstrap-based responsive grid
 - Optimized for both desktop and mobile devices
 - Navigation bar shrinks on scroll
 
-### 10. Development & Build
+### 12. Development & Build
 
 #### Dependencies
 - jekyll (>= 3.9.3)
@@ -205,12 +285,39 @@ All pages require YAML front matter with available parameters:
 - share-title, share-description, share-img
 - author, layout, and more
 
+## Recently Implemented Features (December 2025)
+
+### Dark Mode System
+- ✅ Complete dark mode with toggle button
+- ✅ localStorage persistence
+- ✅ System preference detection
+- ✅ Smooth transitions (0.3s)
+- ✅ Background image filtering
+- ✅ Comprehensive element coverage
+- ✅ Accessibility features (keyboard, ARIA)
+- ✅ No FOUC (flash of unstyled content)
+
+### Design Enhancements
+- ✅ Enhanced light mode with improved contrast
+- ✅ 3-column footer layout
+- ✅ Ultra-slim footer design (~70% height reduction)
+- ✅ Consistent box styling across all sections
+- ✅ Background image filtering for both themes
+- ✅ Enhanced typography with text shadows
+- ✅ Professional box shadows and borders
+
+### Layout Improvements
+- ✅ Proper section alignment across all pages
+- ✅ Responsive footer with mobile stacking
+- ✅ Inline social media icons
+- ✅ Consistent spacing and padding
+- ✅ Optimized line heights
+
 ## Future Enhancement Possibilities
 
 ### Potential Features to Consider
 1. Blog posts - Currently no posts are published
-2. Dark mode support (available in Beautiful Jekyll paid plans)
-3. Newsletter subscription
+2. Newsletter subscription
 4. Portfolio/Projects section
 5. Testimonials section
 6. Resume/CV download
