@@ -211,8 +211,6 @@ Update navigation links in `_config.yml`:
 ```yaml
 navbar-links:
   Page Name: "pagename"
-  Resources:
-    - Link Name: "https://example.com"
 ```
 
 ### Footer Configuration

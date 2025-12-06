@@ -61,10 +61,6 @@ The website includes the following main pages accessible through the navigation 
   - Pull Shark
 - Links to GitHub achievements tab
 
-#### Resources Section
-- External links to:
-  - Beautiful Jekyll documentation
-  - Markdown tutorial
 
 ### 3. Footer Design
 **Modern 3-Column Layout:**
