@@ -16,6 +16,7 @@ _site/                # Generated site
 .DS_Store             # macOS Finder
 Thumbs.db             # Windows thumbnails
 ehthumbs.db           # Windows thumbnails
+.github/
 
 # -----------------------------
 # Gems / packaging

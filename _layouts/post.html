@@ -8,6 +8,20 @@ layout: base
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
 
+      <!-- Post Meta Information -->
+      <div class="post-meta-info">
+        <span class="post-date">
+          <i class="far fa-calendar-alt"></i> {{ page.date | date: site.date_format }}
+        </span>
+        {% if page.content %}
+          {% assign words = page.content | strip_html | number_of_words %}
+          {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+          <span class="post-reading-time">
+            <i class="far fa-clock"></i> {{ reading_time }} min read
+          </span>
+        {% endif %}
+      </div>
+
       {% if page.gh-repo %}
         {% assign gh_split =  page.gh-repo | split:'/'  %}
         {% assign gh_user =  gh_split[0]  %}

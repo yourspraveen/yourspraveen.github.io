@@ -1,0 +1,297 @@
+---
+layout: page
+title: Blogs
+subtitle: Thoughts, Tutorials & Insights
+meta-title: "Blogs - Praveen K Palaniswamy | Technical Articles & Insights"
+meta-description: "Read technical articles, tutorials, and insights from Praveen K Palaniswamy on cybersecurity, technology, and software development."
+css: "/assets/css/blogs.css"
+---
+
+<!-- Tag Filter Section -->
+<div class="tag-filter-container">
+  <div class="tag-filter-label">Filter by Tag:</div>
+  <div class="tag-filter-buttons">
+    <button class="tag-filter-btn active" data-tag="all">All Posts</button>
+
+    {% comment %}
+    Build a hash map of tag frequencies
+    {% endcomment %}
+    {% assign tag_counts = "" | split: "" %}
+    {% for post in site.posts %}
+      {% for tag in post.tags %}
+        {% assign tag_counts = tag_counts | push: tag %}
+      {% endfor %}
+    {% endfor %}
+
+    {% comment %}
+    Get unique tags and count their occurrences
+    {% endcomment %}
+    {% assign unique_tags = tag_counts | uniq %}
+    {% assign sorted_tags = "" | split: "" %}
+
+    {% for tag in unique_tags %}
+      {% if tag != "" %}
+        {% assign count = 0 %}
+        {% for check_tag in tag_counts %}
+          {% if check_tag == tag %}
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        {% assign tag_with_count = tag | append: ":" | append: count %}
+        {% assign sorted_tags = sorted_tags | push: tag_with_count %}
+      {% endif %}
+    {% endfor %}
+
+    {% comment %}
+    Sort by count (descending) - manual bubble sort since Liquid doesn't have native sort by count
+    We'll just display first 5 after sorting
+    {% endcomment %}
+    {% assign tags_displayed = 0 %}
+    {% for i in (1..5) %}
+      {% assign max_count = 0 %}
+      {% assign max_tag = "" %}
+      {% for tag_data in sorted_tags %}
+        {% assign parts = tag_data | split: ":" %}
+        {% assign tag_name = parts[0] %}
+        {% assign tag_count = parts[1] | plus: 0 %}
+        {% assign already_shown = false %}
+        {% for j in (1..i) %}
+          {% if j < i %}
+            {% comment %}Check if this tag was already shown{% endcomment %}
+          {% endif %}
+        {% endfor %}
+        {% if tag_count > max_count %}
+          {% assign max_count = tag_count %}
+          {% assign max_tag = tag_name %}
+        {% endif %}
+      {% endfor %}
+      {% if max_tag != "" %}
+        <button class="tag-filter-btn" data-tag="{{ max_tag | slugify }}">{{ max_tag }}</button>
+        {% assign tags_displayed = tags_displayed | plus: 1 %}
+        {% comment %}Remove this tag from consideration{% endcomment %}
+        {% assign new_sorted_tags = "" | split: "" %}
+        {% for tag_data in sorted_tags %}
+          {% assign parts = tag_data | split: ":" %}
+          {% unless parts[0] == max_tag %}
+            {% assign new_sorted_tags = new_sorted_tags | push: tag_data %}
+          {% endunless %}
+        {% endfor %}
+        {% assign sorted_tags = new_sorted_tags %}
+      {% endif %}
+    {% endfor %}
+
+    {% if unique_tags.size > 5 %}
+      <button class="tag-filter-btn tag-more-btn" id="show-all-tags">
+        +{{ unique_tags.size | minus: 5 }} more
+      </button>
+    {% endif %}
+  </div>
+
+  <!-- Hidden tags container for "show all" functionality -->
+  {% if unique_tags.size > 5 %}
+  <div class="tag-filter-buttons tag-filter-all-tags" id="all-tags-container" style="display: none; margin-top: 0.5rem;">
+    {% for tag in unique_tags %}
+      {% if tag != "" %}
+        <button class="tag-filter-btn" data-tag="{{ tag | slugify }}">{{ tag }}</button>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+
+<!-- Blog Posts Grid -->
+<div class="blog-grid-container">
+  {% if site.posts.size > 0 %}
+    {% for post in paginator.posts %}
+      {% assign slugified_tags = "" | split: "" %}
+      {% for tag in post.tags %}
+        {% assign slugified_tag = tag | slugify %}
+        {% assign slugified_tags = slugified_tags | push: slugified_tag %}
+      {% endfor %}
+      <article class="blog-card" data-tags="{{ slugified_tags | join: ',' }}">
+        <a href="{{ post.url | relative_url }}" class="blog-card-link">
+          <!-- Blog Post Image -->
+          <div class="blog-card-image">
+            {% if post.thumbnail-img %}
+              <img src="{{ post.thumbnail-img | relative_url }}" alt="{{ post.title | strip_html | xml_escape }}" loading="lazy">
+            {% elsif post.cover-img %}
+              <img src="{{ post.cover-img | relative_url }}" alt="{{ post.title | strip_html | xml_escape }}" loading="lazy">
+            {% else %}
+              <div class="blog-card-no-image">
+                <i class="fas fa-file-alt"></i>
+              </div>
+            {% endif %}
+          </div>
+
+          <!-- Blog Post Content -->
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">{{ post.title | strip_html }}</h3>
+
+            <div class="blog-card-meta">
+              <span class="blog-card-date">
+                <i class="far fa-calendar-alt"></i> {{ post.date | date: site.date_format }}
+              </span>
+
+              {% if post.content %}
+                {% assign words = post.content | strip_html | number_of_words %}
+                {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+                <span class="blog-card-reading-time">
+                  <i class="far fa-clock"></i> {{ reading_time }} min read
+                </span>
+              {% endif %}
+            </div>
+
+            {% if post.summary %}
+              <p class="blog-card-summary">{{ post.summary | strip_html | truncatewords: 30 }}</p>
+            {% elsif post.subtitle %}
+              <p class="blog-card-summary">{{ post.subtitle | strip_html | truncatewords: 30 }}</p>
+            {% else %}
+              <p class="blog-card-summary">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            {% endif %}
+
+            {% if post.tags.size > 0 %}
+              <div class="blog-card-tags">
+                {% for tag in post.tags limit:3 %}
+                  <span class="blog-card-tag">{{ tag }}</span>
+                {% endfor %}
+                {% if post.tags.size > 3 %}
+                  <span class="blog-card-tag-more">+{{ post.tags.size | minus: 3 }}</span>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  {% else %}
+    <div class="no-posts-message">
+      <i class="fas fa-inbox"></i>
+      <h3>No blog posts yet</h3>
+      <p>Check back soon for new content!</p>
+    </div>
+  {% endif %}
+</div>
+
+<!-- Pagination -->
+{% if paginator.total_pages > 1 %}
+<nav class="blog-pagination">
+  <ul class="pagination justify-content-center">
+    <!-- First Page -->
+    {% if paginator.page > 2 %}
+      <li class="page-item">
+        <a class="page-link" href="{{ '/blogs' | relative_url }}">
+          <i class="fas fa-angle-double-left"></i>
+        </a>
+      </li>
+    {% endif %}
+
+    <!-- Previous Page -->
+    {% if paginator.previous_page %}
+      <li class="page-item">
+        {% if paginator.previous_page == 1 %}
+          <a class="page-link" href="{{ '/blogs' | relative_url }}">
+            <i class="fas fa-angle-left"></i> Previous
+          </a>
+        {% else %}
+          <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">
+            <i class="fas fa-angle-left"></i> Previous
+          </a>
+        {% endif %}
+      </li>
+    {% endif %}
+
+    <!-- Page Numbers -->
+    {% for page_num in (1..paginator.total_pages) %}
+      {% if page_num == paginator.page %}
+        <li class="page-item active">
+          <span class="page-link">{{ page_num }}</span>
+        </li>
+      {% elsif page_num == 1 %}
+        <li class="page-item">
+          <a class="page-link" href="{{ '/blogs' | relative_url }}">{{ page_num }}</a>
+        </li>
+      {% else %}
+        <li class="page-item">
+          <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page_num }}">{{ page_num }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+
+    <!-- Next Page -->
+    {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">
+          Next <i class="fas fa-angle-right"></i>
+        </a>
+      </li>
+    {% endif %}
+
+    <!-- Last Page -->
+    {% assign second_last_page = paginator.total_pages | minus: 1 %}
+    {% if paginator.page < second_last_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">
+          <i class="fas fa-angle-double-right"></i>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
+
+<!-- Tag Filter JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.tag-filter-btn:not(.tag-more-btn)');
+  const blogCards = document.querySelectorAll('.blog-card');
+  const showAllBtn = document.getElementById('show-all-tags');
+  const allTagsContainer = document.getElementById('all-tags-container');
+
+  // Handle tag filtering
+  function setupTagFilter() {
+    const allFilterButtons = document.querySelectorAll('.tag-filter-btn:not(.tag-more-btn)');
+    allFilterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const selectedTag = this.getAttribute('data-tag');
+
+        // Update active button
+        allFilterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Filter blog cards
+        blogCards.forEach(card => {
+          const cardTags = card.getAttribute('data-tags').split(',');
+
+          if (selectedTag === 'all' || cardTags.includes(selectedTag)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // Initial setup
+  setupTagFilter();
+
+  // Handle "show all tags" button
+  if (showAllBtn && allTagsContainer) {
+    let allTagsVisible = false;
+    const originalText = showAllBtn.textContent;
+
+    showAllBtn.addEventListener('click', function() {
+      allTagsVisible = !allTagsVisible;
+
+      if (allTagsVisible) {
+        allTagsContainer.style.display = 'flex';
+        showAllBtn.textContent = 'Show less';
+        setupTagFilter(); // Re-setup filters for newly shown tags
+      } else {
+        allTagsContainer.style.display = 'none';
+        showAllBtn.textContent = originalText;
+      }
+    });
+  }
+});
+</script>

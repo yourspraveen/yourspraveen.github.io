@@ -25,6 +25,7 @@ baseurl: ""
 
 navbar-links:
   Posts: "posts"
+  Blogs: "blogs"
   Appointments: "appointments"
   Recognitions: "achievements"
   Contact: "contact"
@@ -287,7 +288,8 @@ timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 10
+paginate_path: "/blogs/page:num/"
 
 kramdown:
   input: GFM
@@ -299,6 +301,13 @@ defaults:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
+  -
+    scope:
+      path: "_posts" # all files in _posts directory
+      type: "posts"
+    values:
+      layout: "post"
+      css: "/assets/css/post.css"
 
 # Exclude these files from production site
 exclude:
