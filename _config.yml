@@ -26,6 +26,7 @@ baseurl: ""
 navbar-links:
   Posts: "posts"
   Blogs: "blogs"
+  Resume: "resume"
   Appointments: "appointments"
   Recognitions: "achievements"
   Contact: "contact"
