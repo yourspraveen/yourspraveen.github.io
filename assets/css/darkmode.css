@@ -571,20 +571,40 @@ footer a {
 /* Table styling */
 [data-theme="dark"] table {
   color: var(--text-col);
-  border-color: var(--navbar-border-col);
+  border-color: var(--navbar-border-col) !important;
 }
 
 [data-theme="dark"] table thead th {
   background-color: var(--navbar-col);
-  border-color: var(--navbar-border-col);
+  border-color: var(--navbar-border-col) !important;
+}
+
+[data-theme="dark"] table thead tr {
+  border-bottom-color: var(--navbar-border-col) !important;
 }
 
 [data-theme="dark"] table tbody tr {
-  border-color: var(--navbar-border-col);
+  border-color: var(--navbar-border-col) !important;
+  border-bottom-color: var(--navbar-border-col) !important;
 }
 
 [data-theme="dark"] table tbody tr:hover {
   background-color: #2d2d2d;
+}
+
+[data-theme="dark"] table tbody td,
+[data-theme="dark"] table thead th {
+  border-color: var(--navbar-border-col) !important;
+}
+
+/* Override inline styles for resume table */
+[data-theme="dark"] table tr[style*="border-bottom"] {
+  border-bottom-color: var(--navbar-border-col) !important;
+}
+
+[data-theme="dark"] table th[style*="padding"],
+[data-theme="dark"] table td[style*="padding"] {
+  color: var(--text-col);
 }
 
 /* Achievement cards dark mode */
