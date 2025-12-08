@@ -581,26 +581,31 @@ footer a {
 
 [data-theme="dark"] table thead tr {
   border-bottom-color: var(--navbar-border-col) !important;
+  background-color: var(--navbar-col);
 }
 
 [data-theme="dark"] table tbody tr {
   border-color: var(--navbar-border-col) !important;
   border-bottom-color: var(--navbar-border-col) !important;
+  background-color: transparent !important;
 }
 
 [data-theme="dark"] table tbody td,
 [data-theme="dark"] table thead th {
   border-color: var(--navbar-border-col) !important;
+  background-color: transparent !important;
 }
 
 /* Override inline styles for resume table */
 [data-theme="dark"] table tr[style*="border-bottom"] {
   border-bottom-color: var(--navbar-border-col) !important;
+  background-color: transparent !important;
 }
 
 [data-theme="dark"] table th[style*="padding"],
 [data-theme="dark"] table td[style*="padding"] {
   color: var(--text-col);
+  background-color: transparent !important;
 }
 
 /* Achievement cards dark mode */
