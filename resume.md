@@ -242,6 +242,29 @@ Recognized for outstanding team performance and successful delivery of critical 
 
 ---
 
+## Technical Competition Judging
+
+**DECA Inc. - Competitive Event Judge** | _Nov 2025_
+Served as competitive event judge at The Ultimate DECA Power Trip in Arlington, VA, evaluating student presentations in marketing, finance, hospitality and management. Provided guidance and professional feedback to emerging leaders and entrepreneurs.
+[View Certificate](/assets/certs/Deca-WashingtonDC.pdf)
+
+**UVA Girls Hoo Hack 2025 - Official Judge** | _Oct 2025_
+Served as official judge for Girls Hoo Hack 2025, a women-centered, gender-inclusive hackathon at University of Virginia with theme "Hacks and Crafts." Evaluated innovative projects combining creativity and technology to solve real-world problems.
+[View Event Details](https://girls-hoo-hack-2025.devpost.com/)
+
+**VTHacks 13 - Official Judge** | _Sep 2025_
+Served as official judge for VTHacks 13, Virginia Tech's premier hackathon. Evaluated innovative student projects and provided constructive feedback to inspire the next generation of innovators.
+[View Certificate](/assets/certs/VT-HAX.pdf) | [Verify Credential](https://credsverse.com/credentials/313cb3d1-e96f-4414-bb5e-39cc38e39192)
+
+**Technology Student Association (TSA) Judge** | _May 2025_
+Evaluated student technology and engineering projects at TSA competition, providing feedback and encouragement to next-generation innovators.
+
+**NASA TechRise Student Challenge - Judge** | _2025-26_
+Served as judge for NASA TechRise Student Challenge, evaluating student experiment proposals for suborbital rocket and high-altitude balloon flights. Assessed experiment originality, educational impact, and technical feasibility for NASA Flight Opportunities program.
+[View Certificate](/assets/certs/nasatechrise2025.pdf)
+
+---
+
 ## Mentoring & Professional Affiliations
 
 **IEEE Senior Member** | _May 2025 - Present_
@@ -252,9 +275,6 @@ Member of the International Association of Engineers, contributing to the advanc
 
 **UStrive.org Volunteer Mentor** | _Nov 2020 - Present_
 Providing guidance and mentorship to students and early-career professionals, helping them navigate career development, technical skill building, and professional growth in technology fields.
-
-**Technology Student Association (TSA) Judge** | _May 2025_
-Evaluating student technology and engineering projects, providing feedback and encouragement to next-generation innovators.
 
 **Scouting America - Advancement Chair** | _Aug 2022 - Jul 2024_
 Led youth advancement programs, coordinating skill development, merit badge counseling, and rank progression activities for local scout troop.
