@@ -7,11 +7,11 @@ meta-description: "Professional resume of Praveen K Palaniswamy - Security Engin
 permalink: /resume/
 ---
 
-<div style="text-align: center; margin-bottom: 2rem;">
+<!--div style="text-align: center; margin-bottom: 2rem;">
   <a href="/assets/resume/praveen_palaniswamy_resume.pdf" class="btn btn-primary" style="padding: 0.75rem 2rem; font-size: 1.1rem; text-decoration: none;">
     Download PDF Version
   </a>
-</div>
+</div-->
 
 ---
 
