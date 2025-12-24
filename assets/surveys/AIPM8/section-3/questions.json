@@ -1,0 +1,56 @@
+{
+  "section": {
+    "id": 3,
+    "title": "AI Use Across Project Phases",
+    "description": "This section focuses on the Project Management Focus Areas (similar to process groups). For each project phase below, indicate how often you use AI tools."
+  },
+  "questions": [
+    {
+      "id": "focus_areas_frequency",
+      "type": "likert-table",
+      "text": "For each project phase below, indicate how often you use AI tools to assist with the activities in that phase.",
+      "hint": "Select one option per row that best represents your frequency of AI use in that phase.",
+      "required_rows": "all",
+      "scale_type": "frequency",
+      "scale_options": [
+        { "label": "Never", "value": "never" },
+        { "label": "Rarely", "value": "rarely" },
+        { "label": "Sometimes", "value": "sometimes" },
+        { "label": "Often", "value": "often" },
+        { "label": "Always", "value": "always" }
+      ],
+      "rows": [
+        {
+          "id": "initiating",
+          "label": "**Initiating**",
+          "description": "Defining a new project or phase; establishing project vision and alignment",
+          "required": true
+        },
+        {
+          "id": "planning",
+          "label": "**Planning**",
+          "description": "Establishing scope, objectives, and actions; developing project plans, estimates, and risk responses",
+          "required": true
+        },
+        {
+          "id": "executing",
+          "label": "**Executing**",
+          "description": "Performing the work as defined in the plan; managing teams, stakeholders, and resources during execution",
+          "required": true
+        },
+        {
+          "id": "monitoring",
+          "label": "**Monitoring & Controlling**",
+          "description": "Tracking progress, reviewing performance, managing changes to ensure alignment with plan",
+          "required": true
+        },
+        {
+          "id": "closing",
+          "label": "**Closing**",
+          "description": "Finalizing all activities, completing deliverables, lessons learned, and project closure tasks",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

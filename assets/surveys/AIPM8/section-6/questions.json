@@ -1,0 +1,63 @@
+{
+  "section": {
+    "id": 6,
+    "title": "AI Impact on Job Content and Skills",
+    "description": "This section explores how AI is affecting your work activities and the skills required in your role."
+  },
+  "questions": [
+    {
+      "id": "job_content_impact",
+      "type": "likert-table",
+      "text": "Please rate your agreement with each statement below, where 1 = Strongly Disagree and 5 = Strongly Agree:",
+      "required_rows": "partial",
+      "scale_options": [
+        { "label": "1 - Strongly Disagree", "value": "1" },
+        { "label": "2 - Disagree", "value": "2" },
+        { "label": "3 - Neutral", "value": "3" },
+        { "label": "4 - Agree", "value": "4" },
+        { "label": "5 - Strongly Agree", "value": "5" },
+        { "label": "N/A", "value": "na" }
+      ],
+      "rows": [
+        {
+          "id": "reduced_admin_time",
+          "label": "AI has reduced the time I spend on administrative and reporting tasks",
+          "required": false
+        },
+        {
+          "id": "increased_strategic_time",
+          "label": "AI has increased the time I spend on strategic activities (stakeholder management, risk trade-offs, value delivery)",
+          "required": false
+        },
+        {
+          "id": "changing_skills",
+          "label": "AI is changing the skills required for my role",
+          "required": false
+        },
+        {
+          "id": "automation_expectation",
+          "label": "I expect parts of my current responsibilities to be automated within 3-5 years",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "important_skills",
+      "type": "checkbox",
+      "text": "Which skills are becoming MORE important in your role due to AI? (Select all that apply)",
+      "required": false,
+      "options": [
+        { "label": "Data literacy / analytics", "value": "data_literacy" },
+        { "label": "Stakeholder communication", "value": "stakeholder_comm" },
+        { "label": "Change management / adoption", "value": "change_mgmt" },
+        { "label": "Domain expertise", "value": "domain" },
+        { "label": "Systems thinking / architecture", "value": "systems" },
+        { "label": "AI prompt engineering / tool configuration", "value": "ai_prompting" },
+        { "label": "Critical thinking / validation of AI outputs", "value": "critical_thinking" },
+        { "label": "Ethical decision-making", "value": "ethics" },
+        { "label": "None – Skills have not changed", "value": "none", "exclusive": true },
+        { "label": "Other", "value": "other", "has_text_input": true }
+      ]
+    }
+  ]
+}

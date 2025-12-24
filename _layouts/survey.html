@@ -1,0 +1,117 @@
+---
+layout: base
+---
+
+{% include header.html type="page" %}
+
+<main class="container-md">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <div class="survey-container">
+        <!-- Survey Code Entry Section -->
+        <div id="survey-code-entry" class="survey-stage">
+          <!-- Code Entry Section -->
+          <div class="code-entry-section" id="code-entry-section">
+            <div class="code-input-group">
+              <label for="survey-code-input" class="form-label">
+                <strong>Survey Code</strong>
+              </label>
+              <input
+                type="text"
+                id="survey-code-input"
+                class="form-control form-control-lg"
+                placeholder="Enter 5-character code (e.g., AIPM8)"
+                maxlength="5"
+                autocomplete="off"
+              />
+              <small class="form-text text-muted" id="code-hint">
+                Enter your survey code to begin
+              </small>
+            </div>
+          </div>
+
+          <!-- Research Consent Section (loaded dynamically from intro.md) - SECOND, hidden initially -->
+          <div class="research-consent mt-4" id="research-consent" style="display: none;">
+            <hr class="my-4">
+
+            <div id="consent-content-container">
+              <!-- Content will be loaded from intro.md when user enters code -->
+            </div>
+
+            <div class="consent-checkbox-container mt-4">
+              <label class="consent-checkbox-label">
+                <input type="checkbox" id="consent-checkbox" />
+                <span class="checkbox-text">
+                  <strong>I have read the above information and consent to participate in this research study.</strong>
+                </span>
+              </label>
+            </div>
+
+            <!-- Start Survey Button - shown with consent section -->
+            <div class="mt-4 text-center">
+              <button type="button" class="btn btn-primary btn-lg" id="start-survey-btn" disabled>
+                Start Survey
+              </button>
+            </div>
+          </div>
+
+          <div class="survey-message" id="survey-message-entry" style="display: none;"></div>
+        </div>
+
+        <!-- Survey Questions Section -->
+        <div id="survey-questions-stage" class="survey-stage" style="display: none;">
+          <div class="survey-header">
+            <h2 id="survey-title-main">Impact of AI on Project Management</h2>
+            <p class="section-subtitle" id="section-subtitle">Section 1: Participant Background</p>
+          </div>
+
+          <div class="survey-progress">
+            <div class="progress">
+              <div class="progress-bar" id="survey-progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="progress-text" id="progress-text">Section <span id="current-section">1</span> of <span id="total-sections">9</span></p>
+          </div>
+
+          <div class="survey-content" id="survey-questions">
+            <!-- Questions will be dynamically loaded here -->
+          </div>
+
+          <div class="survey-navigation">
+            <button type="button" class="btn btn-secondary" id="prev-btn" style="display: none;">Previous</button>
+            <button type="button" class="btn btn-primary" id="next-btn">Next</button>
+            <button type="button" class="btn btn-success" id="submit-btn" style="display: none;">Submit Survey</button>
+          </div>
+
+          <div class="survey-message" id="survey-message-questions" style="display: none;"></div>
+        </div>
+
+        <!-- Thank You / Closure Section -->
+        <div id="survey-thank-you" class="survey-stage" style="display: none;">
+          <div class="success-icon-container text-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="text-success" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+          </div>
+
+          <!-- Content loaded dynamically from appendix.md -->
+          <div id="appendix-content-container" class="appendix-content">
+            <p><em>Loading...</em></p>
+          </div>
+
+          <div class="mt-4 text-center">
+            <a href="{{ site.baseurl }}/" class="btn btn-primary">Return to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Pass Jekyll variables to JavaScript
+  window.SURVEY_CONFIG = {
+    sections: {% if page.sections %}{{ page.sections | jsonify }}{% else %}[]{% endif %},
+    baseUrl: "{{ site.baseurl }}"
+  };
+</script>
+<script src="{{ '/assets/js/survey.js' | relative_url }}"></script>

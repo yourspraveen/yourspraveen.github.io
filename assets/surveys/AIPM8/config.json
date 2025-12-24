@@ -1,0 +1,85 @@
+{
+  "survey": {
+    "code": "AIPM8",
+    "title": "Impact of AI on Project Management Professionals",
+    "subtitle": "PMBOK® 8th Edition Framework",
+    "version": "1.0",
+    "description": "Research study on AI's impact on project management practices",
+    "estimated_time": "20-25 minutes",
+    "sections": [
+      {
+        "id": 1,
+        "name": "section-1",
+        "title": "Participant Background",
+        "description": "General demographic and professional context"
+      },
+      {
+        "id": 2,
+        "name": "section-2",
+        "title": "AI Exposure and Usage",
+        "description": "Your general exposure to AI tools"
+      },
+      {
+        "id": 3,
+        "name": "section-3",
+        "title": "AI Use Across Project Phases",
+        "description": "PMBOK Focus Areas (Initiating, Planning, Executing, etc.)"
+      },
+      {
+        "id": 4,
+        "name": "section-4",
+        "title": "AI Use Across Performance Domains",
+        "description": "PMBOK Performance Domains"
+      },
+      {
+        "id": 5,
+        "name": "section-5",
+        "title": "Perceived Impact of AI",
+        "description": "Impact ratings across domains"
+      },
+      {
+        "id": 6,
+        "name": "section-6",
+        "title": "AI Impact on Job Content and Skills",
+        "description": "Changes to work activities and required skills"
+      },
+      {
+        "id": 7,
+        "name": "section-7",
+        "title": "AI Risks and Concerns",
+        "description": "Potential risks and concerns"
+      },
+      {
+        "id": 8,
+        "name": "section-8",
+        "title": "Value Delivery and Attitudes",
+        "description": "Overall satisfaction and value assessment"
+      },
+      {
+        "id": 9,
+        "name": "section-9",
+        "title": "Open-Ended Feedback",
+        "description": "Your insights and suggestions"
+      }
+    ],
+    "researchers": [
+      {
+        "name": "Ragu Ragunathan",
+        "email": "ragu.ragunathan@captechu.edu",
+        "phone": "+1 (240)-499-4613"
+      },
+      {
+        "name": "Praveen Palaniswamy",
+        "email": "Praveen.Palaniswamy@gmail.com",
+        "phone": "+1 (312)-285-0316"
+      }
+    ],
+    "settings": {
+      "allow_multiple_submissions": true,
+      "require_consent": true,
+      "sequential_navigation": true,
+      "auto_save": true,
+      "show_progress": true
+    }
+  }
+}

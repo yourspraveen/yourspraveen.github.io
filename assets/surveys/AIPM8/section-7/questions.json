@@ -1,0 +1,59 @@
+{
+  "section": {
+    "id": 7,
+    "title": "AI Risks and Concerns",
+    "description": "Please rate your level of concern for each of the following potential risks related to AI use in project management."
+  },
+  "questions": [
+    {
+      "id": "risk_concerns",
+      "type": "likert-table",
+      "text": "Rate your level of concern for each risk factor:",
+      "required_rows": "all",
+      "scale_options": [
+        { "label": "Not a Concern", "value": "not_concern" },
+        { "label": "Minor Concern", "value": "minor" },
+        { "label": "Major Concern", "value": "major" },
+        { "label": "Blocking Adoption", "value": "blocking" }
+      ],
+      "rows": [
+        {
+          "id": "data_sensitivity",
+          "label": "**Data sensitivity / confidentiality**",
+          "description": "Sharing sensitive project data with AI tools",
+          "required": true
+        },
+        {
+          "id": "hallucinations",
+          "label": "**Hallucinations / accuracy**",
+          "description": "AI providing incorrect or misleading information",
+          "required": true
+        },
+        {
+          "id": "bias",
+          "label": "**Bias in prioritization**",
+          "description": "AI recommendations reflecting biased data or algorithms",
+          "required": true
+        },
+        {
+          "id": "overdependence",
+          "label": "**Over-dependence on AI**",
+          "description": "Loss of critical thinking or human judgment",
+          "required": true
+        },
+        {
+          "id": "compliance",
+          "label": "**Compliance / regulatory issues**",
+          "description": "AI use not aligned with organizational or legal requirements",
+          "required": true
+        },
+        {
+          "id": "job_displacement",
+          "label": "**Job displacement concerns**",
+          "description": "AI potentially replacing PM roles",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

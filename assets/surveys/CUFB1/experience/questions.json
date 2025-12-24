@@ -1,0 +1,69 @@
+{
+  "section": {
+    "id": 2,
+    "title": "Experience",
+    "description": "Tell us about your experience with our service"
+  },
+  "questions": [
+    {
+      "id": "first_visit",
+      "type": "radio",
+      "text": "Is this your first time using our service?",
+      "required": true,
+      "options": [
+        { "label": "Yes", "value": "yes" },
+        { "label": "No", "value": "no" }
+      ]
+    },
+    {
+      "id": "usage_frequency",
+      "type": "select",
+      "text": "How often do you use our service?",
+      "required": true,
+      "options": [
+        { "label": "Daily", "value": "daily" },
+        { "label": "Weekly", "value": "weekly" },
+        { "label": "Monthly", "value": "monthly" },
+        { "label": "Rarely", "value": "rarely" },
+        { "label": "This is my first time", "value": "first_time" }
+      ]
+    },
+    {
+      "id": "primary_use_case",
+      "type": "textarea",
+      "text": "What do you primarily use our service for?",
+      "required": true,
+      "min_chars": 10,
+      "max_chars": 1000,
+      "default_rows": 4,
+      "show_char_count": false
+    },
+    {
+      "id": "features_used",
+      "type": "checkbox",
+      "text": "Which features have you used? (Select all that apply)",
+      "required": false,
+      "options": [
+        { "label": "Basic features", "value": "basic" },
+        { "label": "Advanced tools", "value": "advanced" },
+        { "label": "Reporting", "value": "reporting" },
+        { "label": "Collaboration", "value": "collaboration" },
+        { "label": "Mobile app", "value": "mobile" },
+        { "label": "API integration", "value": "api" }
+      ]
+    },
+    {
+      "id": "ease_of_use",
+      "type": "radio",
+      "text": "How would you rate the ease of use?",
+      "required": true,
+      "options": [
+        { "label": "Very Easy", "value": "very_easy" },
+        { "label": "Easy", "value": "easy" },
+        { "label": "Neutral", "value": "neutral" },
+        { "label": "Difficult", "value": "difficult" },
+        { "label": "Very Difficult", "value": "very_difficult" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "section": {
+    "id": 2,
+    "title": "AI Exposure and Usage",
+    "description": "This section asks about your general exposure to AI tools in your project management work."
+  },
+  "questions": [
+    {
+      "id": "ai_usage_frequency",
+      "type": "radio",
+      "text": "Use of AI-based Tools in Your Work:",
+      "hint": "Do you use any AI-powered tools in your project management duties?",
+      "required": true,
+      "options": [
+        { "label": "No, not at all – I do not use AI tools in my work", "value": "no" },
+        { "label": "Yes, rarely – I use AI tools infrequently (a few times a month or less)", "value": "rarely" },
+        { "label": "Yes, occasionally – I use AI tools regularly, but not daily (e.g., a few times per week)", "value": "occasionally" },
+        { "label": "Yes, daily – I use AI tools daily or in nearly every project", "value": "daily" }
+      ]
+    },
+    {
+      "id": "ai_tool_types",
+      "type": "checkbox",
+      "text": "Types of AI Tools Used (Select all that apply):",
+      "hint": "Which of the following AI technologies or applications have you used for project management tasks?",
+      "required": false,
+      "options": [
+        { "label": "General-purpose GenAI tools (e.g., ChatGPT, Google Gemini, Claude, Microsoft Copilot)", "value": "genai" },
+        { "label": "AI features embedded in PM software (e.g., Jira AI, Asana, Monday.com, Microsoft Project, Azure DevOps)", "value": "embedded_pm" },
+        { "label": "Scheduling or Resource optimization – AI-driven tools for scheduling, resource allocation, or timeline predictions", "value": "scheduling" },
+        { "label": "Predictive analytics – Machine learning tools for forecasting project outcomes, risk analysis, or effort estimation", "value": "predictive" },
+        { "label": "Automated dashboards/Reporting – AI tools that aggregate data and create status reports or performance dashboards", "value": "dashboards" },
+        { "label": "Communication assistants – AI for translating languages, summarizing meetings, sentiment analysis", "value": "communication" },
+        { "label": "Process automation (RPA) – Robotic process automation bots to automate routine project administration tasks", "value": "rpa" },
+        { "label": "Custom AI/ML models – AI/ML models built by internal teams for specific project management needs", "value": "custom" },
+        { "label": "None – I have not used any AI tools in project management", "value": "none", "exclusive": true },
+        { "label": "Other", "value": "other", "has_text_input": true, "text_placeholder": "Please specify other AI tools" }
+      ]
+    },
+    {
+      "id": "ai_integration_level",
+      "type": "radio",
+      "text": "AI Integration Level:",
+      "hint": "How is AI integrated into your project management work?",
+      "required": true,
+      "options": [
+        { "label": "Ad-hoc, individual use (e.g., separate chatbot in browser, personal experimentation)", "value": "adhoc" },
+        { "label": "Embedded into PM tools (e.g., Jira AI, MS Project AI features, Monday.com AI)", "value": "embedded" },
+        { "label": "Organization-level AI policies (clear policies, governance, and standard tools)", "value": "organizational" },
+        { "label": "Experimental / pilot only (testing in limited capacity)", "value": "experimental" },
+        { "label": "Not applicable (I don't use AI)", "value": "na" }
+      ]
+    },
+    {
+      "id": "org_ai_guidance",
+      "type": "radio",
+      "text": "Organizational Guidance on AI Use:",
+      "hint": "Rate your agreement: 'My organization has clear policies and training on AI use in project management.'",
+      "required": true,
+      "options": [
+        { "label": "1 - Strongly Disagree", "value": "1" },
+        { "label": "2 - Disagree", "value": "2" },
+        { "label": "3 - Neutral", "value": "3" },
+        { "label": "4 - Agree", "value": "4" },
+        { "label": "5 - Strongly Agree", "value": "5" },
+        { "label": "N/A (I don't use AI)", "value": "na" }
+      ]
+    }
+  ]
+}

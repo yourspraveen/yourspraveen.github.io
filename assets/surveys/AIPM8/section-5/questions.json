@@ -1,0 +1,77 @@
+{
+  "section": {
+    "id": 5,
+    "title": "Perceived Impact of AI",
+    "description": "Now we'd like to understand how impactful AI usage has been in these areas."
+  },
+  "questions": [
+    {
+      "id": "performance_domains_impact",
+      "type": "likert-table",
+      "text": "For each Performance Domain, if you have used AI, rate the perceived impact of AI on that aspect of your work.",
+      "hint": "If you selected 'Never' in Section 4 for a domain, please select 'Did Not Use AI' for that domain below.",
+      "required_rows": "partial",
+      "scale_type": "impact",
+      "scale_options": [
+        { "label": "Did Not Use", "value": "not_used", "skip_option": true },
+        { "label": "High Negative", "value": "high_negative" },
+        { "label": "Moderate Negative", "value": "moderate_negative" },
+        { "label": "Slight Negative", "value": "slight_negative" },
+        { "label": "No Impact", "value": "no_impact" },
+        { "label": "Slight Positive", "value": "slight_positive" },
+        { "label": "Moderate Positive", "value": "moderate_positive" },
+        { "label": "High Positive", "value": "high_positive" }
+      ],
+      "rows": [
+        {
+          "id": "stakeholders",
+          "label": "**Stakeholders**",
+          "description": "Stakeholder engagement & communications",
+          "required": false
+        },
+        {
+          "id": "team",
+          "label": "**Team**",
+          "description": "Team formation, development, collaboration",
+          "required": false
+        },
+        {
+          "id": "development_approach",
+          "label": "**Development Approach & Life Cycle**",
+          "description": "Selecting/tailoring approach and life cycle",
+          "required": false
+        },
+        {
+          "id": "planning",
+          "label": "**Planning**",
+          "description": "Organizing activities, establishing baselines and plans",
+          "required": false
+        },
+        {
+          "id": "project_work",
+          "label": "**Project Work**",
+          "description": "Establishing processes and performing work",
+          "required": false
+        },
+        {
+          "id": "delivery",
+          "label": "**Delivery**",
+          "description": "Delivering scope and quality requirements",
+          "required": false
+        },
+        {
+          "id": "measurement",
+          "label": "**Measurement**",
+          "description": "Assessing performance and taking actions",
+          "required": false
+        },
+        {
+          "id": "uncertainty",
+          "label": "**Uncertainty**",
+          "description": "Managing risks, ambiguity, and complexity",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
