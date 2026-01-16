@@ -9,48 +9,63 @@
       "id": "risk_concerns",
       "type": "likert-table",
       "text": "Rate your level of concern for each risk factor:",
+      "hint": "Select one option per row. 'Blocking Adoption' means this risk would prevent you or your organization from using AI for project management in practice.",
       "required_rows": "all",
       "scale_options": [
         { "label": "Not a Concern", "value": "not_concern" },
         { "label": "Minor Concern", "value": "minor" },
+        { "label": "Moderate Concern", "value": "moderate" },
         { "label": "Major Concern", "value": "major" },
-        { "label": "Blocking Adoption", "value": "blocking" }
+        { "label": "Blocking Adoption", "value": "blocking" },
+        { "label": "N/A (No AI Use)", "value": "na" }
       ],
       "rows": [
         {
           "id": "data_sensitivity",
           "label": "**Data sensitivity / confidentiality**",
-          "description": "Sharing sensitive project data with AI tools",
+          "description": "Risk of exposing confidential project, customer, or organizational information when using AI tools",
           "required": true
         },
         {
-          "id": "hallucinations",
-          "label": "**Hallucinations / accuracy**",
-          "description": "AI providing incorrect or misleading information",
+          "id": "hallucinations_accuracy",
+          "label": "**Accuracy / hallucinations**",
+          "description": "Risk of AI producing incorrect, misleading, or fabricated outputs that affect decisions",
           "required": true
         },
         {
-          "id": "bias",
-          "label": "**Bias in prioritization**",
-          "description": "AI recommendations reflecting biased data or algorithms",
+          "id": "bias_fairness",
+          "label": "**Bias / fairness**",
+          "description": "Risk of biased recommendations (e.g., prioritization, staffing, or stakeholder decisions) due to training data or model behavior",
           "required": true
         },
         {
-          "id": "overdependence",
-          "label": "**Over-dependence on AI**",
-          "description": "Loss of critical thinking or human judgment",
+          "id": "overreliance_judgment",
+          "label": "**Over-reliance on AI**",
+          "description": "Risk of reduced critical thinking, weaker human judgment, or rubber-stamping AI outputs",
           "required": true
         },
         {
-          "id": "compliance",
-          "label": "**Compliance / regulatory issues**",
-          "description": "AI use not aligned with organizational or legal requirements",
+          "id": "compliance_regulatory",
+          "label": "**Compliance / regulatory**",
+          "description": "Risk of AI use violating organizational policy, contractual obligations, privacy requirements, or regulations",
+          "required": true
+        },
+        {
+          "id": "ip_ownership",
+          "label": "**IP / ownership and retention**",
+          "description": "Risk related to ownership of generated outputs, tool data retention, or reuse of inputs by third-party providers",
+          "required": true
+        },
+        {
+          "id": "security_threats",
+          "label": "**Security threats (prompt injection / data leakage)**",
+          "description": "Risk of malicious inputs, prompt injection, or unintended disclosure through integrations and plugins",
           "required": true
         },
         {
           "id": "job_displacement",
-          "label": "**Job displacement concerns**",
-          "description": "AI potentially replacing PM roles",
+          "label": "**Job displacement**",
+          "description": "Concern that AI will reduce demand for certain PM activities or roles over time",
           "required": true
         }
       ]

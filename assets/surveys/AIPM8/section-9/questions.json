@@ -2,68 +2,68 @@
   "section": {
     "id": 9,
     "title": "Open-Ended Feedback",
-    "description": "Finally, please provide brief written responses to the questions below. Your insights will help us understand context, suggestions, or concerns in your own words."
+    "description": "Please provide brief written responses to the questions below. Your insights will help add context, surface practical experiences, and identify opportunities or concerns in your own words."
   },
   "questions": [
     {
       "id": "challenges_risks",
       "type": "textarea",
       "text": "Challenges or Risks Observed:",
-      "hint": "In your experience, what challenges, risks, or negative impacts (if any) have you observed when using AI in project management? Examples: issues of accuracy, trust, ethical concerns, job impact, integration difficulties, data privacy, over-reliance, etc.",
+      "hint": "Based on your experience, what challenges, risks, or unintended effects (if any) have you observed when using AI in project management?",
       "required": false,
       "min_chars": 50,
       "max_chars": 2000,
       "default_rows": 6,
       "show_char_count": true,
-      "guidance": "Please write 2-5 sentences (minimum 50 characters)."
+      "guidance": "Consider topics such as accuracy, trust, ethics, governance, integration effort, data protection, over-reliance, or workforce impact. Please write 2–5 sentences (minimum 50 characters)."
     },
     {
       "id": "tasks_automated",
       "type": "textarea",
-      "text": "Tasks Automated or Reduced:",
-      "hint": "Which specific project management tasks have you stopped or significantly reduced doing manually because of AI? Examples: status report writing, data aggregation, meeting summaries, risk assessment, schedule updates, etc.",
+      "text": "Tasks Automated or Significantly Reduced:",
+      "hint": "Which specific project management tasks have you automated or substantially reduced through the use of AI?",
       "required": false,
       "min_chars": 50,
       "max_chars": 2000,
       "default_rows": 6,
       "show_char_count": true,
-      "guidance": "Please write 2-5 sentences (minimum 50 characters)."
+      "guidance": "Examples may include reporting, data aggregation, meeting documentation, forecasting, analysis, or coordination activities. Please write 2–5 sentences (minimum 50 characters)."
     },
     {
       "id": "improvement_suggestions",
       "type": "textarea",
       "text": "Suggestions for Improvement:",
-      "hint": "Do you have any suggestions or ideas for how AI tools could better support project management in the future? For instance: features you wish existed, improvements to current tools, or specific needs in project management that AI hasn't met yet.",
+      "hint": "What improvements or new capabilities would you like to see in AI tools to better support project management?",
       "required": false,
       "min_chars": 50,
       "max_chars": 2000,
       "default_rows": 6,
       "show_char_count": true,
-      "guidance": "Please write 2-5 sentences (minimum 50 characters)."
+      "guidance": "You may comment on missing features, usability, governance controls, integration with existing tools, or unmet needs in project management. Please write 2–5 sentences (minimum 50 characters)."
     },
     {
       "id": "ideal_ai_assistant",
       "type": "textarea",
       "text": "Ideal AI Assistant (Future Vision):",
-      "hint": "If you could design the ideal AI assistant for your role, which 3 project management activities would you want it to own end-to-end? Think about activities where AI could completely handle the task from start to finish with minimal human intervention.",
+      "hint": "If you could design an ideal AI assistant for your role, which three project management activities would you want it to handle end-to-end with minimal human intervention?",
       "required": false,
       "min_chars": 50,
       "max_chars": 2000,
       "default_rows": 6,
       "show_char_count": true,
-      "guidance": "Please write 2-5 sentences (minimum 50 characters)."
+      "guidance": "Focus on activities where full or near-full automation could realistically add value. Please write 2–5 sentences (minimum 50 characters)."
     },
     {
       "id": "hybrid_role_impact",
       "type": "textarea",
-      "text": "For Hybrid Technical/PM Roles (Optional):",
-      "hint": "If your primary role is NOT 'Project Manager' (e.g., Developer, Architect, Tech Lead), how has AI changed the project management portion of your responsibilities? Skip this question if you are a full-time Project Manager.",
+      "text": "Impact on Hybrid Technical / Project Roles (Optional):",
+      "hint": "If your primary role is not a full-time Project Manager (e.g., Developer, Architect, Tech Lead), how has AI affected the project management aspects of your responsibilities?",
       "required": false,
       "min_chars": 0,
       "max_chars": 2000,
       "default_rows": 6,
       "show_char_count": true,
-      "guidance": "Optional. Please write 2-5 sentences if applicable."
+      "guidance": "Optional. Skip this question if you are a full-time Project Manager. If applicable, please write 2–5 sentences."
     }
   ]
 }

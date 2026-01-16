@@ -8,30 +8,30 @@
     {
       "id": "pm_experience_years",
       "type": "radio",
-      "text": "Years of Professional Project Management Experience:",
-      "hint": "Select the range that best describes your total years of project management experience.",
+      "text": "Years of Professional Project Management Experience (including hybrid roles):",
+      "hint": "Select the range that best describes your total years of professional experience performing project management responsibilities.",
       "required": true,
       "options": [
-        { "label": "1-5 years", "value": "1-5" },
-        { "label": "6-10 years", "value": "6-10" },
-        { "label": "11-15 years", "value": "11-15" },
-        { "label": "16-20 years", "value": "16-20" },
+        { "label": "1–5 years", "value": "1-5" },
+        { "label": "6–10 years", "value": "6-10" },
+        { "label": "11–15 years", "value": "11-15" },
+        { "label": "16–20 years", "value": "16-20" },
         { "label": "21+ years", "value": "21+" }
       ]
     },
     {
       "id": "current_role",
       "type": "radio",
-      "text": "Current Formal Role/Title:",
-      "hint": "Select the option that best describes your primary role.",
+      "text": "Current Formal Role / Title:",
+      "hint": "Select the option that best describes your primary role in your organization.",
       "required": true,
       "options": [
         { "label": "Project Manager", "value": "pm" },
-        { "label": "Program/Portfolio Manager", "value": "program_mgr" },
+        { "label": "Program or Portfolio Manager", "value": "program_mgr" },
         { "label": "Project Coordinator / PMO Analyst", "value": "coordinator" },
         { "label": "PMO Lead / Director", "value": "pmo_lead" },
         { "label": "Tech Lead / Engineering Manager", "value": "tech_lead" },
-        { "label": "Individual Contributor (Developer, Business Analyst, Architect, etc.)", "value": "ic" },
+        { "label": "Individual Contributor (e.g., Developer, Business Analyst, Architect)", "value": "ic" },
         {
           "label": "Other",
           "value": "other",
@@ -43,25 +43,25 @@
     {
       "id": "pm_time_percentage",
       "type": "radio",
-      "text": "Percentage of Time Spent on Project Management:",
-      "hint": "Approximately what percentage of your work time is dedicated to project management activities?",
+      "text": "Percentage of Time Spent on Project Management Activities:",
+      "hint": "Approximately what percentage of your work time is dedicated to project management-related activities?",
       "required": true,
       "options": [
-        { "label": "0-10% (Minimal PM work)", "value": "0-10" },
-        { "label": "11-25% (Occasional PM work)", "value": "11-25" },
-        { "label": "26-50% (Part-time PM responsibilities)", "value": "26-50" },
-        { "label": "51-75% (Mostly PM work)", "value": "51-75" },
-        { "label": "76-100% (Full-time PM role)", "value": "76-100" }
+        { "label": "0–10% (Minimal PM involvement)", "value": "0-10" },
+        { "label": "11–25% (Occasional PM responsibilities)", "value": "11-25" },
+        { "label": "26–50% (Part-time PM responsibilities)", "value": "26-50" },
+        { "label": "51–75% (Mostly PM work)", "value": "51-75" },
+        { "label": "76–100% (Full-time PM role)", "value": "76-100" }
       ]
     },
     {
       "id": "project_methodology",
       "type": "radio",
-      "text": "Primary Project Methodology:",
+      "text": "Primary Project Management Methodology:",
       "hint": "Which project management methodology does your organization primarily use?",
       "required": true,
       "options": [
-        { "label": "Agile (Scrum, Kanban, etc.)", "value": "agile" },
+        { "label": "Agile (Scrum, Kanban, XP, etc.)", "value": "agile" },
         { "label": "Waterfall (Traditional predictive approach)", "value": "waterfall" },
         { "label": "Hybrid (Combination of Agile and Waterfall)", "value": "hybrid" },
         { "label": "SAFe (Scaled Agile Framework)", "value": "safe" },
@@ -76,17 +76,17 @@
     {
       "id": "industry_domain",
       "type": "radio",
-      "text": "Primary Industry/Domain of Your Projects:",
-      "hint": "Select your organization's main industry or domain.",
+      "text": "Primary Industry / Domain of Your Projects:",
+      "hint": "Select the primary industry or domain in which most of your projects are delivered.",
       "required": true,
       "options": [
-        { "label": "Information Technology (IT/Software)", "value": "it" },
-        { "label": "Finance/Banking", "value": "finance" },
-        { "label": "Healthcare/Biotechnology", "value": "healthcare" },
-        { "label": "Manufacturing/Engineering", "value": "manufacturing" },
-        { "label": "Construction/Infrastructure", "value": "construction" },
-        { "label": "Government/Defense", "value": "government" },
-        { "label": "Education/Research", "value": "education" },
+        { "label": "Information Technology (IT / Software)", "value": "it" },
+        { "label": "Finance / Banking", "value": "finance" },
+        { "label": "Healthcare / Biotechnology", "value": "healthcare" },
+        { "label": "Manufacturing / Engineering", "value": "manufacturing" },
+        { "label": "Construction / Infrastructure", "value": "construction" },
+        { "label": "Government / Defense", "value": "government" },
+        { "label": "Education / Research", "value": "education" },
         {
           "label": "Other",
           "value": "other",
@@ -102,23 +102,23 @@
       "hint": "Approximately how many employees work in your organization?",
       "required": true,
       "options": [
-        { "label": "1-50 (Small)", "value": "1-50" },
-        { "label": "51-250 (Mid-size)", "value": "51-250" },
-        { "label": "251-1000 (Large)", "value": "251-1000" },
+        { "label": "1–50 (Small)", "value": "1-50" },
+        { "label": "51–250 (Mid-size)", "value": "51-250" },
+        { "label": "251–1000 (Large / Mid-Enterprise)", "value": "251-1000" },
         { "label": "1001+ (Enterprise)", "value": "1001+" }
       ]
     },
     {
       "id": "project_size",
       "type": "radio",
-      "text": "Typical Project Size/Complexity:",
-      "hint": "What is the typical size of projects you manage or work on?",
+      "text": "Typical Project Size / Complexity:",
+      "hint": "Select the option that best represents the overall scope, team size, and budget of the projects you typically work on.",
       "required": true,
       "options": [
-        { "label": "Small projects (1-5 team members, budget < $100K)", "value": "small" },
-        { "label": "Medium projects (6-15 team members, budget $100K-$1M)", "value": "medium" },
-        { "label": "Large projects (16-50 team members, budget $1M-$10M)", "value": "large" },
-        { "label": "Enterprise projects (50+ team members, budget $10M+)", "value": "enterprise" }
+        { "label": "Small (1–5 team members, budget < $100K)", "value": "small" },
+        { "label": "Medium (6–15 team members, budget $100K–$1M)", "value": "medium" },
+        { "label": "Large (16–50 team members, budget $1M–$10M)", "value": "large" },
+        { "label": "Enterprise (50+ team members, budget $10M+)", "value": "enterprise" }
       ]
     }
   ]

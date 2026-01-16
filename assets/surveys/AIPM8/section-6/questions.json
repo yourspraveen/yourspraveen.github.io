@@ -8,7 +8,7 @@
     {
       "id": "job_content_impact",
       "type": "likert-table",
-      "text": "Please rate your agreement with each statement below, where 1 = Strongly Disagree and 5 = Strongly Agree:",
+      "text": "Please rate your agreement with each statement below (1 = Strongly Disagree, 5 = Strongly Agree):",
       "required_rows": "partial",
       "scale_options": [
         { "label": "1 - Strongly Disagree", "value": "1" },
@@ -21,22 +21,32 @@
       "rows": [
         {
           "id": "reduced_admin_time",
-          "label": "AI has reduced the time I spend on administrative and reporting tasks",
+          "label": "AI has reduced the time I spend on administrative and reporting tasks.",
           "required": false
         },
         {
           "id": "increased_strategic_time",
-          "label": "AI has increased the time I spend on strategic activities (stakeholder management, risk trade-offs, value delivery)",
+          "label": "AI has increased the time I spend on strategic activities (e.g., stakeholder management, risk trade-offs, value delivery).",
           "required": false
         },
         {
-          "id": "changing_skills",
-          "label": "AI is changing the skills required for my role",
+          "id": "skill_shift_required",
+          "label": "AI is changing the skills required for my role.",
           "required": false
         },
         {
           "id": "automation_expectation",
-          "label": "I expect parts of my current responsibilities to be automated within 3-5 years",
+          "label": "I expect some of my current responsibilities to be automated within the next 3–5 years.",
+          "required": false
+        },
+        {
+          "id": "skill_development_need",
+          "label": "I have needed to learn new skills to effectively use AI tools in my work.",
+          "required": false
+        },
+        {
+          "id": "quality_accountability",
+          "label": "Even when I use AI tools, I remain responsible for verifying the accuracy and quality of the outputs.",
           "required": false
         }
       ]
@@ -44,7 +54,7 @@
     {
       "id": "important_skills",
       "type": "checkbox",
-      "text": "Which skills are becoming MORE important in your role due to AI? (Select all that apply)",
+      "text": "Which skills are becoming more important in your role due to AI? (Select all that apply)",
       "required": false,
       "options": [
         { "label": "Data literacy / analytics", "value": "data_literacy" },
@@ -52,11 +62,12 @@
         { "label": "Change management / adoption", "value": "change_mgmt" },
         { "label": "Domain expertise", "value": "domain" },
         { "label": "Systems thinking / architecture", "value": "systems" },
-        { "label": "AI prompt engineering / tool configuration", "value": "ai_prompting" },
+        { "label": "AI tool literacy (prompting, configuration, workflows)", "value": "ai_tool_literacy" },
         { "label": "Critical thinking / validation of AI outputs", "value": "critical_thinking" },
         { "label": "Ethical decision-making", "value": "ethics" },
+        { "label": "Governance / policy awareness (privacy, compliance, security)", "value": "governance" },
         { "label": "None – Skills have not changed", "value": "none", "exclusive": true },
-        { "label": "Other", "value": "other", "has_text_input": true }
+        { "label": "Other", "value": "other", "has_text_input": true, "text_placeholder": "Please specify" }
       ]
     }
   ]

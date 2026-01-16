@@ -2,51 +2,56 @@
   "section": {
     "id": 8,
     "title": "Value Delivery and Attitudes",
-    "description": "This section asks how AI may have contributed to delivering value in your projects."
+    "description": "This section assesses how AI has contributed to value delivery in projects and your overall attitudes toward using AI."
   },
   "questions": [
     {
       "id": "value_areas",
       "type": "checkbox",
-      "text": "In which of the following areas has AI use helped improve your project management outcomes? (Select all that apply)",
+      "text": "In which of the following areas has AI use improved your project management outcomes? (Select all that apply)",
       "required": false,
       "options": [
         {
-          "label": "Decision-Making – AI has helped me make more informed or faster project decisions",
+          "label": "Decision-making effectiveness – AI has helped me make more informed or timely project decisions",
           "value": "decision_making"
         },
         {
-          "label": "Stakeholder Alignment & Communication – AI has improved stakeholder understanding, engagement, or communication",
+          "label": "Stakeholder alignment & communication – AI has improved stakeholder understanding, engagement, or communication",
           "value": "stakeholder_alignment"
         },
         {
-          "label": "Team Productivity – AI has enhanced team collaboration or productivity",
+          "label": "Team productivity – AI has enhanced team collaboration or productivity",
           "value": "team_productivity"
         },
         {
-          "label": "Project Delivery Speed/Efficiency – AI has accelerated delivery timelines or improved workflow efficiency",
-          "value": "delivery_speed"
+          "label": "Delivery efficiency – AI has accelerated delivery timelines or improved workflow efficiency",
+          "value": "delivery_efficiency"
         },
         {
-          "label": "Deliverable Quality/Value – AI has contributed to higher quality outputs or added value to project deliverables",
-          "value": "quality"
+          "label": "Deliverable quality and value – AI has contributed to higher-quality outputs or increased delivered value",
+          "value": "quality_value"
         },
         {
-          "label": "None of the above – AI has not notably improved any of these aspects in my projects",
+          "label": "Risk and issue management – AI has improved early identification or handling of risks and issues",
+          "value": "risk_management"
+        },
+        {
+          "label": "None of the above – AI has not noticeably improved these outcomes",
           "value": "none",
           "exclusive": true
         },
         {
           "label": "Other",
           "value": "other",
-          "has_text_input": true
+          "has_text_input": true,
+          "text_placeholder": "Please specify"
         }
       ]
     },
     {
       "id": "satisfaction_confidence",
       "type": "likert-table",
-      "text": "Please rate your agreement with each statement below, where 1 = Strongly Disagree and 5 = Strongly Agree:",
+      "text": "Please rate your agreement with each statement below (1 = Strongly Disagree, 5 = Strongly Agree):",
       "required_rows": "partial",
       "scale_options": [
         { "label": "1 - Strongly Disagree", "value": "1" },
@@ -59,22 +64,27 @@
       "rows": [
         {
           "id": "satisfied",
-          "label": "I am satisfied with the AI tools I have used in my project management work",
+          "label": "I am satisfied with the AI tools I have used in my project management work.",
           "required": false
         },
         {
           "id": "effective",
-          "label": "AI tools have been effective in supporting my project management tasks and improving project outcomes",
+          "label": "AI tools have been effective in supporting my project management tasks and improving outcomes.",
           "required": false
         },
         {
           "id": "confident",
-          "label": "I feel confident using AI tools in my role as a project management professional",
+          "label": "I feel confident using AI tools in my role as a project management professional.",
           "required": false
         },
         {
           "id": "benefits_outweigh",
-          "label": "The benefits of using AI outweigh the potential drawbacks or risks",
+          "label": "Overall, the benefits of using AI outweigh the potential drawbacks or risks.",
+          "required": false
+        },
+        {
+          "id": "trust_outputs",
+          "label": "I generally trust the outputs produced by AI tools when appropriate controls and reviews are in place.",
           "required": false
         }
       ]

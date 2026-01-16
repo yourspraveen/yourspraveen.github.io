@@ -2,14 +2,14 @@
   "section": {
     "id": 4,
     "title": "AI Use Across Project Performance Domains",
-    "description": "This section considers the eight Project Performance Domains as defined in PMBOK 8th Edition."
+    "description": "This section focuses on how frequently AI tools are used across the eight Project Performance Domains defined in PMBOK (8th Edition)."
   },
   "questions": [
     {
       "id": "performance_domains_frequency",
       "type": "likert-table",
-      "text": "Please indicate how often you use AI tools to support tasks in each of the following Performance Domains:",
-      "hint": "Select one option per row to indicate your frequency of AI use in that domain.",
+      "text": "For each Project Performance Domain below, indicate how often you use AI tools to support related tasks and activities.",
+      "hint": "Consider both standalone AI tools and AI features embedded in project management or delivery tools. Select one option per row.",
       "required_rows": "all",
       "scale_type": "frequency",
       "scale_options": [
@@ -23,49 +23,49 @@
         {
           "id": "stakeholders",
           "label": "**Stakeholders**",
-          "description": "Identifying, analyzing, and engaging stakeholders effectively throughout the project",
+          "description": "Identifying, analyzing, and engaging stakeholders throughout the project lifecycle",
           "required": true
         },
         {
           "id": "team",
           "label": "**Team**",
-          "description": "Building, developing, and managing an effective project team",
+          "description": "Building, developing, and managing an effective and collaborative project team",
           "required": true
         },
         {
           "id": "development_approach",
           "label": "**Development Approach & Life Cycle**",
-          "description": "Selecting and tailoring the development approach and project life cycle",
+          "description": "Selecting, tailoring, and adapting the development approach and project life cycle",
           "required": true
         },
         {
           "id": "planning",
           "label": "**Planning**",
-          "description": "Organizing and coordinating project activities, establishing baselines and plans",
+          "description": "Organizing and coordinating activities; establishing baselines, schedules, and plans",
           "required": true
         },
         {
           "id": "project_work",
           "label": "**Project Work**",
-          "description": "Establishing processes and performing work to deliver project outcomes",
+          "description": "Establishing processes and performing work to deliver intended project outcomes",
           "required": true
         },
         {
           "id": "delivery",
           "label": "**Delivery**",
-          "description": "Delivering the scope and quality that the project was undertaken to achieve",
+          "description": "Delivering the intended scope, quality, and value outcomes of the project",
           "required": true
         },
         {
           "id": "measurement",
           "label": "**Measurement**",
-          "description": "Assessing project performance and taking appropriate actions",
+          "description": "Assessing project performance, analyzing results, and taking appropriate corrective actions",
           "required": true
         },
         {
           "id": "uncertainty",
           "label": "**Uncertainty**",
-          "description": "Managing risks, ambiguity, and complexity throughout the project",
+          "description": "Managing risks, ambiguity, and complexity across the project lifecycle",
           "required": true
         }
       ]
@@ -73,25 +73,29 @@
     {
       "id": "measurement_status_reports",
       "type": "radio",
-      "text": "Generate or QA project status reports using AI:",
-      "hint": "For the Measurement domain specifically, do you use AI for this activity?",
+      "text": "Use AI to generate or quality-assure project status reports:",
+      "hint": "For the Measurement domain specifically, how often do you use AI for this activity?",
       "required": false,
       "options": [
-        { "label": "Yes, frequently", "value": "frequently" },
-        { "label": "Yes, occasionally", "value": "occasionally" },
-        { "label": "No", "value": "no" }
+        { "label": "Never", "value": "never" },
+        { "label": "Rarely", "value": "rarely" },
+        { "label": "Sometimes", "value": "sometimes" },
+        { "label": "Often", "value": "often" },
+        { "label": "Always", "value": "always" }
       ]
     },
     {
       "id": "measurement_forecast_overruns",
       "type": "radio",
       "text": "Use AI to forecast schedule or budget overruns:",
-      "hint": "For the Measurement domain specifically, do you use AI for this activity?",
+      "hint": "For the Measurement domain specifically, how often do you use AI for forecasting schedule or cost deviations?",
       "required": false,
       "options": [
-        { "label": "Yes, frequently", "value": "frequently" },
-        { "label": "Yes, occasionally", "value": "occasionally" },
-        { "label": "No", "value": "no" }
+        { "label": "Never", "value": "never" },
+        { "label": "Rarely", "value": "rarely" },
+        { "label": "Sometimes", "value": "sometimes" },
+        { "label": "Often", "value": "often" },
+        { "label": "Always", "value": "always" }
       ]
     }
   ]
