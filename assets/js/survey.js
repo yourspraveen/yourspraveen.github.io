@@ -244,6 +244,7 @@ class SurveyManager {
     this.surveyCode = null; // Will be set when user enters code
     this.baseUrl = config.baseUrl || '';
     this.questions = {};
+    this.sectionMetadata = {}; // Store section metadata from questions.json
     this.surveyState = {};
     this.currentStage = 'code-entry'; // Stages: code-entry, questions, thank-you
 
@@ -608,6 +609,10 @@ class SurveyManager {
         }
         const data = await response.json();
         this.questions[section.name] = data.questions || [];
+        // Store section metadata (title, description, etc.) from questions.json
+        if (data.section) {
+          this.sectionMetadata[section.name] = data.section;
+        }
       } catch (error) {
         console.error(`Error loading questions for ${section.name}:`, error);
         this.questions[section.name] = [];
@@ -632,6 +637,12 @@ class SurveyManager {
     // Update progress
     this.updateProgress();
 
+    // Update section subtitle in header
+    const sectionSubtitle = document.getElementById('section-subtitle');
+    if (sectionSubtitle) {
+      sectionSubtitle.textContent = `Section ${index + 1}: ${section.title}`;
+    }
+
     // Clear container
     this.questionsContainer.innerHTML = '';
 
@@ -640,6 +651,18 @@ class SurveyManager {
     sectionTitle.className = 'section-title';
     sectionTitle.textContent = section.title;
     this.questionsContainer.appendChild(sectionTitle);
+
+    // Add section description if available
+    // Prioritize description from questions.json (sectionMetadata), fall back to config.json
+    const metadata = this.sectionMetadata[section.name];
+    const description = (metadata && metadata.description) || section.description;
+
+    if (description) {
+      const sectionDescription = document.createElement('p');
+      sectionDescription.className = 'section-description text-muted';
+      sectionDescription.textContent = description;
+      this.questionsContainer.appendChild(sectionDescription);
+    }
 
     // Render questions
     if (sectionQuestions.length === 0) {
