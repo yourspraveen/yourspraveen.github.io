@@ -626,6 +626,11 @@ body.survey-active .header-section {
 
 [data-theme="dark"] .likert-table thead {
   background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  color: white;
+}
+
+[data-theme="dark"] .likert-table th {
+  color: white;
 }
 
 [data-theme="dark"] .likert-table tbody tr {
@@ -783,6 +788,7 @@ body.survey-active .header-section {
   text-align: center;
   font-weight: 600;
   font-size: 0.95rem;
+  color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
