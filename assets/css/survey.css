@@ -57,9 +57,9 @@
    =================================== */
 
 .survey-container {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 body.survey-active .header-section {
@@ -82,6 +82,9 @@ body.survey-active .header-section {
   background: linear-gradient(135deg, #008AFF 0%, #0077dd 100%);
   color: white;
   border-radius: var(--survey-radius);
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 [data-theme="dark"] .survey-header {
@@ -110,6 +113,9 @@ body.survey-active .header-section {
 
 .survey-progress {
   margin-bottom: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .survey-progress .progress {
@@ -145,6 +151,9 @@ body.survey-active .header-section {
   border-radius: var(--survey-radius);
   box-shadow: 0 2px 8px var(--survey-shadow);
   margin-bottom: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title {
@@ -172,6 +181,9 @@ body.survey-active .header-section {
   border-radius: var(--survey-radius);
   border: 2px solid var(--survey-border);
   margin-top: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .code-entry-section h3 {
@@ -236,6 +248,9 @@ body.survey-active .header-section {
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: var(--survey-radius);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #consent-content-container {
@@ -370,6 +385,9 @@ body.survey-active .header-section {
   justify-content: space-between;
   gap: 1rem;
   margin-top: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .survey-navigation .btn {
@@ -717,6 +735,9 @@ body.survey-active .header-section {
 
 .thank-you-content {
   padding: 3rem 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .success-icon {
@@ -755,6 +776,9 @@ body.survey-active .header-section {
   background: var(--survey-bg-alt);
   border-radius: var(--survey-radius);
   margin: 1rem 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .appendix-content h1 {
@@ -844,6 +868,36 @@ body.survey-active .header-section {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
+
+/* Tablet and Small Laptop Optimization */
+@media (max-width: 1200px) {
+  .likert-table thead th {
+    font-size: 0.75rem !important;
+    padding: 0.6rem 0.3rem !important;
+  }
+
+  .likert-table td.row-label {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .likert-table td.row-label strong {
+    font-size: 0.9rem;
+  }
+
+  .likert-table td.row-label .row-description {
+    font-size: 0.8rem;
+  }
+
+  .likert-table td.radio-cell {
+    padding: 0.6rem 0.2rem;
+  }
+
+  .likert-table th.row-header {
+    width: 20%;
+    min-width: 120px;
+  }
+}
 
 @media (max-width: 768px) {
   .survey-container {
