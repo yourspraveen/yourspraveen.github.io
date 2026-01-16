@@ -565,37 +565,66 @@ body.survey-active .header-section {
   margin: 1rem 0;
   border-radius: var(--survey-radius);
   box-shadow: 0 2px 8px var(--survey-shadow);
+  max-width: 100%;
 }
 
 .likert-table {
   width: 100%;
   border-collapse: collapse;
   background: var(--survey-bg);
-  min-width: 600px;
+  table-layout: fixed;
 }
 
 .likert-table thead {
-  background: linear-gradient(135deg, #008AFF 0%, #0077dd 100%);
-  color: white;
+  background: linear-gradient(135deg, #008AFF 0%, #0077dd 100%) !important;
+  background-color: #008AFF !important;
+  color: white !important;
+}
+
+.likert-table thead tr {
+  background: linear-gradient(135deg, #008AFF 0%, #0077dd 100%) !important;
+  background-color: #008AFF !important;
 }
 
 [data-theme="dark"] .likert-table thead {
-  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%) !important;
+  background-color: #1565c0 !important;
+  color: white !important;
+}
+
+[data-theme="dark"] .likert-table thead tr {
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%) !important;
+  background-color: #1565c0 !important;
+}
+
+.likert-table thead th {
+  padding: 0.75rem 0.5rem !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  color: white !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+  line-height: 1.3 !important;
+  vertical-align: middle !important;
 }
 
 .likert-table th {
-  padding: 1rem 0.75rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white !important;
+}
+
+[data-theme="dark"] .likert-table thead th {
+  color: white !important;
 }
 
 .likert-table th.row-header {
   text-align: left;
-  width: 35%;
-  min-width: 200px;
+  width: 25%;
+  min-width: 150px;
+  max-width: 250px;
+  color: var(--survey-text) !important;
 }
 
 .likert-table tbody tr {
@@ -616,30 +645,34 @@ body.survey-active .header-section {
 }
 
 .likert-table td.row-label {
-  padding: 1rem;
+  padding: 0.75rem 0.5rem;
   font-weight: 500;
   color: var(--survey-text);
   background: var(--survey-bg-alt);
   border-right: 2px solid var(--survey-border);
-  vertical-align: top;
+  vertical-align: middle;
+  font-size: 0.95rem;
+  word-wrap: break-word;
 }
 
 .likert-table td.row-label strong {
   display: block;
   margin-bottom: 0.25rem;
+  font-size: 0.95rem;
 }
 
 .likert-table td.row-label .row-description {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--survey-text-muted);
   font-weight: normal;
   display: block;
   margin-top: 0.25rem;
+  line-height: 1.4;
 }
 
 .likert-table td.radio-cell {
   text-align: center;
-  padding: 1rem 0.5rem;
+  padding: 0.75rem 0.25rem;
   border: 1px solid var(--survey-border);
   background: var(--survey-bg);
 }
@@ -878,19 +911,19 @@ body.survey-active .header-section {
 
   .likert-table td.row-label {
     padding: 1rem;
-    background: var(--survey-primary);
-    color: white;
+    background: var(--survey-primary) !important;
+    color: white !important;
     border-radius: 0;
     margin-bottom: 0.75rem;
   }
 
   .likert-table td.row-label strong {
-    color: white;
+    color: white !important;
     font-size: 1.05rem;
   }
 
   .likert-table td.row-label .row-description {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.9) !important;
     font-size: 0.9rem;
   }
 
