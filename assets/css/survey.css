@@ -10,15 +10,33 @@
   padding: 2rem 0;
 }
 
-/* Survey Header */
-.survey-header {
-  margin-bottom: 2rem;
-  text-align: center;
+/* Hide page header when survey is active */
+body.survey-active .header-section {
+  display: none;
 }
 
-.survey-header h1 {
-  color: #333;
+/* Compact survey header */
+.survey-header {
   margin-bottom: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+  background: linear-gradient(135deg, #008AFF 0%, #0077dd 100%);
+  color: white;
+  border-radius: 0.5rem;
+  margin-top: -1rem;
+}
+
+.survey-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.survey-header h1,
+.survey-header #survey-title-main {
+  color: white;
+  margin-bottom: 0;
+  font-size: 1.5rem;
 }
 
 .survey-description {
@@ -252,7 +270,7 @@
 }
 
 .survey-progress .progress-bar {
-  background-color: #008AFF;
+  background-color: #28a745;
   transition: width 0.3s ease;
   font-weight: 600;
 }
@@ -465,7 +483,16 @@
   color: #e0e0e0;
 }
 
+[data-theme="dark"] .survey-header {
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+}
+
 [data-theme="dark"] .survey-header h1,
+[data-theme="dark"] .survey-header h2,
+[data-theme="dark"] .survey-header #survey-title-main {
+  color: white;
+}
+
 [data-theme="dark"] .section-title,
 [data-theme="dark"] .survey-question .form-label,
 [data-theme="dark"] .code-entry-section h3 {

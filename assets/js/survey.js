@@ -566,12 +566,15 @@ class SurveyManager {
     switch (stage) {
       case 'code-entry':
         if (this.codeEntryStage) this.codeEntryStage.style.display = 'block';
+        document.body.classList.remove('survey-active');
         break;
       case 'questions':
         if (this.questionsStage) this.questionsStage.style.display = 'block';
+        document.body.classList.add('survey-active');
         break;
       case 'thank-you':
         if (this.thankYouStage) this.thankYouStage.style.display = 'block';
+        document.body.classList.remove('survey-active');
         break;
     }
 
@@ -636,12 +639,6 @@ class SurveyManager {
 
     // Update progress
     this.updateProgress();
-
-    // Update section subtitle in header
-    const sectionSubtitle = document.getElementById('section-subtitle');
-    if (sectionSubtitle) {
-      sectionSubtitle.textContent = `Section ${index + 1}: ${section.title}`;
-    }
 
     // Clear container
     this.questionsContainer.innerHTML = '';
