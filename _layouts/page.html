@@ -4,9 +4,9 @@ layout: base
 
 {% include header.html type="page" %}
 
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+<main class="{% if page.full-width %} container-fluid {% else %} container-fluid {% endif %} px-3 px-md-4">
   <div class="row">
-    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+    <div class="{% if page.full-width %} col-12 {% else %} col-12 col-xxl-10 offset-xxl-1 {% endif %}">
       {% if page.before-content %}
         <div class="before-content">
           {% for file in page.before-content %}
@@ -15,7 +15,9 @@ layout: base
         </div>
       {% endif %}
 
-      {{ content }}
+      <div class="page-content {% if page.content-width == 'narrow' %}content-narrow{% endif %}">
+        {{ content }}
+      </div>
 
       {% if page.after-content %}
         <div class="after-content">

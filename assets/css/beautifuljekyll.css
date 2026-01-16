@@ -478,8 +478,24 @@ footer .footer-custom-content {
 
 /* --- Post preview (feed) --- */
 
+/* Page Content Width Control */
+.page-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-content.content-narrow {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .posts-list {
     margin: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post-preview {
@@ -790,10 +806,16 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 .pagination {
   margin: 0.625rem 0 0;
   justify-content: space-between;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pagination.blog-pager {
   margin-top: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pagination .page-item.next {

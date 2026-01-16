@@ -5,6 +5,7 @@ subtitle: Security Engineering Leader | Cryptography & Post-Quantum Specialist
 meta-title: "Resume - Praveen K Palaniswamy | Security Engineering & Cryptography Leader"
 meta-description: "Professional resume of Praveen K Palaniswamy - Security Engineering Leader specializing in cryptography, post-quantum encryption, hybrid security systems, and engineering management"
 permalink: /resume/
+content-width: narrow
 ---
 
 <!--div style="text-align: center; margin-bottom: 2rem;">
