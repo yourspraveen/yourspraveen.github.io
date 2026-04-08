@@ -37,3 +37,7 @@ No personally identifiable information is collected at any point. All responses 
 
 **Consent Statement:**
 *Check the box below to confirm your consent, then click **Start Survey** to begin.*
+
+---
+
+*PMBOK® is a registered trademark of the Project Management Institute, Inc. This study is conducted independently and is not affiliated with or endorsed by PMI.*
