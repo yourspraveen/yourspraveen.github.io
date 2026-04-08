@@ -24,10 +24,10 @@ Your participation is entirely voluntary. You may withdraw at any time without c
 There are no more than minimal risks associated with this study. There is no direct individual benefit; however, findings will contribute to the body of knowledge on AI adoption in project management and inform future practice and training.
 
 **Compensation:**
-No compensation will be provided for participation.
+No compensation will be provided for participation. The researchers derive no financial benefit from this study. Data collected will be used solely for academic trend analysis and publication in technical research papers, and will not be sold to or shared with any commercial entity.
 
 **Confidentiality:**
-No personally identifiable information will be collected beyond this consent. All responses will be anonymized and stored on password-protected systems accessible only to the researchers. Research records will be retained for three years following study completion, then securely deleted.
+No personally identifiable information is collected at any point. All responses are fully anonymized and stored on password-protected systems accessible only to the researchers. Research records will be retained for three years following study completion, then securely deleted.
 
 **Contacts and Questions:**
 - Ragu Ragunathan — [ragu.ragunathan@captechu.edu](mailto:ragu.ragunathan@captechu.edu) | +1 (240) 499-4613
@@ -36,6 +36,4 @@ No personally identifiable information will be collected beyond this consent. Al
 ---
 
 **Consent Statement:**
-I have read and understood the above information. I understand my participation is voluntary and I may withdraw at any time. I agree to participate in this study.
-
-*By clicking **"I Agree"** below, you confirm your consent to participate.*
+*Check the box below to confirm your consent, then click **Start Survey** to begin.*
