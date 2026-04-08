@@ -21,13 +21,16 @@ If you agree to participate, you will complete an online survey of approximately
 Your participation is entirely voluntary. You may withdraw at any time without consequence to any current or future professional relationships.
 
 **Risks and Benefits:**
-There are no more than minimal risks associated with this study. There is no direct individual benefit; however, findings will contribute to the body of knowledge on AI adoption in project management and inform future practice and training.
+There are no more than minimal risks associated with this study. There is no direct individual benefit; however, findings will contribute to the body of knowledge on AI adoption in project management and inform future practice and training. A summary of findings may be made available upon request once the study is complete.
 
 **Compensation:**
 No compensation will be provided for participation. The researchers derive no financial benefit from this study. Data collected will be used solely for academic trend analysis and publication in technical research papers, and will not be sold to or shared with any commercial entity.
 
 **Confidentiality:**
-No personally identifiable information is collected at any point. All responses are fully anonymized and stored on password-protected systems accessible only to the researchers. Research records will be retained for three years following study completion, then securely deleted.
+No personally identifiable information is collected at any point. All responses are fully anonymized and stored on password-protected systems accessible only to the researchers. No data that could identify you is collected, stored, or transferred across jurisdictions. Research records will be retained for three years following study completion, then securely deleted.
+
+**Independent Research:**
+This study is conducted independently by the researchers and has not been submitted for formal Institutional Review Board (IRB) review. Participation is entirely voluntary and you may withdraw at any time.
 
 **Contacts and Questions:**
 - Ragu Ragunathan — [ragu.ragunathan@captechu.edu](mailto:ragu.ragunathan@captechu.edu) | +1 (240) 499-4613
