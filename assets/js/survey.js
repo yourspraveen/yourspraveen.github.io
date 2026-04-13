@@ -56,9 +56,16 @@ class MarkdownParser {
       return text; // Strip dangerous links, keep the text
     });
 
+    // Ordered lists (before unordered to avoid conflicts)
+    html = html.replace(/^\d+\.\s+(.*$)/gim, '<li data-ol>$1</li>');
+    html = html.replace(/((?:<li data-ol>.*<\/li>\n?)+)/gim, '<ol>$1</ol>');
+
     // Unordered lists
     html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
     html = html.replace(/((?:<li>.*<\/li>\n?)+)/gim, '<ul>$1</ul>');
+
+    // Clean up ordered list markers (after unordered list processing to avoid re-wrapping)
+    html = html.replace(/ data-ol/g, '');
 
     // Horizontal rules
     html = html.replace(/^---$/gm, '<hr>');
@@ -83,7 +90,7 @@ class MarkdownParser {
 function safeHTML(html) {
   if (typeof DOMPurify !== 'undefined') {
     return DOMPurify.sanitize(html, {
-      ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'p', 'strong', 'em', 'a', 'ul', 'li', 'hr', 'br'],
+      ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'p', 'strong', 'em', 'a', 'ol', 'ul', 'li', 'hr', 'br'],
       ALLOWED_ATTR: ['href', 'target', 'rel'],
       ALLOW_DATA_ATTR: false
     });
