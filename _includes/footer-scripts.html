@@ -10,7 +10,10 @@
     {% if js contains 'jquery' %}
       <script>
         if (typeof jQuery == 'undefined') {
-          document.write('<script src="{{ js | relative_url }}" defer></scr' + 'ipt>');
+          var s = document.createElement('script');
+          s.src = '{{ js | relative_url }}';
+          s.defer = true;
+          document.body.appendChild(s);
         }
       </script>
     {% else %}

@@ -47,8 +47,14 @@ class MarkdownParser {
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
 
-    // Links
-    html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+    // Links — validate protocol to prevent javascript: and data: XSS
+    html = html.replace(/\[(.*?)\]\((.*?)\)/g, function(match, text, url) {
+      var normalizedUrl = url.trim().toLowerCase();
+      if (normalizedUrl.startsWith('http://') || normalizedUrl.startsWith('https://') || normalizedUrl.startsWith('mailto:')) {
+        return '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + text + '</a>';
+      }
+      return text; // Strip dangerous links, keep the text
+    });
 
     // Unordered lists
     html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
@@ -68,6 +74,24 @@ class MarkdownParser {
 
     return html;
   }
+}
+
+/**
+ * Sanitize HTML output before innerHTML assignment.
+ * Uses DOMPurify when available, falls back to stripping all tags.
+ */
+function safeHTML(html) {
+  if (typeof DOMPurify !== 'undefined') {
+    return DOMPurify.sanitize(html, {
+      ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'p', 'strong', 'em', 'a', 'ul', 'li', 'hr', 'br'],
+      ALLOWED_ATTR: ['href', 'target', 'rel'],
+      ALLOW_DATA_ATTR: false
+    });
+  }
+  // Fallback: escape all HTML if DOMPurify isn't loaded
+  var div = document.createElement('div');
+  div.textContent = html;
+  return div.innerHTML;
 }
 
 // Security Utilities
@@ -384,7 +408,7 @@ class SurveyManager {
 
       const container = document.getElementById('consent-content-container');
       if (container) {
-        container.innerHTML = html;
+        container.innerHTML = safeHTML(html);
       }
 
       // Show the consent section (which includes the start button)
@@ -426,7 +450,7 @@ class SurveyManager {
 
       const container = document.getElementById('appendix-content-container');
       if (container) {
-        container.innerHTML = html;
+        container.innerHTML = safeHTML(html);
       }
     } catch (error) {
       console.error('Error loading appendix:', error);
@@ -738,7 +762,7 @@ class SurveyManager {
       labelTd.className = 'row-label';
 
       const labelContent = document.createElement('div');
-      labelContent.innerHTML = row.label;
+      labelContent.textContent = row.label;
       labelTd.appendChild(labelContent);
 
       if (row.description) {
@@ -814,7 +838,13 @@ class SurveyManager {
     const label = document.createElement('label');
     label.className = 'form-label';
     label.htmlFor = `q_${question.id}`;
-    label.innerHTML = question.text + (question.required ? ' <span class="text-danger">*</span>' : '');
+    label.textContent = question.text;
+    if (question.required) {
+      var asterisk = document.createElement('span');
+      asterisk.className = 'text-danger';
+      asterisk.textContent = ' *';
+      label.appendChild(asterisk);
+    }
     questionDiv.appendChild(label);
 
     // Hint text
