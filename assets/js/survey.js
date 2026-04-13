@@ -67,13 +67,16 @@ class MarkdownParser {
     // Clean up ordered list markers (after unordered list processing to avoid re-wrapping)
     html = html.replace(/ data-ol/g, '');
 
+    // Restore paragraph boundaries consumed by list grouping regex
+    html = html.replace(/(<\/(?:ol|ul)>)\n(?!\n)/g, '$1\n\n');
+
     // Horizontal rules
     html = html.replace(/^---$/gm, '<hr>');
 
     // Line breaks - convert double newlines to paragraphs
     html = html.split('\n\n').map(para => {
-      // Don't wrap if already wrapped in a tag
-      if (para.match(/^<[h|u|o|l|d]/)) {
+      // Don't wrap if already wrapped in a block-level tag
+      if (para.match(/^<(?:h[1-6]|ul|ol|li|div|hr)/)) {
         return para;
       }
       return '<p>' + para + '</p>';
