@@ -245,6 +245,18 @@ Recognized for outstanding team performance and successful delivery of critical 
 
 ## Technical Competition Judging
 
+**HooHacks 2026 - Mentor & Judge** | _Mar 2026_
+Served as mentor and judge for HooHacks 2026 at the University of Virginia in Charlottesville, VA. Mentored students on project development and evaluated submissions in a science-fair style expo.
+[View Certificate](/assets/certs/HooHacks2026.pdf)
+
+**Make OHI/O 12 - Official Judge** | _Mar 2026_
+Served as official judge for Make OHI/O 12, The Ohio State University's hackathon. Provided expertise to guide participants and evaluate innovative student projects.
+[View Letter of Participation](/assets/certs/Praveen%20Palaniswamy%20MakeOHIO%202026%20Letter%20of%20Participation.pdf) | [View Certificate](/assets/certs/Praveen%20Palaniswamy%20Make%20OHIO%202026%20Volunteer%20Certificates.pdf)
+
+**HackViolet 2026 - Official Judge** | _Feb 2026_
+Served as official judge for HackViolet 2026, Virginia Tech's 24-hour hackathon. Evaluated innovative student projects and provided constructive feedback to participants.
+[View Certificate](/assets/certs/HackViolet-2026.jpg)
+
 **DECA Inc. - Competitive Event Judge** | _Nov 2025_
 Served as competitive event judge at The Ultimate DECA Power Trip in Arlington, VA, evaluating student presentations in marketing, finance, hospitality and management. Provided guidance and professional feedback to emerging leaders and entrepreneurs.
 [View Certificate](/assets/certs/Deca-WashingtonDC.pdf)
