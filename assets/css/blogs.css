@@ -7,16 +7,16 @@
   margin-bottom: 2rem;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid #e1e4e8;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--card-border, #D2D2D7);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow, 0 1px 3px rgba(0, 0, 0, 0.06));
 }
 
 .tag-filter-label {
   font-weight: 600;
   margin-bottom: 0.75rem;
   font-size: 1rem;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
 }
 
 .tag-filter-buttons {
@@ -27,9 +27,9 @@
 
 .tag-filter-btn {
   padding: 0.5rem 1rem;
-  border: 2px solid #e1e4e8;
+  border: 1px solid var(--card-border, #D2D2D7);
   background: #ffffff;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 500;
@@ -39,18 +39,18 @@
 }
 
 .tag-filter-btn:hover {
-  border-color: #008AFF;
-  color: #008AFF;
-  background: rgba(0, 138, 255, 0.05);
+  border-color: var(--accent-col, #0066CC);
+  color: var(--accent-col, #0066CC);
+  background: rgba(0, 102, 204, 0.05);
   transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 138, 255, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2);
 }
 
 .tag-filter-btn.active {
-  background: #008AFF;
+  background: var(--accent-col, #0066CC);
   color: #ffffff;
-  border-color: #008AFF;
-  box-shadow: 0 2px 4px rgba(0, 138, 255, 0.3);
+  border-color: var(--accent-col, #0066CC);
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.3);
 }
 
 .tag-filter-btn.tag-more-btn {
@@ -62,7 +62,7 @@
 
 .tag-filter-btn.tag-more-btn:hover {
   background: #e0e0e0;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
   border-color: #999;
   transform: translateY(-2px);
 }
@@ -70,7 +70,7 @@
 .tag-filter-all-tags {
   flex-wrap: wrap;
   padding-top: 0.5rem;
-  border-top: 1px solid #e1e4e8;
+  border-top: 1px solid var(--card-border, #D2D2D7);
   animation: slideDown 0.3s ease;
 }
 
@@ -96,18 +96,20 @@
 /* Blog Card */
 .blog-card {
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid #e1e4e8;
+  border: 1px solid var(--card-border, #D2D2D7);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow, 0 1px 3px rgba(0, 0, 0, 0.06));
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
 }
 
 .blog-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  border-color: #008AFF;
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover, 0 10px 30px rgba(0, 0, 0, 0.08)), 0 0 0 1px rgba(0, 102, 204, 0.1);
+  border-color: var(--accent-col, #0066CC);
 }
 
 .blog-card-link {
@@ -160,7 +162,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -213,8 +215,8 @@
 .blog-card-tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background: rgba(0, 138, 255, 0.1);
-  color: #008AFF;
+  background: var(--warm-col-light, rgba(212, 135, 10, 0.08));
+  color: var(--warm-col, #D4870A);
   border-radius: 12px;
   font-size: 0.75rem;
   font-weight: 500;
@@ -245,7 +247,7 @@
 
 .no-posts-message h3 {
   font-size: 1.5rem;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
   margin-bottom: 0.5rem;
 }
 
@@ -264,9 +266,9 @@
 }
 
 .blog-pagination .page-item .page-link {
-  border: 2px solid #e1e4e8;
+  border: 1px solid var(--card-border, #D2D2D7);
   background: #ffffff;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
   border-radius: 8px;
   padding: 0.5rem 0.75rem;
   font-weight: 500;
@@ -274,17 +276,17 @@
 }
 
 .blog-pagination .page-item .page-link:hover {
-  border-color: #008AFF;
-  background: rgba(0, 138, 255, 0.05);
-  color: #008AFF;
+  border-color: var(--accent-col, #0066CC);
+  background: rgba(0, 102, 204, 0.05);
+  color: var(--accent-col, #0066CC);
   transform: translateY(-2px);
 }
 
 .blog-pagination .page-item.active .page-link {
-  background: #008AFF;
+  background: var(--accent-col, #0066CC);
   color: #ffffff;
-  border-color: #008AFF;
-  box-shadow: 0 2px 4px rgba(0, 138, 255, 0.3);
+  border-color: var(--accent-col, #0066CC);
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.3);
 }
 
 /* ========================================
@@ -360,8 +362,8 @@
 }
 
 [data-theme="dark"] .blog-card-tag {
-  background: rgba(100, 181, 246, 0.15);
-  color: #64b5f6;
+  background: var(--warm-col-light, rgba(245, 166, 35, 0.12));
+  color: var(--warm-col, #F5A623);
 }
 
 [data-theme="dark"] .blog-card-tag-more {

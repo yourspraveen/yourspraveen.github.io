@@ -3,11 +3,11 @@
     font-size: 1.1875rem;
     margin-top: 1.25rem;
     width: 100%;
-    border: 1px solid #e1e4e8;
-    border-radius: 8px;
+    border: 1px solid var(--card-border, #D2D2D7);
+    border-radius: 12px;
     padding: 1.5rem;
     background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow, 0 1px 3px rgba(0, 0, 0, 0.06));
     transition: all 0.3s ease;
     margin-left: auto;
     margin-right: auto;

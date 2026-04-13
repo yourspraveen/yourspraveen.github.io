@@ -11,9 +11,9 @@
   margin-bottom: 2rem;
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid #e1e4e8;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--card-border, #D2D2D7);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow, 0 1px 3px rgba(0, 0, 0, 0.06));
   font-size: 0.95rem;
   color: #666;
   max-width: 1200px;
@@ -33,14 +33,14 @@
 .post-reading-time i,
 .post-author i {
   font-size: 1rem;
-  color: #008AFF;
+  color: var(--accent-col, #0066CC);
 }
 
 /* Blog Post Content */
 .blog-post {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -51,8 +51,8 @@
   margin-bottom: 1rem;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #2c3e50;
-  border-bottom: 2px solid #e1e4e8;
+  color: var(--text-col, #1D1D1F);
+  border-bottom: 2px solid var(--card-border, #D2D2D7);
   padding-bottom: 0.5rem;
 }
 
@@ -61,7 +61,7 @@
   margin-bottom: 0.75rem;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #34495e;
+  color: var(--text-col, #1D1D1F);
 }
 
 .blog-post h4 {
@@ -69,7 +69,7 @@
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #34495e;
+  color: var(--text-col, #1D1D1F);
 }
 
 .blog-post p {
@@ -91,8 +91,8 @@
 .blog-post blockquote {
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
-  border-left: 4px solid #008AFF;
-  background: rgba(0, 138, 255, 0.05);
+  border-left: 4px solid var(--accent-col, #0066CC);
+  background: rgba(0, 102, 204, 0.05);
   border-radius: 0 8px 8px 0;
 }
 
@@ -105,7 +105,7 @@
 .blog-post code {
   padding: 0.2rem 0.4rem;
   background: rgba(0, 0, 0, 0.05);
-  border: 1px solid #e1e4e8;
+  border: 1px solid var(--card-border, #D2D2D7);
   border-radius: 4px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.9em;
@@ -116,7 +116,7 @@
   margin: 1.5rem 0;
   padding: 1.5rem;
   background: #f6f8fa;
-  border: 1px solid #e1e4e8;
+  border: 1px solid var(--card-border, #D2D2D7);
   border-radius: 8px;
   overflow-x: auto;
 }
@@ -141,7 +141,7 @@
   width: 100%;
   margin: 1.5rem 0;
   border-collapse: collapse;
-  border: 1px solid #e1e4e8;
+  border: 1px solid var(--card-border, #D2D2D7);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -149,20 +149,20 @@
 .blog-post th,
 .blog-post td {
   padding: 0.75rem;
-  border: 1px solid #e1e4e8;
+  border: 1px solid var(--card-border, #D2D2D7);
   text-align: left;
 }
 
 .blog-post th {
   background: #f6f8fa;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--text-col, #1D1D1F);
 }
 
 .blog-post hr {
   margin: 2.5rem 0;
   border: 0;
-  border-top: 2px solid #e1e4e8;
+  border-top: 2px solid var(--card-border, #D2D2D7);
 }
 
 /* Table of Contents Styling */
@@ -172,8 +172,8 @@
 
 .blog-post > ul:first-of-type,
 .blog-post > h2:contains("Table of Contents") + ul {
-  background: rgba(0, 138, 255, 0.05);
-  border: 1px solid #e1e4e8;
+  background: rgba(0, 102, 204, 0.05);
+  border: 1px solid var(--card-border, #D2D2D7);
   border-radius: 8px;
   padding: 1.5rem 2rem;
   margin: 1.5rem 0 2rem;
@@ -187,7 +187,7 @@
 
 .blog-post > ul:first-of-type a,
 .blog-post > h2:contains("Table of Contents") + ul a {
-  color: #008AFF;
+  color: var(--accent-col, #0066CC);
   text-decoration: none;
   font-weight: 500;
 }
@@ -195,7 +195,7 @@
 .blog-post > ul:first-of-type a:hover,
 .blog-post > h2:contains("Table of Contents") + ul a:hover {
   text-decoration: underline;
-  color: #0085A1;
+  color: var(--hover-col, #0051A3);
 }
 
 /* Summary Section Styling */
@@ -205,8 +205,8 @@
   font-weight: 500;
   color: #555;
   padding: 1rem 1.5rem;
-  background: rgba(0, 138, 255, 0.05);
-  border-left: 4px solid #008AFF;
+  background: rgba(0, 102, 204, 0.05);
+  border-left: 4px solid var(--accent-col, #0066CC);
   border-radius: 0 8px 8px 0;
   margin: 1.5rem 0;
 }
@@ -215,12 +215,12 @@
 .blog-tags {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
-  border-top: 2px solid #e1e4e8;
+  border-top: 2px solid var(--card-border, #D2D2D7);
 }
 
 .blog-tags span {
   font-weight: 600;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
   margin-right: 0.5rem;
 }
 
@@ -228,8 +228,8 @@
   display: inline-block;
   padding: 0.4rem 1rem;
   margin: 0.25rem;
-  background: rgba(0, 138, 255, 0.1);
-  color: #008AFF;
+  background: var(--warm-col-light, rgba(212, 135, 10, 0.08));
+  color: var(--warm-col, #D4870A);
   border-radius: 20px;
   text-decoration: none;
   font-size: 0.9rem;
@@ -238,10 +238,10 @@
 }
 
 .blog-tags a:hover {
-  background: #008AFF;
+  background: var(--warm-col, #D4870A);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 138, 255, 0.3);
+  box-shadow: 0 2px 4px rgba(212, 135, 10, 0.3);
 }
 
 /* Blog Pager (Previous/Next) */
@@ -263,9 +263,9 @@
   gap: 0.5rem;
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.6);
-  border: 2px solid #e1e4e8;
+  border: 2px solid var(--card-border, #D2D2D7);
   border-radius: 8px;
-  color: #404040;
+  color: var(--text-col, #1D1D1F);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -273,11 +273,11 @@
 }
 
 .blog-pager .page-link:hover {
-  border-color: #008AFF;
-  color: #008AFF;
-  background: rgba(0, 138, 255, 0.05);
+  border-color: var(--accent-col, #0066CC);
+  color: var(--accent-col, #0066CC);
+  background: rgba(0, 102, 204, 0.05);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 138, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 102, 204, 0.2);
 }
 
 .blog-pager .previous .page-link {
@@ -386,14 +386,14 @@
 }
 
 [data-theme="dark"] .blog-tags a {
-  background: rgba(100, 181, 246, 0.15);
-  color: #64b5f6;
+  background: var(--warm-col-light, rgba(245, 166, 35, 0.12));
+  color: var(--warm-col, #F5A623);
 }
 
 [data-theme="dark"] .blog-tags a:hover {
-  background: #64b5f6;
-  color: #1a1a1a;
-  box-shadow: 0 2px 4px rgba(100, 181, 246, 0.3);
+  background: var(--warm-col, #F5A623);
+  color: #161617;
+  box-shadow: 0 2px 4px rgba(245, 166, 35, 0.3);
 }
 
 [data-theme="dark"] .blog-pager .page-link {

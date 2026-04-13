@@ -2,24 +2,32 @@
 
 /* Force font rendering optimization to prevent font flash */
 @font-face {
-  font-family: 'Lora-fallback';
-  src: local('Times New Roman'), local('Georgia');
+  font-family: 'PlayfairDisplay-fallback';
+  src: local('Georgia'), local('Times New Roman');
   ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  size-adjust: 105%;
+}
+
+@font-face {
+  font-family: 'Inter-fallback';
+  src: local('-apple-system'), local('Segoe UI'), local('Arial');
+  ascent-override: 100%;
   descent-override: 25%;
   line-gap-override: 0%;
   size-adjust: 100%;
 }
 
-@font-face {
-  font-family: 'OpenSans-fallback';
-  src: local('Arial'), local('Helvetica');
-  ascent-override: 105%;
-  descent-override: 35%;
-  line-gap-override: 0%;
-  size-adjust: 95%;
+/* Suppress ALL transitions during page load to prevent dark-mode flash */
+html.no-transitions,
+html.no-transitions *,
+html.no-transitions *::before,
+html.no-transitions *::after {
+  transition: none !important;
 }
 
-/* Enable smooth transitions for theme changes */
+/* Enable smooth transitions for theme changes (only after page load) */
 body,
 .navbar,
 .navbar-custom,
@@ -117,37 +125,16 @@ select,
    LIGHT MODE ENHANCEMENTS
    ======================================== */
 
-/* Light mode navbar styling - enhanced to match dark mode polish */
+/* Light mode navbar styling - glassmorphism */
 .navbar-custom {
   position: relative;
-  border-bottom: 2px solid var(--navbar-border-col);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Lighten navbar background image in light mode for better text contrast */
-.navbar-custom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  filter: brightness(1.15) contrast(0.95) saturate(0.9);
-  z-index: -1;
-}
-
-/* Ensure navbar content is above the background */
-.navbar-custom > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Light mode footer styling - enhanced, extra slim, and 3-column layout */
+/* Light mode footer styling - dark band, extra slim, and 3-column layout */
 footer {
   position: relative;
-  border-top: 2px solid var(--navbar-border-col);
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  border-top: none;
+  box-shadow: none;
   padding: 0.5rem 0 !important;
   margin-top: 2rem !important;
   font-size: 0.875rem;
@@ -350,33 +337,50 @@ footer a {
 /* Dark mode color scheme */
 [data-theme="dark"] {
   /* Main colors */
-  --page-col: #1a1a1a;
-  --text-col: #e0e0e0;
-  --link-col: #64b5f6;
-  --hover-col: #90caf9;
-  --mid-col: #a0a0a0;
+  --page-col: #161617;
+  --text-col: #E5E5E7;
+  --link-col: #5AC8FA;
+  --hover-col: #70D4FF;
+  --mid-col: #98989D;
 
-  /* Navbar colors - brighter for better visibility */
-  --navbar-col: #1f1f1f;
-  --navbar-text-col: #ffffff;
-  --navbar-border-col: #505050;
+  /* Navbar colors */
+  --navbar-col: #1C1C1E;
+  --navbar-text-col: #F5F5F7;
+  --navbar-border-col: #38383A;
 
-  /* Footer colors - brighter for better visibility */
-  --footer-col: #1f1f1f;
-  --footer-text-col: #d0d0d0;
-  --footer-link-col: #ffffff;
-  --footer-hover-col: #90caf9;
+  /* Footer colors */
+  --footer-col: #1C1C1E;
+  --footer-text-col: #98989D;
+  --footer-link-col: #F5F5F7;
+  --footer-hover-col: #5AC8FA;
+
+  /* Accent and component variables */
+  --accent-col: #5AC8FA;
+  --accent-gradient: linear-gradient(135deg, #5AC8FA, #0A84FF);
+  --warm-col: #F5A623;
+  --warm-col-light: rgba(245, 166, 35, 0.12);
+  --warm-col-hover: #FFB940;
+  --card-border: #38383A;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.12);
+  --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* footer dark band */
+  --footer-band-bg: #111114;
+  --footer-band-text: #8E8E93;
+  --footer-band-link: #B0B0B8;
+  --footer-band-hover: #5AC8FA;
+  --footer-band-icon: #E5E5E7;
 
   /* Custom colors for specific elements */
-  --achievement-bg: #2d2d2d;
-  --achievement-border: #404040;
-  --code-bg: #2d2d2d;
-  --code-border: #404040;
-  --input-bg: #2d2d2d;
-  --input-border: #404040;
-  --input-text: #e0e0e0;
-  --dropdown-bg: #2d2d2d;
-  --dropdown-border: #404040;
+  --achievement-bg: #1C1C1E;
+  --achievement-border: #38383A;
+  --code-bg: #1C1C1E;
+  --code-border: #38383A;
+  --input-bg: #1C1C1E;
+  --input-border: #38383A;
+  --input-text: #E5E5E7;
+  --dropdown-bg: #1C1C1E;
+  --dropdown-border: #38383A;
 }
 
 /* Ensure body background updates */
@@ -407,23 +411,20 @@ footer a {
   z-index: 1;
 }
 
-/* Update navbar styling for dark mode */
+/* Update navbar styling for dark mode - glassmorphism */
 [data-theme="dark"] .navbar-custom {
-  background-color: var(--navbar-col);
-  border-bottom-color: var(--navbar-border-col);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* Darken navbar background image in dark mode - override light mode filter */
-[data-theme="dark"] .navbar-custom::before {
-  filter: brightness(0.3) contrast(1.2) grayscale(0.4);
+  background-color: rgba(22, 22, 23, 0.75);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom-color: rgba(56, 56, 58, 0.5);
+  box-shadow: none;
 }
 
 [data-theme="dark"] .navbar-custom .navbar-brand,
 [data-theme="dark"] .navbar-custom .navbar-nav .nav-link {
   color: var(--navbar-text-col);
   font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  text-shadow: none;
 }
 
 [data-theme="dark"] .navbar-custom .navbar-brand {
@@ -456,17 +457,17 @@ footer a {
 /* Dropdown menu dark mode */
 [data-theme="dark"] .dropdown-menu {
   background-color: var(--navbar-col);
-  border: 2px solid var(--navbar-border-col);
+  border: 1px solid var(--navbar-border-col);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] .dropdown-item {
-  color: #ffffff;
+  color: #F5F5F7;
 }
 
 [data-theme="dark"] .dropdown-item:hover,
 [data-theme="dark"] .dropdown-item:focus {
-  background-color: #404040;
+  background-color: #38383A;
   color: var(--hover-col);
 }
 
@@ -474,48 +475,67 @@ footer a {
   border-top-color: var(--navbar-border-col);
 }
 
-/* Footer styling for dark mode */
+/* Footer styling for dark mode — deeper dark band */
 [data-theme="dark"] footer {
-  background-color: var(--footer-col);
-  border-top-color: var(--navbar-border-col);
-  color: var(--footer-text-col);
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* Darken footer background image in dark mode - override light mode filter */
-[data-theme="dark"] footer::before {
-  filter: brightness(0.3) contrast(1.2) grayscale(0.4);
+  background-color: var(--footer-band-bg);
+  border-top: none;
+  color: var(--footer-band-text);
+  box-shadow: none;
 }
 
 [data-theme="dark"] footer a {
-  color: var(--footer-link-col);
+  color: var(--footer-band-link);
   font-weight: 500;
 }
 
 [data-theme="dark"] footer a:hover,
 [data-theme="dark"] footer a:focus {
-  color: var(--hover-col);
+  color: var(--footer-band-hover);
   text-decoration: underline;
 }
 
 [data-theme="dark"] footer .copyright {
-  color: var(--footer-text-col);
+  color: var(--footer-band-text);
 }
 
 [data-theme="dark"] footer p,
 [data-theme="dark"] footer li {
-  color: var(--footer-text-col);
+  color: var(--footer-band-text);
 }
 
 /* Social media icons in footer - better visibility */
 [data-theme="dark"] footer .social-links a {
-  color: var(--footer-link-col);
+  color: var(--footer-band-link);
   opacity: 0.9;
 }
 
 [data-theme="dark"] footer .social-links a:hover {
-  color: var(--hover-col);
+  color: var(--footer-band-hover);
   opacity: 1;
+}
+
+/* Post preview cards dark mode */
+[data-theme="dark"] .post-preview {
+  background-color: var(--page-col);
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+[data-theme="dark"] .post-preview:hover {
+  box-shadow: var(--card-shadow-hover), 0 0 0 1px rgba(90, 200, 250, 0.15);
+  border-color: var(--accent-col);
+}
+
+[data-theme="dark"] .post-preview:last-child {
+  border-color: var(--card-border);
+}
+
+/* Dark mode gradient heading */
+[data-theme="dark"] .intro-header .page-heading h1 {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Form elements dark mode */

@@ -147,17 +147,17 @@ remove-ads: true
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
 # Light mode colors (default)
-page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+page-col: "#FBFBFD"
+text-col: "#1D1D1F"
+link-col: "#0066CC"
+hover-col: "#0051A3"
+navbar-col: "#F5F5F7"
+navbar-text-col: "#1D1D1F"
+navbar-border-col: "#D2D2D7"
+footer-col: "#F5F5F7"
+footer-text-col: "#6E6E73"
+footer-link-col: "#1D1D1F"
+footer-hover-col: "#0066CC"
 
 # Dark mode colors (applied when dark mode is active)
 # These are defined in /assets/css/darkmode.css and override the light mode colors
@@ -177,8 +177,8 @@ footer-hover-col: "#0085A1"
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
 
-navbar-img: "/assets/img/bgimage.png"
-footer-img: "/assets/img/bgimage.png"
+#navbar-img: "/assets/img/bgimage.png"
+#footer-img: "/assets/img/bgimage.png"
 #page-img: "/assets/img/bgimage.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
@@ -189,8 +189,8 @@ footer-img: "/assets/img/bgimage.png"
 #  - "/assets/css/custom-styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-#site-js:
-#  - "/assets/js/custom-script.js"
+site-js:
+  - "/assets/js/scroll-reveal.js"
 
 #################################
 # --- Web Analytics Section --- #

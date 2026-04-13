@@ -1,7 +1,7 @@
 /* Define default light mode achievement colors */
 :root {
-  --achievement-bg: #f6f8fa;
-  --achievement-border: #e1e4e8;
+  --achievement-bg: #F5F5F7;
+  --achievement-border: var(--card-border, #D2D2D7);
 }
 
 .achievement {
@@ -12,14 +12,17 @@
   margin: 1rem 0;
   background-color: var(--achievement-bg);
   border: 1px solid var(--achievement-border);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow, 0 1px 3px rgba(0,0,0,0.06));
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .achievement:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover, 0 10px 30px rgba(0,0,0,0.08));
+  border-color: var(--accent-col, #0066CC);
+  transform: translateY(-3px);
 }
 
 .achievement img {
