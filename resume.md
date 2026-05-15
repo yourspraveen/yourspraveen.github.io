@@ -246,9 +246,7 @@ Recognized for outstanding team performance and successful delivery of critical 
 ## Technical Competition Judging
 
 **[Regeneron ISEF 2026](https://www.societyforscience.org/isef/) - Grand Award Judge, Software Design** | _May 2026_
-
 Served as Grand Award Judge in the Software Design category at the Regeneron International Science and Engineering Fair (ISEF) 2026, Phoenix, AZ (May 9–15) — the world's largest pre-college STEM competition with 75+ years of history. The 2026 fair drew 1,725 finalists from 70+ countries, selected through 365 affiliated fairs worldwide, competing for over $7 million in awards and scholarships across 22 scientific categories. Evaluated 63 Software Design projects alongside approximately 800 judges fair-wide, conducting in-depth finalist interviews and applying rigorous criteria spanning research originality, design methodology, technical execution, creativity, and real-world impact. Projects reviewed spanned cutting-edge areas including post-quantum cryptography, multi-agent reinforcement learning, privacy-preserving biometric authentication, AI-driven climate modeling, and intelligent infrastructure optimization — domains directly aligned with professional expertise in AI, software engineering, and security.
-
 [View Certificate](/assets/certs/ISEF_Grand_Judge_2026.pdf)
 
 ---
