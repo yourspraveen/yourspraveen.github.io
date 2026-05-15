@@ -254,34 +254,34 @@ Served as Grand Award Judge in the Software Design category at the Regeneron Int
 ---
 
 **HooHacks 2026 - Mentor & Judge** | _Mar 2026_
-Served as mentor and judge for HooHacks 2026 at the University of Virginia in Charlottesville, VA. Mentored students on project development and evaluated submissions in a science-fair style expo.
+Served as mentor and judge for HooHacks 2026, a 24-hour hackathon at the University of Virginia, Charlottesville, VA (March 21–22). The event drew 687 registered participants competing across nine prize tracks for over $20,000 in prizes, with themes spanning education, social good, and beginner-friendly projects. Mentored teams on project development and evaluated submissions in a science-fair style expo.
 [View Certificate](/assets/certs/HooHacks2026.pdf)
 
-**Make OHI/O 12 - Official Judge** | _Mar 2026_
-Served as official judge for Make OHI/O 12, The Ohio State University's hackathon. Provided expertise to guide participants and evaluate innovative student projects.
+**MakeOHI/O 2026 - Official Judge** | _Mar 2026_
+Served as official judge for MakeOHI/O 2026, The Ohio State University's annual hardware-focused makeathon held at the Physics Research Building, Columbus, OH (March 7–8). The event engaged 250+ undergraduate and graduate students who designed and built physical computing prototypes using free hardware kits, 3D printers, soldering stations, and laser cutters via Bolz Makerspace. The main challenge centered on interactive tools addressing environmental and ecological issues through hardware-based education, with additional open, capstone, and sponsored tracks (Intel, Honda, AEP). Evaluated innovative hardware prototypes and provided technical expertise to guide participants.
 [View Letter of Participation](/assets/certs/Praveen%20Palaniswamy%20MakeOHIO%202026%20Letter%20of%20Participation.pdf) | [View Certificate](/assets/certs/Praveen%20Palaniswamy%20Make%20OHIO%202026%20Volunteer%20Certificates.pdf)
 
 **HackViolet 2026 - Official Judge** | _Feb 2026_
-Served as official judge for HackViolet 2026, Virginia Tech's 24-hour hackathon. Evaluated innovative student projects and provided constructive feedback to participants.
+Served as official judge for HackViolet 2026, Virginia Tech's 24-hour gender-inclusive hackathon held at Squires Student Center, Blacksburg, VA (January 31 – February 1). The event drew 177 participants building projects to address the gender gap in technology, spanning machine learning/AI, web development, and beginner-friendly tracks. Evaluated projects and provided constructive feedback to participants.
 [View Certificate](/assets/certs/HackViolet-2026.jpg)
 
 **DECA Inc. - Competitive Event Judge** | _Nov 2025_
-Served as competitive event judge at The Ultimate DECA Power Trip in Arlington, VA, evaluating student presentations in marketing, finance, hospitality and management. Provided guidance and professional feedback to emerging leaders and entrepreneurs.
+Served as competitive event judge at The Ultimate DECA Power Trip 2025, held at the Crystal Gateway Marriott, Arlington, VA (November 21–23) — a flagship leadership conference drawing thousands of high school DECA members from across all four national regions. Evaluated student role-play presentations in marketing, finance, hospitality, and management, and provided professional feedback to emerging business leaders and entrepreneurs.
 [View Certificate](/assets/certs/Deca-WashingtonDC.pdf)
 
 **UVA Girls Hoo Hack 2025 - Official Judge** | _Oct 2025_
-Served as official judge for Girls Hoo Hack 2025, a women-centered, gender-inclusive hackathon at University of Virginia with theme "Hacks and Crafts." Evaluated innovative projects combining creativity and technology to solve real-world problems.
+Served as official judge for Girls Hoo Hack 2025, organized by Girls Who Code at UVA, held at Rice Hall Information Technology Engineering Building, Charlottesville, VA (October 25–26). The women-centered, gender-inclusive event brought together 124 participants under the theme "Hacks and Crafts," combining creative arts with technology to solve real-world problems. Evaluated projects across sustainability, UI/UX design, and beginner-friendly innovation categories.
 [View Event Details](https://girls-hoo-hack-2025.devpost.com/)
 
 **VTHacks 13 - Official Judge** | _Sep 2025_
-Served as official judge for VTHacks 13, Virginia Tech's premier hackathon. Evaluated innovative student projects and provided constructive feedback to inspire the next generation of innovators.
+Served as official judge for VTHacks 13, Virginia Tech's premier 3-day hackathon in Blacksburg, VA (September 26–28, 2025). The event drew 405 participants competing across open-ended, social good, and beginner-friendly tracks for prizes including M4 MacBook Airs, sponsored by Deloitte, Databricks, Peraton, CoStar, and Capital One. Evaluated student projects through 4-minute presentation sessions and provided feedback to inspire the next generation of innovators.
 [View Certificate](/assets/certs/VT-HAX.pdf) | [Verify Credential](https://credsverse.com/credentials/313cb3d1-e96f-4414-bb5e-39cc38e39192)
 
 **Technology Student Association (TSA) Judge** | _May 2025_
-Evaluated student technology and engineering projects at TSA competition, providing feedback and encouragement to next-generation innovators.
+Evaluated student technology and engineering projects at a TSA (Technology Student Association) competition (May 2025) — a nationwide STEM organization with 300,000+ student members competing across 40 high school competition categories. Provided technical feedback and encouragement to next-generation innovators in technology and engineering.
 
 **NASA TechRise Student Challenge - Judge** | _2025-26_
-Served as judge for NASA TechRise Student Challenge, evaluating student experiment proposals for suborbital rocket and high-altitude balloon flights. Assessed experiment originality, educational impact, and technical feasibility for NASA Flight Opportunities program.
+Served as judge for the NASA TechRise Student Challenge (2025-26 cycle), evaluating student experiment proposals for suborbital rocket and high-altitude balloon flights under NASA's Flight Opportunities program. The 2025-26 cycle received the highest number of entries in the program's history, with 60 winning teams representing 370+ students across 52 states and territories, each awarded $1,500 to build and fly their experiments. Assessed originality, educational impact, and technical feasibility of proposed payloads for spaceflight.
 [View Certificate](/assets/certs/nasatechrise2025.pdf)
 
 ---
