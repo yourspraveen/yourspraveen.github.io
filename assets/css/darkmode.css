@@ -1,0 +1,840 @@
+/* Dark Mode Styles for Beautiful Jekyll */
+
+/* Force font rendering optimization to prevent font flash */
+@font-face {
+  font-family: 'PlayfairDisplay-fallback';
+  src: local('Georgia'), local('Times New Roman');
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  size-adjust: 105%;
+}
+
+@font-face {
+  font-family: 'Inter-fallback';
+  src: local('-apple-system'), local('Segoe UI'), local('Arial');
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
+}
+
+/* Suppress ALL transitions during page load to prevent dark-mode flash */
+html.no-transitions,
+html.no-transitions *,
+html.no-transitions *::before,
+html.no-transitions *::after {
+  transition: none !important;
+}
+
+/* Enable smooth transitions for theme changes (only after page load) */
+body,
+.navbar,
+.navbar-custom,
+footer,
+.intro-header,
+.page-heading,
+.post-heading,
+a,
+button,
+input,
+textarea,
+select,
+.form-control,
+.btn,
+.card,
+.achievement,
+.dropdown-menu {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Prevent flickering on navbar links by disabling color transitions and using GPU acceleration */
+.navbar-custom .navbar-nav .nav-link,
+.navbar-custom .navbar-brand {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent text shifting on click by removing default browser styles */
+.navbar-custom .navbar-nav .nav-link:active,
+.navbar-custom .navbar-nav .nav-link:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand:focus {
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+  transform: translateZ(0);
+}
+
+/* Ensure consistent sizing on all link states */
+.navbar-custom .navbar-nav .nav-link,
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus,
+.navbar-custom .navbar-nav .nav-link:active {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  will-change: color;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  margin: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+/* ========================================
+   AVATAR LEFT POSITIONING
+   ======================================== */
+
+/* Position avatar to the left of Home text */
+.navbar-custom .avatar-container-left {
+  position: relative;
+  display: inline-block;
+  width: 3.125rem;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+}
+
+.navbar-custom.top-nav-short .avatar-container-left {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-custom .avatar-container-left .avatar-img-border {
+  width: 100%;
+  border-radius: 50%;
+  margin: 0;
+  display: inline-block;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.navbar-custom .avatar-container-left .avatar-img {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ========================================
+   LIGHT MODE ENHANCEMENTS
+   ======================================== */
+
+/* Light mode navbar styling - glassmorphism */
+.navbar-custom {
+  position: relative;
+}
+
+/* Light mode footer styling - dark band, extra slim, and 3-column layout */
+footer {
+  position: relative;
+  border-top: none;
+  box-shadow: none;
+  padding: 0.5rem 0 !important;
+  margin-top: 2rem !important;
+  font-size: 0.875rem;
+}
+
+/* Footer container */
+footer .beautiful-jekyll-footer {
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: 100%;
+}
+
+/* Make footer row more compact */
+footer .row {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Remove default margins from footer paragraphs */
+footer p {
+  margin-bottom: 0 !important;
+}
+
+footer p.copyright,
+footer p.theme-by {
+  margin-bottom: 0 !important;
+}
+
+/* Footer columns alignment */
+footer .footer-left {
+  text-align: left;
+  line-height: 1.2;
+}
+
+footer .footer-center {
+  text-align: center;
+  line-height: 1.2;
+}
+
+footer .footer-right {
+  text-align: right;
+  line-height: 1;
+}
+
+/* Adjust column padding for slimmer appearance */
+footer .col-md-4 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Social links styling - inline for right column */
+footer .footer-links {
+  margin-bottom: 0;
+  display: inline-block;
+  line-height: 1;
+}
+
+footer .footer-links ul {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+footer .footer-links li {
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+}
+
+footer .footer-links a {
+  display: inline-block;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+/* Reduce icon size slightly */
+footer .footer-links .fa-stack {
+  width: 1.75em;
+  height: 1.75em;
+  line-height: 1.75em;
+}
+
+footer .footer-links .fa-stack-1x,
+footer .footer-links .fa-stack-2x {
+  line-height: inherit;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 767px) {
+  /* Stack columns on mobile */
+  footer .footer-left,
+  footer .footer-center,
+  footer .footer-right {
+    text-align: center !important;
+    margin-bottom: 0.5rem;
+  }
+
+  footer .footer-right {
+    margin-bottom: 0;
+  }
+
+  footer .footer-links ul {
+    justify-content: center;
+  }
+}
+
+/* ========================================
+   PAGE TITLE AND SUBTITLE SIZING
+   ======================================== */
+
+/* Reduce page title size for better proportions */
+.intro-header .page-heading h1 {
+  font-size: 2.25rem !important; /* Reduced from 3.125rem (50px) to 2.25rem (36px) */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.intro-header .post-heading h1 {
+  font-size: 1.875rem !important; /* Reduced from 2.1875rem (35px) to 1.875rem (30px) */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Reduce subtitle size */
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading {
+  font-size: 1.25rem !important; /* Reduced from 1.6875rem (27px) to 1.25rem (20px) */
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 0.5rem !important;
+}
+
+/* Mobile responsive adjustments for titles */
+@media (max-width: 767px) {
+  .intro-header .page-heading h1 {
+    font-size: 1.75rem !important; /* Even smaller on mobile */
+  }
+
+  .intro-header .post-heading h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .intro-header .page-heading .page-subheading,
+  .intro-header .post-heading .post-subheading {
+    font-size: 1.125rem !important; /* 18px on mobile */
+  }
+}
+
+/* Adjust intro header margins for better spacing with smaller titles */
+.intro-header {
+  margin: 3.5rem 0 1rem !important; /* Reduced top margin from 5rem to 3.5rem */
+}
+
+.intro-header.big-img {
+  margin-bottom: 1.5rem !important; /* Slightly reduced */
+}
+
+/* Lighten footer background image in light mode */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: brightness(1.15) contrast(0.95) saturate(0.9);
+  z-index: 0;
+}
+
+/* Ensure footer content is above the background */
+footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Light mode navbar text enhancements - bold and prominent */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+}
+
+/* Light mode footer enhancements */
+footer a {
+  font-weight: 500;
+}
+
+/* ========================================
+   DARK MODE OVERRIDES
+   ======================================== */
+
+/* Dark mode color scheme */
+[data-theme="dark"] {
+  /* Main colors */
+  --page-col: #161617;
+  --text-col: #E5E5E7;
+  --link-col: #5AC8FA;
+  --hover-col: #70D4FF;
+  --mid-col: #98989D;
+
+  /* Navbar colors */
+  --navbar-col: #1C1C1E;
+  --navbar-text-col: #F5F5F7;
+  --navbar-border-col: #38383A;
+
+  /* Footer colors */
+  --footer-col: #1C1C1E;
+  --footer-text-col: #98989D;
+  --footer-link-col: #F5F5F7;
+  --footer-hover-col: #5AC8FA;
+
+  /* Accent and component variables */
+  --accent-col: #5AC8FA;
+  --accent-gradient: linear-gradient(135deg, #5AC8FA, #0A84FF);
+  --warm-col: #F5A623;
+  --warm-col-light: rgba(245, 166, 35, 0.12);
+  --warm-col-hover: #FFB940;
+  --card-border: #38383A;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.12);
+  --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* footer dark band */
+  --footer-band-bg: #111114;
+  --footer-band-text: #8E8E93;
+  --footer-band-link: #B0B0B8;
+  --footer-band-hover: #5AC8FA;
+  --footer-band-icon: #E5E5E7;
+
+  /* Custom colors for specific elements */
+  --achievement-bg: #1C1C1E;
+  --achievement-border: #38383A;
+  --code-bg: #1C1C1E;
+  --code-border: #38383A;
+  --input-bg: #1C1C1E;
+  --input-border: #38383A;
+  --input-text: #E5E5E7;
+  --dropdown-bg: #1C1C1E;
+  --dropdown-border: #38383A;
+}
+
+/* Ensure body background updates */
+[data-theme="dark"] body {
+  background-color: var(--page-col);
+  color: var(--text-col);
+  position: relative;
+}
+
+/* Darken page background image in dark mode if it exists */
+[data-theme="dark"] body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: brightness(0.25) contrast(1.1) grayscale(0.5);
+  z-index: -2;
+}
+
+/* Ensure main content is above the darkened background */
+[data-theme="dark"] body > main,
+[data-theme="dark"] body > nav,
+[data-theme="dark"] body > footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Update navbar styling for dark mode - glassmorphism */
+[data-theme="dark"] .navbar-custom {
+  background-color: rgba(22, 22, 23, 0.75);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom-color: rgba(56, 56, 58, 0.5);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .navbar-custom .navbar-brand,
+[data-theme="dark"] .navbar-custom .navbar-nav .nav-link {
+  color: var(--navbar-text-col);
+  font-weight: 600;
+  text-shadow: none;
+}
+
+[data-theme="dark"] .navbar-custom .navbar-brand {
+  font-weight: 700;
+}
+
+[data-theme="dark"] .navbar-custom .navbar-brand:hover,
+[data-theme="dark"] .navbar-custom .navbar-brand:focus {
+  color: var(--hover-col);
+}
+
+[data-theme="dark"] .navbar-custom .navbar-nav .nav-link:hover,
+[data-theme="dark"] .navbar-custom .navbar-nav .nav-link:focus {
+  color: var(--hover-col);
+}
+
+[data-theme="dark"] .navbar-custom .navbar-toggler {
+  border-color: var(--navbar-border-col);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .navbar-custom .navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Dropdown menu dark mode */
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--navbar-col);
+  border: 1px solid var(--navbar-border-col);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: #F5F5F7;
+}
+
+[data-theme="dark"] .dropdown-item:hover,
+[data-theme="dark"] .dropdown-item:focus {
+  background-color: #38383A;
+  color: var(--hover-col);
+}
+
+[data-theme="dark"] .dropdown-divider {
+  border-top-color: var(--navbar-border-col);
+}
+
+/* Footer styling for dark mode — deeper dark band */
+[data-theme="dark"] footer {
+  background-color: var(--footer-band-bg);
+  border-top: none;
+  color: var(--footer-band-text);
+  box-shadow: none;
+}
+
+[data-theme="dark"] footer a {
+  color: var(--footer-band-link);
+  font-weight: 500;
+}
+
+[data-theme="dark"] footer a:hover,
+[data-theme="dark"] footer a:focus {
+  color: var(--footer-band-hover);
+  text-decoration: underline;
+}
+
+[data-theme="dark"] footer .copyright {
+  color: var(--footer-band-text);
+}
+
+[data-theme="dark"] footer p,
+[data-theme="dark"] footer li {
+  color: var(--footer-band-text);
+}
+
+/* Social media icons in footer - better visibility */
+[data-theme="dark"] footer .social-links a {
+  color: var(--footer-band-link);
+  opacity: 0.9;
+}
+
+[data-theme="dark"] footer .social-links a:hover {
+  color: var(--footer-band-hover);
+  opacity: 1;
+}
+
+/* Post preview cards dark mode */
+[data-theme="dark"] .post-preview {
+  background-color: var(--page-col);
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+[data-theme="dark"] .post-preview:hover {
+  box-shadow: var(--card-shadow-hover), 0 0 0 1px rgba(90, 200, 250, 0.15);
+  border-color: var(--accent-col);
+}
+
+[data-theme="dark"] .post-preview:last-child {
+  border-color: var(--card-border);
+}
+
+/* Dark mode gradient heading */
+[data-theme="dark"] .intro-header .page-heading h1 {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Form elements dark mode */
+[data-theme="dark"] .form-control {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--input-text);
+}
+
+[data-theme="dark"] .form-control:focus {
+  background-color: var(--input-bg);
+  border-color: var(--link-col);
+  color: var(--input-text);
+  box-shadow: 0 0 0 0.2rem rgba(100, 181, 246, 0.25);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #808080;
+}
+
+/* Button styling for dark mode */
+[data-theme="dark"] .btn-primary {
+  background-color: var(--link-col);
+  border-color: var(--link-col);
+  color: #1a1a1a;
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-primary:focus {
+  background-color: var(--hover-col);
+  border-color: var(--hover-col);
+  color: #1a1a1a;
+}
+
+/* Code blocks and pre elements */
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background-color: var(--code-bg);
+  border-color: var(--code-border);
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .highlight {
+  background-color: var(--code-bg);
+}
+
+/* Blockquote styling */
+[data-theme="dark"] blockquote {
+  color: var(--mid-col);
+  border-left-color: var(--navbar-border-col);
+}
+
+/* Table styling */
+[data-theme="dark"] table {
+  color: var(--text-col);
+  border-color: var(--navbar-border-col) !important;
+}
+
+[data-theme="dark"] table thead th {
+  background-color: var(--navbar-col);
+  border-color: var(--navbar-border-col) !important;
+}
+
+[data-theme="dark"] table thead tr {
+  border-bottom-color: var(--navbar-border-col) !important;
+  background-color: var(--navbar-col);
+}
+
+[data-theme="dark"] table tbody tr {
+  border-color: var(--navbar-border-col) !important;
+  border-bottom-color: var(--navbar-border-col) !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] table tbody td,
+[data-theme="dark"] table thead th {
+  border-color: var(--navbar-border-col) !important;
+  background-color: transparent !important;
+}
+
+/* Override inline styles for resume table */
+[data-theme="dark"] table tr[style*="border-bottom"] {
+  border-bottom-color: var(--navbar-border-col) !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] table th[style*="padding"],
+[data-theme="dark"] table td[style*="padding"] {
+  color: var(--text-col);
+  background-color: transparent !important;
+}
+
+/* Achievement cards dark mode */
+[data-theme="dark"] .achievement {
+  background-color: var(--achievement-bg);
+  border-color: var(--achievement-border);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .achievement p {
+  color: var(--text-col);
+}
+
+/* Pagination styling */
+[data-theme="dark"] .pagination .page-link {
+  background-color: var(--navbar-col);
+  border-color: var(--navbar-border-col);
+  color: var(--link-col);
+}
+
+[data-theme="dark"] .pagination .page-link:hover {
+  background-color: #404040;
+  color: var(--hover-col);
+}
+
+[data-theme="dark"] .pagination .page-item.active .page-link {
+  background-color: var(--link-col);
+  border-color: var(--link-col);
+  color: #1a1a1a;
+}
+
+/* Search overlay dark mode */
+[data-theme="dark"] #beautifuljekyll-search-overlay {
+  background-color: rgba(26, 26, 26, 0.95);
+}
+
+[data-theme="dark"] #nav-search-input {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--input-text);
+}
+
+/* Cards and panels */
+[data-theme="dark"] .card,
+[data-theme="dark"] .panel {
+  background-color: var(--navbar-col);
+  border-color: var(--navbar-border-col);
+}
+
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .panel-heading {
+  background-color: #404040;
+  border-bottom-color: var(--navbar-border-col);
+}
+
+/* Jumbotron */
+[data-theme="dark"] .jumbotron {
+  background-color: var(--navbar-col);
+  color: var(--text-col);
+}
+
+/* HR elements */
+[data-theme="dark"] hr {
+  border-color: var(--navbar-border-col);
+}
+
+/* Tags page styling */
+[data-theme="dark"] .tag-btn {
+  background-color: var(--navbar-col);
+  border-color: var(--navbar-border-col);
+  color: var(--link-col);
+}
+
+[data-theme="dark"] .tag-btn:hover {
+  background-color: var(--link-col);
+  color: #1a1a1a;
+}
+
+/* Social share buttons */
+[data-theme="dark"] .social-share-btn {
+  background-color: var(--navbar-col);
+  border-color: var(--navbar-border-col);
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .social-share-btn:hover {
+  background-color: #404040;
+}
+
+/* Improve image visibility in dark mode */
+[data-theme="dark"] img:not(.avatar-img):not([src*="badge"]):not([src*="icon"]) {
+  opacity: 0.9;
+}
+
+/* Avatar styling - enhanced for dark mode */
+[data-theme="dark"] .avatar-img {
+  opacity: 1;
+  border: 3px solid var(--navbar-border-col);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .avatar-img-border {
+  background-color: transparent;
+}
+
+/* Navbar avatar container */
+[data-theme="dark"] .avatar-container {
+  opacity: 1;
+}
+
+/* Third-party widget containers - dark mode specific colors */
+[data-theme="dark"] #appointments-section,
+[data-theme="dark"] #aboutme-section,
+[data-theme="dark"] #contactme-section {
+  border-color: var(--navbar-border-col);
+  background-color: rgba(45, 45, 45, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Formspree form in dark mode - enhanced styling */
+[data-theme="dark"] #contact-form input[type="email"],
+[data-theme="dark"] #contact-form input[type="text"],
+[data-theme="dark"] #contact-form textarea {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--input-text);
+}
+
+[data-theme="dark"] #contact-form input[type="email"]:focus,
+[data-theme="dark"] #contact-form input[type="text"]:focus,
+[data-theme="dark"] #contact-form textarea:focus {
+  border-color: var(--link-col);
+  box-shadow: 0 0 0 0.2rem rgba(100, 181, 246, 0.25);
+}
+
+/* SociableKit widget - attempt to blend */
+[data-theme="dark"] .sk-ww-linkedin-profile-post {
+  filter: brightness(0.9) contrast(0.95);
+}
+
+/* Ensure links remain visible */
+[data-theme="dark"] a {
+  color: var(--link-col);
+}
+
+[data-theme="dark"] a:hover,
+[data-theme="dark"] a:focus {
+  color: var(--hover-col);
+  text-decoration: underline;
+}
+
+/* Badge and icon improvements for dark mode */
+[data-theme="dark"] .badge {
+  background-color: var(--navbar-col);
+  color: var(--text-col);
+  border: 1px solid var(--navbar-border-col);
+}
+
+/* List group items */
+[data-theme="dark"] .list-group-item {
+  background-color: var(--navbar-col);
+  border-color: var(--navbar-border-col);
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .list-group-item:hover {
+  background-color: #404040;
+}
+
+/* Alert boxes */
+[data-theme="dark"] .alert {
+  background-color: var(--navbar-col);
+  border-color: var(--navbar-border-col);
+  color: var(--text-col);
+}
+
+/* Improve header visibility */
+[data-theme="dark"] .intro-header,
+[data-theme="dark"] .page-heading,
+[data-theme="dark"] .post-heading {
+  color: var(--text-col);
+  position: relative;
+}
+
+/* Darken intro header background images in dark mode */
+[data-theme="dark"] .intro-header.big-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+[data-theme="dark"] .intro-header.big-img > * {
+  position: relative;
+  z-index: 2;
+}
+
+[data-theme="dark"] .intro-header .page-heading h1,
+[data-theme="dark"] .intro-header .post-heading h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] .intro-header .page-heading .page-subheading,
+[data-theme="dark"] .intro-header .post-heading .post-subheading {
+  color: #e0e0e0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}

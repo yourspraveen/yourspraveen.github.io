@@ -1,0 +1,15 @@
+# robots.txt for www.yourspraveen.com
+# Allow all search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.yourspraveen.com/sitemap.xml
+
+# Crawl delay (optional - adjust if needed)
+# Crawl-delay: 10
+
+# Disallow crawling of specific directories (if needed in the future)
+# Disallow: /private/
+# Disallow: /temp/

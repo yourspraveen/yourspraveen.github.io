@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Preconnect to external domains for faster resource loading -->
+  <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net https://stackpath.bootstrapcdn.com https://unpkg.com https://cdnjs.cloudflare.com https://widgets.sociablekit.com https://koalendar.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src * data:; connect-src 'self' https://survey-api-365853907280.us-central1.run.app; frame-src https://koalendar.com https://widgets.sociablekit.com;">
+
+  <!-- Dark mode initialization - must be before styles to prevent flash -->
+  <script>
+    (function() {
+      var d = document.documentElement;
+      d.classList.add('no-transitions');
+      var STORAGE_KEY = 'theme-preference';
+      var saved = localStorage.getItem(STORAGE_KEY);
+      var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      d.setAttribute('data-theme', theme);
+      window.addEventListener('DOMContentLoaded', function() {
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            d.classList.remove('no-transitions');
+          });
+        });
+      });
+    })();
+  </script>
+
+  
+
+  
+
+  
+
+  <title>Resume | Home</title>
+
+  
+  
+  <meta name="author" content="Praveen K Palaniswamy">
+  
+
+  <meta name="description" content="Security Engineering Leader | Cryptography &amp; Post-Quantum Specialist">
+
+  
+
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Home" href="https://www.yourspraveen.com/feed.xml">
+  
+
+  
+
+  
+
+  
+
+  
+<!-- Cloudflare Web Analytics -->
+<script defer
+    src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "f4fc10f5948041a3a023f32d43ad0e4e"}'>
+</script>
+<!-- End Cloudflare Web Analytics -->
+
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+
+
+    
+      
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+      <link rel="stylesheet" href="/assets/css/darkmode.css">
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/ux-improvements.css">
+    
+  
+
+  
+  
+  
+
+  
+
+  <!-- Deferred CSS loading for non-critical styles -->
+  <script>
+    // Load CSS asynchronously
+    function loadDeferredCSS(href) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }
+
+    // Load deferred styles after page load
+    if (window.addEventListener) {
+      window.addEventListener('load', function() {
+        
+          
+        loadDeferredCSS('/assets/css/bootstrap-social.css');
+          
+        
+        
+        
+      });
+    }
+  </script>
+
+  <!-- Fallback for browsers without JavaScript -->
+  <noscript>
+    
+      
+    <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+      
+    
+    
+  </noscript>
+
+  
+
+  
+  <meta property="og:site_name" content="Home">
+  <meta property="og:title" content="Resume | Home">
+  <meta property="og:description" content="Security Engineering Leader | Cryptography &amp; Post-Quantum Specialist">
+
+  
+  <meta property="og:image" content="https://www.yourspraveen.com/assets/img/avatar-100.jpeg">
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.yourspraveen.com/resume/">
+  <link rel="canonical" href="https://www.yourspraveen.com/resume/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Resume | Home">
+  <meta property="twitter:description" content="Security Engineering Leader | Cryptography &amp; Post-Quantum Specialist">
+
+  
+  <meta name="twitter:image" content="https://www.yourspraveen.com/assets/img/avatar-100.jpeg">
+  
+
+  
+
+
+  
+
+  
+  
+
+  
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular">
+
+  
+    <div class="avatar-container-left">
+      <div class="avatar-img-border">
+        <a href="https://www.yourspraveen.com/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/avatar-100.jpeg" />
+        </a>
+      </div>
+    </div>
+  <a class="navbar-brand" href="https://www.yourspraveen.com/">Home</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/posts">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/survey">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/appointments">Appointments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/achievements">Recognitions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li><!-- Dark Mode Toggle Button -->
+<li class="nav-item">
+  <button
+    id="darkmode-toggle"
+    class="nav-link btn btn-link darkmode-toggle-btn"
+    type="button"
+    aria-label="Toggle dark mode"
+    title="Toggle dark mode">
+    <span id="darkmode-icon-moon" class="fas fa-moon" aria-hidden="true"></span>
+    <span id="darkmode-icon-sun" class="fas fa-sun" style="display: none;" aria-hidden="true"></span>
+  </button>
+</li>
+
+<style>
+/* Dark mode toggle button styling */
+.darkmode-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.125rem;
+  color: var(--navbar-text-col);
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkmode-toggle-btn:hover,
+.darkmode-toggle-btn:focus {
+  color: var(--hover-col);
+  text-decoration: none;
+  transform: scale(1.1);
+  outline: none;
+}
+
+.darkmode-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.darkmode-toggle-btn:focus-visible {
+  outline: 2px solid var(--link-col);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Icon transitions */
+.darkmode-toggle-btn .fa-moon,
+.darkmode-toggle-btn .fa-sun {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 1199px) {
+  .darkmode-toggle-btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Ensure proper spacing in navbar */
+.navbar-nav .nav-item .darkmode-toggle-btn {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .darkmode-toggle-btn {
+  color: var(--navbar-text-col);
+}
+
+[data-theme="dark"] .darkmode-toggle-btn:hover,
+[data-theme="dark"] .darkmode-toggle-btn:focus {
+  color: var(--hover-col);
+}
+
+/* Animation for icon switch */
+@keyframes iconFadeIn {
+  from {
+    opacity: 0;
+    transform: rotate(-30deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+.darkmode-toggle-btn .fa-moon,
+.darkmode-toggle-btn .fa-sun {
+  animation: iconFadeIn 0.3s ease;
+}
+</style>
+
+    </ul>
+  </div>
+
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"
+          integrity="sha384-UN+lyciv8Ta643YxZ9sY2tdTSmk3KE61Qq84ZIXG9NRTbD9+NFXy38m9h6Exxx3n"
+          crossorigin="anonymous"></script>
+  <script>
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: '/assets/data/searchcorpus.json' 
+    });
+  </script>
+</div>
+
+
+
+
+
+  
+
+
+
+<header class="header-section ">
+<div class="intro-header ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="page-heading">
+          <h1>Resume</h1>
+          
+            
+              <hr class="small">
+              <span class="page-subheading">Security Engineering Leader | Cryptography & Post-Quantum Specialist</span>
+            
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+</header>
+
+
+<main class=" container-fluid  px-3 px-md-4">
+  <div class="row">
+    <div class=" col-12 col-xxl-10 offset-xxl-1 ">
+      
+
+      <div class="page-content content-narrow">
+        <!--div style="text-align: center; margin-bottom: 2rem;">
+  <a href="/assets/resume/praveen_palaniswamy_resume.pdf" class="btn btn-primary" style="padding: 0.75rem 2rem; font-size: 1.1rem; text-decoration: none;">
+    Download PDF Version
+  </a>
+</div-->
+
+<hr />
+
+<h2 id="professional-summary">Professional Summary</h2>
+
+<p>Dynamic and accomplished software engineering leader with 20+ years of experience spanning application development, project management, enterprise integration, and cloud infrastructure management. Proven expertise in implementing robust software solutions, leading cross-functional teams, and driving technological innovations across Fortune 500 financial institutions. Deep specialization in cryptography, data security, data loss prevention, and crypto agility strategies for enterprise-scale systems. Combines technical depth in applied cryptography, AI security, and distributed systems with strategic leadership in building high-performing engineering teams. Extensive domain knowledge across financial services, telecommunications, governance risk &amp; compliance, and enterprise technology sectors. Adept in applying capability maturity models, risk management frameworks, and agile methodologies including Test-Driven Development (TDD) to deliver mission-critical solutions.</p>
+
+<hr />
+
+<h2 id="core-skills--competencies">Core Skills &amp; Competencies</h2>
+
+<h3 id="artificial-intelligence--machine-learning">Artificial Intelligence &amp; Machine Learning</h3>
+<ul>
+  <li><strong>Enterprise AI Initiatives</strong>: Multi-agentic conversational AI workflows (MACAW), AI strategy and implementation</li>
+  <li><strong>AI Security &amp; Governance</strong>: Model security assessment, AI governance frameworks, responsible AI practices</li>
+  <li><strong>ML Platforms</strong>: AWS SageMaker, cloud-based ML infrastructure, data analytics integration</li>
+  <li><strong>Emerging Technologies</strong>: Evaluation and adoption of GenAI technologies for enterprise use cases</li>
+</ul>
+
+<h3 id="cryptography--security">Cryptography &amp; Security</h3>
+<ul>
+  <li><strong>Data Loss Prevention</strong>: Data-in-transit security strategy, enterprise DLP implementation across US, UK, and Canada operations</li>
+  <li><strong>Crypto Agility &amp; Standards</strong>: Algorithm agility frameworks, cryptographic standards management, enterprise encryption strategy</li>
+  <li><strong>Applied Cryptography</strong>: PKI infrastructure, certificate lifecycle management, secure key management, TLS/mTLS implementation</li>
+  <li><strong>Encryption &amp; Key Management</strong>: Symmetric and asymmetric encryption, key rotation strategies, HSM integration</li>
+  <li><strong>Post-Quantum Readiness</strong>: Evaluation and planning for post-quantum cryptographic transitions, emerging algorithm assessment</li>
+  <li><strong>Security Protocols &amp; Identity</strong>: OAuth 2.0, OIDC, SAML, SSO integration, secure session management</li>
+  <li><strong>Fraud Prevention &amp; AML</strong>: Anti-Money Laundering technology platforms (NICE Actimize), fraud detection systems, SAR filing support</li>
+  <li><strong>Governance, Risk &amp; Compliance</strong>: GRC platform implementation (IBM OpenPages), regulatory compliance, audit support, CISO engagement</li>
+  <li><strong>Incident Management</strong>: Security incident response, vendor risk management, enterprise security operations</li>
+</ul>
+
+<h3 id="cloud--systems--platforms">Cloud / Systems / Platforms</h3>
+<ul>
+  <li><strong>AWS Cloud Services</strong>: IAM, KMS, Secrets Manager, CloudHSM, EC2, S3, Lambda, certified solutions architect and security specialist</li>
+  <li><strong>Hybrid Cloud Architecture</strong>: Multi-cloud strategy, cloud migration planning, hybrid infrastructure design</li>
+  <li><strong>Mainframe to Distributed Migration</strong>: COBOL to Java/Scala modernization, IBM z/OS to distributed systems, legacy system transformation</li>
+  <li><strong>Enterprise SOA</strong>: Service-oriented architecture, middleware integration, web services (REST/SOAP), API design and management</li>
+  <li><strong>Messaging Architecture</strong>: Apache Kafka, Zookeeper, Tibco Rendezvous, JMS, event-driven systems</li>
+  <li><strong>Application Servers</strong>: WebLogic, WebSphere, Tomcat, enterprise application deployment and management</li>
+  <li><strong>Container &amp; Orchestration</strong>: Docker containerization, Kubernetes basics, microservices deployment</li>
+  <li><strong>Infrastructure Management</strong>: Continuous delivery pipelines, deployment automation, infrastructure optimization</li>
+</ul>
+
+<h3 id="programming-languages">Programming Languages</h3>
+<ul>
+  <li><strong>Enterprise Development</strong>: Java (J2EE, Spring, Hibernate), Scala, Python</li>
+  <li><strong>Web Technologies</strong>: JavaScript, TypeScript, DOJO, GWT (Google Web Toolkit)</li>
+  <li><strong>Legacy Systems</strong>: COBOL (migration expertise), IBM JZOS, PL/SQL</li>
+  <li><strong>Scripting &amp; Automation</strong>: Bash, Python, Shell scripting</li>
+</ul>
+
+<h3 id="architecture--leadership">Architecture &amp; Leadership</h3>
+<ul>
+  <li><strong>Engineering Leadership</strong>: Building and managing high-performing technical teams, technical mentorship, career development</li>
+  <li><strong>Project &amp; Program Management</strong>: Multi-million dollar project delivery, budget management, resource allocation, timeline execution</li>
+  <li><strong>Agile &amp; Methodologies</strong>: Scrum master experience, sprint planning, Test-Driven Development (TDD), continuous improvement</li>
+  <li><strong>Strategic Planning</strong>: OKR development and execution, technical roadmap creation, organizational goal alignment</li>
+  <li><strong>Enterprise Architecture</strong>: Solution architecture, system design, integration patterns, middleware design, SOA implementation</li>
+  <li><strong>Security Architecture</strong>: Cryptographic system design, threat modeling, security design reviews, defense-in-depth strategies</li>
+  <li><strong>Vendor &amp; Stakeholder Management</strong>: Vendor relationship management, contract negotiation, cross-functional collaboration</li>
+  <li><strong>Change Management</strong>: Legacy system modernization, organizational process improvement, technology adoption strategies</li>
+</ul>
+
+<h3 id="domain-expertise">Domain Expertise</h3>
+<ul>
+  <li><strong>Financial Services</strong>: Banking, wealth management, credit card processing, payment systems, financial trading</li>
+  <li><strong>Telecommunications</strong>: Enterprise collaboration platforms, customer support systems, service delivery</li>
+  <li><strong>Governance, Risk &amp; Compliance</strong>: GRC platforms, regulatory compliance, audit management, risk assessment</li>
+  <li><strong>Enterprise Technology</strong>: Cloud infrastructure, enterprise integration, application modernization, legacy system migration</li>
+</ul>
+
+<h3 id="tools--frameworks">Tools &amp; Frameworks</h3>
+<ul>
+  <li><strong>Enterprise Frameworks</strong>: Spring Framework (MVC, Core), Hibernate, Struts, J2EE (JSP, Servlets, EJB)</li>
+  <li><strong>Messaging &amp; Streaming</strong>: Apache Kafka, Apache Zookeeper, Tibco Rendezvous, JMS</li>
+  <li><strong>Databases</strong>: Oracle, IBM DB2, MongoDB, REDIS, JDBC, PL/SQL</li>
+  <li><strong>Application Servers</strong>: BEA Weblogic, Apache Tomcat, IBM WebSphere, IIS</li>
+  <li><strong>Enterprise Platforms</strong>: IBM OpenPages GRC, IBM Cognos, NICE Actimize, Liferay Portal, SAP Business Objects</li>
+  <li><strong>Build &amp; CI/CD</strong>: Maven, Gradle, Sonar, Bamboo, Hudson/Jenkins, Blade Logic, GitHub Actions, GitLab CI/CD</li>
+  <li><strong>Testing</strong>: JUnit, Selenium, Mockito, automated testing frameworks</li>
+  <li><strong>Version Control</strong>: Git, IBM Clear Case, IBM Clear Quest, SVN</li>
+  <li><strong>Security Tools</strong>: OpenSSL, Bouncy Castle, HashiCorp Vault</li>
+  <li><strong>Security &amp; Identity</strong>: Single Sign-On (SSO), LDAP, PKI, OAuth, SAML</li>
+  <li><strong>Web Technologies</strong>: RESTful Web Services, SOAP, XML, JSON, AJAX, DOJO, GWT</li>
+  <li><strong>Monitoring &amp; Observability</strong>: AppDynamics, New Relic, Datadog, Splunk, AWS XRay, Log4J, Apache Chainsaw</li>
+  <li><strong>DevOps &amp; Containers</strong>: Docker, Kubernetes, Terraform, infrastructure automation</li>
+  <li><strong>Collaboration</strong>: Jira, Confluence, Slack, security incident response platforms</li>
+</ul>
+
+<hr />
+
+<h2 id="experience">Experience</h2>
+
+<h3 id="senior-manager-software-engineering">Senior Manager, Software Engineering</h3>
+<p><strong>Capital One Bank, USA</strong> | <em>Aug 2019 - Present</em></p>
+
+<p><strong>Cyber Tech</strong> | <em>Aug 2022 - Present</em></p>
+<ul>
+  <li>Lead data-in-transit security strategy for data loss prevention across US, UK, and Canada operations, managing enterprise-wide cryptographic standards and implementation</li>
+  <li>Architect solutions to improve crypto agility and establish cryptographic standards for Fortune 500 financial enterprise, positioning organization for post-quantum readiness</li>
+  <li>Build and manage multiple high-performing technical teams, driving project execution and delivering critical security products on time</li>
+  <li>Define organizational objectives and strategic roadmap for cryptocurrency and encryption initiatives, establishing OKRs aligned with business goals</li>
+  <li>Manage vendor relationships and support CISO office with audit compliance and incident management for security operations</li>
+</ul>
+
+<p><strong>Card Tech</strong> | <em>Aug 2019 - Aug 2022</em></p>
+<ul>
+  <li>Led technical teams for Card Customer Resiliency projects, ensuring alignment with business objectives and regulatory requirements</li>
+  <li>Owned estate, finance, and reporting domains, leading multiple strategic initiatives across card processing infrastructure</li>
+  <li>Provided architectural guidance and managed cross-functional technical teams for mission-critical payment systems</li>
+  <li>Oversaw project execution and planning, consistently delivering high-quality products on schedule for millions of cardholders</li>
+  <li>Served as Subject Matter Expert (SME) for key business processes, driving continuous improvement and innovation</li>
+</ul>
+
+<h3 id="authorized-officer">Authorized Officer</h3>
+<p><strong>UBS Business Solutions, USA</strong> | <em>Jun 2015 - Aug 2019</em></p>
+
+<ul>
+  <li>Demonstrated leadership in improving application development tools and standardization across UBS Wealth Management Americas division</li>
+  <li>Architected enterprise solutions aligned with organizational goals, serving as SME for technical troubleshooting and application support</li>
+  <li>Managed project delivery including budgeting, resource management, and execution for multi-million dollar technology initiatives</li>
+  <li>Led IT simplification efforts, migrating legacy COBOL/Mainframe applications to distributed Java/Scala platforms, reducing operational costs</li>
+  <li>Improved continuous delivery pipelines across IT applications and established process definitions for Application Delivery Division</li>
+  <li>Application Owner/Technical Architect for Client Account Information (CAI) - Middleware Services Layer managing customer and account data integration</li>
+</ul>
+
+<p><strong>Key Projects:</strong></p>
+<ul>
+  <li><strong>FA Compensation (FCM)</strong>: Led Agile team migrating mainframe compensation systems to Scala/Kafka distributed architecture</li>
+  <li><strong>Net New Money (NNM)</strong>: Managed COBOL to Java migration using IBM JZOS API, reducing long-term maintenance costs</li>
+</ul>
+
+<h3 id="technical-lead">Technical Lead</h3>
+<p><strong>Wipro Technologies, USA</strong> | <em>Aug 2012 - Jun 2015</em></p>
+
+<p><strong>Capital One Bank Projects:</strong></p>
+<ul>
+  <li><strong>Anti-Money Laundering Technology Enhancement (AML TEA)</strong>: Designed solutions integrating multiple source systems with NICE Actimize platform for fraud investigation, implementing RESTful services and SAP Business Objects integration</li>
+  <li><strong>GRC Platform (PRIME)</strong>: Extended IBM OpenPages GRC Platform functionality, implementing BPM workflows and integrating Cognos Reports for corporate risk management</li>
+</ul>
+
+<p><strong>Cisco Systems Projects:</strong></p>
+<ul>
+  <li><strong>WebEx Social</strong>: Enhanced Liferay portlet performance for enterprise collaboration platform, implementing automated testing with Selenium</li>
+  <li><strong>Resource Profile Manager (RPMgr)</strong>: Led development of customer support call routing system, integrating with Enterprise Web SOA layer</li>
+</ul>
+
+<h3 id="senior-software-engineer">Senior Software Engineer</h3>
+<p><strong>Object Win Technology, Bangalore</strong> | <em>Dec 2011 - Aug 2012</em></p>
+
+<ul>
+  <li>Continued Cisco Systems Resource Profile Manager project, leading development and architectural design</li>
+</ul>
+
+<h3 id="consultant">Consultant</h3>
+<p><strong>Tell-e Technologies, inc., San Jose</strong> | <em>Mar 2009 - Jul 2011</em></p>
+
+<p><strong>Chicago Mercantile Exchange (CME Group):</strong></p>
+<ul>
+  <li>Designed and implemented Product API (Client Library) for CME Group exchanges, supporting trading operations across multiple asset classes</li>
+  <li>Planned development in Agile iteration cycles, enhanced rule-based product generators for derivatives trading</li>
+  <li>Managed Oracle and DB2 data environments, ported projects from Maven 1 to Maven 2, integrated with Bamboo and Sonar for CI/CD</li>
+  <li>Provided production support for clearing house operations handling billions in daily trading volume</li>
+</ul>
+
+<h3 id="intern-java-developer">Intern Java Developer</h3>
+<p><strong>Chicago Mercantile Exchange (CME Group), Chicago</strong> | <em>Jan 2008 - Dec 2008</em></p>
+
+<ul>
+  <li>Implemented CME Language compiler for derivative product rule engine, accelerating product creation to market time</li>
+  <li>Designed Generic Calendar API with Expression Evaluation Engine for complex financial product scheduling</li>
+  <li>Developed Google Web Toolkit (GWT) UI components for dynamic product configuration interfaces</li>
+</ul>
+
+<h3 id="internet-media-developer">Internet Media Developer</h3>
+<p><strong>Illinois Institute of Technology, Chicago</strong> | <em>Oct 2006 - Dec 2007</em></p>
+
+<ul>
+  <li>Provided content development procedures for IIT’s online lecture videos through Blackboard.com web portal</li>
+  <li>Designed and implemented in-house authoring tool in Java Swing for automated content generation</li>
+  <li>Managed Real Producer encoding for online streaming with bandwidth optimization and server configurations</li>
+  <li>Supervised quality control for distance learning content delivery</li>
+</ul>
+
+<h3 id="entrepreneur">Entrepreneur</h3>
+<p><strong>Career Support India, Coimbatore, India</strong> | <em>Jun 2005 - Jun 2006</em></p>
+
+<ul>
+  <li>Co-founded and operated startup BPO and manpower agency serving business process outsourcing clients</li>
+  <li>Managed operations, client relationships, and service delivery for emerging technology services market</li>
+</ul>
+
+<hr />
+
+<h2 id="education">Education</h2>
+
+<p><strong>Master of Science in Computer Science</strong>
+<em>Illinois Institute of Technology, Chicago, Illinois</em> | 2006 - 2008
+Focused on software engineering, algorithms, and data systems in a research-intensive environment</p>
+
+<p><strong>Bachelor of Engineering in Computer Science and Engineering</strong>
+<em>Anna University, Chennai, India</em> | 2001 - 2005</p>
+
+<hr />
+
+<h2 id="certifications">Certifications</h2>
+
+<table style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="border-bottom: 2px solid #ddd;">
+      <th style="text-align: left; padding: 12px; width: 50%;">Certification</th>
+      <th style="text-align: left; padding: 12px; width: 30%;">Organization</th>
+      <th style="text-align: left; padding: 12px; width: 20%;">Validity Period</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px;"><strong>Certified Information Systems Security Professional (CISSP)</strong></td>
+      <td style="padding: 12px;">ISC²</td>
+      <td style="padding: 12px;">Feb 2024 - Feb 2027</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px;"><strong>AWS Certified Security - Specialty</strong></td>
+      <td style="padding: 12px;">Amazon Web Services</td>
+      <td style="padding: 12px;">Jul 2022 - Jul 2025</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px;"><strong>AWS Certified Solutions Architect – Associate</strong></td>
+      <td style="padding: 12px;">Amazon Web Services</td>
+      <td style="padding: 12px;">Apr 2022 - Apr 2028</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px;"><strong>AWS Certified Cloud Practitioner</strong></td>
+      <td style="padding: 12px;">Amazon Web Services</td>
+      <td style="padding: 12px;">Sep 2019 - Apr 2028</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px;"><strong>PMI Agile Certified Practitioner (PMI-ACP)</strong></td>
+      <td style="padding: 12px;">Project Management Institute</td>
+      <td style="padding: 12px;">Apr 2019</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 12px;"><strong>Sun Certified Web Component Developer (SCWCD)</strong></td>
+      <td style="padding: 12px;">Oracle (Sun Microsystems)</td>
+      <td style="padding: 12px;">Jul 2009</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px;"><strong>Sun Certified Java Programmer (SCJP)</strong></td>
+      <td style="padding: 12px;">Oracle (Sun Microsystems)</td>
+      <td style="padding: 12px;">Mar 2008</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="awards--recognition">Awards &amp; Recognition</h2>
+
+<p><strong>Best Execution Team Award</strong>
+<em>UBS Wealth Management Americas</em> | April 2019</p>
+
+<p>Recognized for outstanding team performance and successful delivery of critical technology initiatives</p>
+
+<hr />
+
+<h2 id="technical-competition-judging">Technical Competition Judging</h2>
+
+<p><strong><a href="https://www.societyforscience.org/isef/">Regeneron ISEF 2026</a> - Grand Award Judge, Software Design</strong> | <em>May 2026</em>
+Served as Grand Award Judge in the Software Design category at the Regeneron International Science and Engineering Fair (ISEF) 2026, Phoenix, AZ (May 9–15) — the world’s largest pre-college STEM competition with 75+ years of history. The 2026 fair drew 1,725 finalists from 70+ countries, selected through 365 affiliated fairs worldwide, competing for over $7 million in awards and scholarships across 22 scientific categories. Evaluated 63 Software Design projects alongside approximately 800 judges fair-wide, conducting in-depth finalist interviews and applying rigorous criteria spanning research originality, design methodology, technical execution, creativity, and real-world impact. Projects reviewed spanned cutting-edge areas including post-quantum cryptography, multi-agent reinforcement learning, privacy-preserving biometric authentication, AI-driven climate modeling, and intelligent infrastructure optimization.
+<a href="/assets/certs/ISEF_Grand_Judge_2026.pdf">View Certificate</a></p>
+
+<p><strong><a href="https://hoohacks-2026.devpost.com">HooHacks 2026</a> - Mentor &amp; Judge</strong> | <em>Mar 2026</em>
+Served as mentor and judge for HooHacks 2026, a 24-hour hackathon at the University of Virginia, Charlottesville, VA (March 21–22). The event drew 687 registered participants competing across nine prize tracks for over $20,000 in prizes, with themes spanning education, social good, and beginner-friendly projects. Mentored teams on project development and evaluated submissions in a science-fair style expo.
+<a href="/assets/certs/HooHacks2026.pdf">View Certificate</a></p>
+
+<p><strong><a href="https://hack.osu.edu/make/2026/">MakeOHI/O 2026</a> - Official Judge</strong> | <em>Mar 2026</em>
+Served as official judge for MakeOHI/O 2026, The Ohio State University’s annual hardware-focused makeathon held at the Physics Research Building, Columbus, OH (March 7–8). The event engaged 250+ undergraduate and graduate students who designed and built physical computing prototypes using free hardware kits, 3D printers, soldering stations, and laser cutters via Bolz Makerspace. The main challenge centered on interactive tools addressing environmental and ecological issues through hardware-based education, with additional open, capstone, and sponsored tracks (Intel, Honda, AEP). Evaluated innovative hardware prototypes and provided technical expertise to guide participants.
+<a href="/assets/certs/Praveen%20Palaniswamy%20MakeOHIO%202026%20Letter%20of%20Participation.pdf">View Letter of Participation</a> | <a href="/assets/certs/Praveen%20Palaniswamy%20Make%20OHIO%202026%20Volunteer%20Certificates.pdf">View Certificate</a></p>
+
+<p><strong><a href="https://hackviolet-2026.devpost.com">HackViolet 2026</a> - Official Judge</strong> | <em>Feb 2026</em>
+Served as official judge for HackViolet 2026, Virginia Tech’s 24-hour gender-inclusive hackathon held at Squires Student Center, Blacksburg, VA (January 31 – February 1). The event drew 177 participants building projects to address the gender gap in technology, spanning machine learning/AI, web development, and beginner-friendly tracks. Evaluated projects and provided constructive feedback to participants.
+<a href="/assets/certs/HackViolet-2026.jpg">View Certificate</a></p>
+
+<p><strong><a href="https://www.deca.org/conferences/power">DECA Inc. - Ultimate Power Trip</a> - Competitive Event Judge</strong> | <em>Nov 2025</em>
+Served as competitive event judge at The Ultimate DECA Power Trip 2025, held at the Crystal Gateway Marriott, Arlington, VA (November 21–23) — a flagship leadership conference drawing thousands of high school DECA members from across all four national regions. Evaluated student role-play presentations in marketing, finance, hospitality, and management, and provided professional feedback to emerging business leaders and entrepreneurs.
+<a href="/assets/certs/Deca-WashingtonDC.pdf">View Certificate</a></p>
+
+<p><strong><a href="https://girls-hoo-hack-2025.devpost.com/">UVA Girls Hoo Hack 2025</a> - Official Judge</strong> | <em>Oct 2025</em>
+Served as official judge for Girls Hoo Hack 2025, organized by Girls Who Code at UVA, held at Rice Hall Information Technology Engineering Building, Charlottesville, VA (October 25–26). The women-centered, gender-inclusive event brought together 124 participants under the theme “Hacks and Crafts,” combining creative arts with technology to solve real-world problems. Evaluated projects across sustainability, UI/UX design, and beginner-friendly innovation categories.
+<a href="https://girls-hoo-hack-2025.devpost.com/">View Event Details</a></p>
+
+<p><strong><a href="https://vthacks-13.devpost.com">VTHacks 13</a> - Official Judge</strong> | <em>Sep 2025</em>
+Served as official judge for VTHacks 13, Virginia Tech’s premier 3-day hackathon in Blacksburg, VA (September 26–28, 2025). The event drew 405 participants competing across open-ended, social good, and beginner-friendly tracks for prizes including M4 MacBook Airs, sponsored by Deloitte, Databricks, Peraton, CoStar, and Capital One. Evaluated student projects through 4-minute presentation sessions and provided feedback to inspire the next generation of innovators.
+<a href="/assets/certs/VT-HAX.pdf">View Certificate</a> | <a href="https://credsverse.com/credentials/313cb3d1-e96f-4414-bb5e-39cc38e39192">Verify Credential</a></p>
+
+<p><strong><a href="https://tsaweb.org/conferences">Technology Student Association (TSA)</a> - Judge</strong> | <em>May 2025</em>
+Evaluated student technology and engineering projects at a TSA (Technology Student Association) competition (May 2025) — a nationwide STEM organization with 300,000+ student members competing across 40 high school competition categories. Provided technical feedback and encouragement to next-generation innovators in technology and engineering.</p>
+
+<p><strong><a href="https://www.nasa.gov/stmd-flight-opportunities/access-flight-tests/techrise/">NASA TechRise Student Challenge</a> - Judge</strong> | <em>2025-26</em>
+Served as judge for the NASA TechRise Student Challenge (2025-26 cycle), evaluating student experiment proposals for suborbital rocket and high-altitude balloon flights under NASA’s Flight Opportunities program. The 2025-26 cycle received the highest number of entries in the program’s history, with 60 winning teams representing 370+ students across 52 states and territories, each awarded $1,500 to build and fly their experiments. Assessed originality, educational impact, and technical feasibility of proposed payloads for spaceflight.
+<a href="/assets/certs/nasatechrise2025.pdf">View Certificate</a></p>
+
+<hr />
+
+<h2 id="mentoring--professional-affiliations">Mentoring &amp; Professional Affiliations</h2>
+
+<p><strong>IEEE Senior Member</strong> | <em>May 2025 - Present</em>
+Active contributor to IEEE Computer Society, participating in standards development and technical publication reviews. Engaging in professional development and knowledge sharing within the global engineering community.</p>
+
+<p><strong>IAENG Member</strong> | <em>Sep 2025 - Present</em>
+Member of the International Association of Engineers, contributing to the advancement of engineering and technology research.</p>
+
+<p><strong>UStrive.org Volunteer Mentor</strong> | <em>Nov 2020 - Present</em>
+Providing guidance and mentorship to students and early-career professionals, helping them navigate career development, technical skill building, and professional growth in technology fields.</p>
+
+<p><strong>Scouting America - Advancement Chair</strong> | <em>Aug 2022 - Jul 2024</em>
+Led youth advancement programs, coordinating skill development, merit badge counseling, and rank progression activities for local scout troop.</p>
+
+<p><strong>Java Community Process (JCP) Member</strong> | <em>2010 - 2013</em>
+Participated in the evolution of Java technology specifications and standards development.</p>
+
+<p><strong>UN Online Volunteer</strong> | <em>2011 - 2012</em>
+Contributed technical expertise to United Nations initiatives focused on science and technology advancement in developing regions.</p>
+
+<hr />
+
+<div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
+  <p style="color: #777; font-size: 0.9rem;">
+    <em>References and detailed project portfolio available upon request</em>
+  </p>
+</div>
+
+      </div>
+
+      
+
+      
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-fluid beautiful-jekyll-footer">
+    <div class="row align-items-center">
+      <!-- Left Column: Theme Credit -->
+      <div class="col-md-4 text-left footer-left">
+        
+        
+      </div>
+
+      <!-- Center Column: Copyright -->
+      <div class="col-md-4 text-center footer-center">
+        <p class="copyright text-muted mb-0">
+        
+          Praveen K Palaniswamy
+          &nbsp;&bull;&nbsp;
+        
+        2026
+
+        
+
+        
+
+        
+        </p>
+      </div>
+
+      <!-- Right Column: Social Links -->
+      <div class="col-md-4 text-right footer-right">
+        
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:Praveen.Palaniswamy@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/yourspraveen" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/praveenpalaniswamy" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.instagram.com/yourspraveen" title="Instagram">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Instagram</span>
+   </a>
+  </li><li class="list-inline-item">
+   <a href="https://orcid.org/0009-0007-2933-3545" title="ORCID">
+     <span class="fa-stack fa-lg" aria-hidden="true">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fab fa-orcid fa-stack-1x fa-inverse"></i>
+     </span>
+     <span class="sr-only">ORCID</span>
+   </a>
+ </li></ul>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous" defer></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js" defer></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/darkmode.js" defer></script>
+    
+  
+
+
+
+  
+    <script src="/assets/dist/bundle.js" defer></script>
+  
+
+
+
+
+
+
+
+</body>
+</html>
