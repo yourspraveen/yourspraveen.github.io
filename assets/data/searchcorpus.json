@@ -1,0 +1,84 @@
+[ 
+ 
+ 
+{ 
+"title"    : "Praveen K Palaniswamy", 
+"desc"     : "Praveen K Palaniswamy", 
+"category" : "page", 
+"url"      : "/aboutme/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Recognitions", 
+"desc"     : "Recognitions", 
+"category" : "page", 
+"url"      : "/achievements/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Appointments", 
+"desc"     : "Appointments", 
+"category" : "page", 
+"url"      : "/appointments/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Contact Me", 
+"desc"     : "Contact Me", 
+"category" : "page", 
+"url"      : "/contact/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Blogs", 
+"desc"     : "Blogs", 
+"category" : "page", 
+"url"      : "/blogs/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Praveen K Palaniswamy", 
+"desc"     : "Praveen K Palaniswamy", 
+"category" : "page", 
+"url"      : "/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Posts", 
+"desc"     : "Posts", 
+"category" : "page", 
+"url"      : "/posts/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Resume", 
+"desc"     : "Resume", 
+"category" : "page", 
+"url"      : "/resume/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Survey Portal", 
+"desc"     : "Survey Portal", 
+"category" : "page", 
+"url"      : "/survey/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Tag Index", 
+"desc"     : "Tag Index", 
+"category" : "page", 
+"url"      : "/tags/", 
+"date"     : "January 1, 1970" 
+} 
+ 
+]

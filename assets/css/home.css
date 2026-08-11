@@ -1,0 +1,173 @@
+/* Homepage — scannable landing.
+   All colors come from existing CSS variables so dark mode works with no extra rules. */
+
+/* --- Hero extra (rendered inside the header, below title/subtitle) --- */
+.home-hero-extra {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.home-hero-tags {
+  font-family: var(--mono-font);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: var(--mid-col);
+  margin-bottom: 1.25rem;
+}
+.home-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Shared section rhythm: single owner of vertical spacing --- */
+.home-section {
+  max-width: 900px;
+  margin: 3.5rem auto;
+}
+.home-section:first-child {
+  margin-top: 2.5rem;
+}
+
+/* --- Mono eyebrow labels --- */
+.section-eyebrow {
+  font-family: var(--mono-font);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--mid-col);
+  margin: 0 0 1.25rem;
+}
+
+/* --- "Now" key-value rows --- */
+.now-list {
+  margin: 0;
+}
+.now-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--card-border);
+}
+.now-row:last-child {
+  border-bottom: none;
+}
+.now-list dt {
+  flex: 0 0 7.5rem;
+  font-family: var(--mono-font);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: var(--mid-col);
+  border-left: 3px solid var(--warm-col);
+  padding-left: 0.75rem;
+}
+.now-list dd {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+/* --- Focus cards --- */
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.focus-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  color: var(--text-col);
+  transition: box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+.focus-card:hover,
+.focus-card:focus-visible {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--text-col);
+}
+.focus-card:focus-visible {
+  outline: 2px solid var(--link-col);
+  outline-offset: 3px;
+}
+.focus-eyebrow {
+  font-family: var(--mono-font);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--warm-text-col);
+  margin: 0 0 0.5rem;
+}
+.focus-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+.focus-card p:last-child {
+  margin: 0;
+  color: var(--mid-col);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* --- Published work --- */
+.pub-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+.pub-cover {
+  flex: 0 0 auto;
+}
+.pub-cover img {
+  width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+.pub-body {
+  flex: 1 1 220px;
+}
+.pub-body p:first-child {
+  margin-top: 0;
+}
+
+/* --- Contact CTA --- */
+.home-cta p:not(.section-eyebrow) {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+/* --- Outline button: readable in both themes --- */
+.btn-outline-primary {
+  color: var(--link-col);
+  border-color: var(--link-col);
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--link-col);
+  border-color: var(--link-col);
+  color: #fff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 767px) {
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+  .now-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .now-list dt {
+    flex-basis: auto;
+  }
+}
