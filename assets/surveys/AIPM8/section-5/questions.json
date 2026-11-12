@@ -1,0 +1,77 @@
+{
+  "section": {
+    "id": 5,
+    "title": "Perceived Impact of AI",
+    "description": "This section assesses how AI usage has affected your effectiveness across key project performance domains."
+  },
+  "questions": [
+    {
+      "id": "performance_domains_impact",
+      "type": "likert-table",
+      "text": "For each Performance Domain below, if you have used AI, rate the perceived effect of AI on your effectiveness in that domain.",
+      "hint": "If you selected 'Never' in Section 4 for a domain, please select 'Did Not Use' for that domain below.",
+      "required_rows": "partial",
+      "scale_type": "impact",
+      "scale_options": [
+        { "label": "Did Not Use", "value": "not_used", "skip_option": true },
+        { "label": "Significantly Worsened", "value": "significantly_worsened" },
+        { "label": "Moderately Worsened", "value": "moderately_worsened" },
+        { "label": "Slightly Worsened", "value": "slightly_worsened" },
+        { "label": "No Noticeable Change", "value": "no_change" },
+        { "label": "Slightly Improved", "value": "slightly_improved" },
+        { "label": "Moderately Improved", "value": "moderately_improved" },
+        { "label": "Significantly Improved", "value": "significantly_improved" }
+      ],
+      "rows": [
+        {
+          "id": "stakeholders",
+          "label": "**Stakeholders**",
+          "description": "Effectiveness of stakeholder engagement and communications",
+          "required": false
+        },
+        {
+          "id": "team",
+          "label": "**Team**",
+          "description": "Effectiveness of team formation, development, and collaboration",
+          "required": false
+        },
+        {
+          "id": "development_approach",
+          "label": "**Development Approach & Life Cycle**",
+          "description": "Effectiveness of selecting and tailoring the development approach and life cycle",
+          "required": false
+        },
+        {
+          "id": "planning",
+          "label": "**Planning**",
+          "description": "Effectiveness of organizing activities and establishing baselines and plans",
+          "required": false
+        },
+        {
+          "id": "project_work",
+          "label": "**Project Work**",
+          "description": "Effectiveness of establishing processes and performing project work",
+          "required": false
+        },
+        {
+          "id": "delivery",
+          "label": "**Delivery**",
+          "description": "Effectiveness of delivering project scope and quality requirements",
+          "required": false
+        },
+        {
+          "id": "measurement",
+          "label": "**Measurement**",
+          "description": "Effectiveness of assessing performance and taking appropriate actions",
+          "required": false
+        },
+        {
+          "id": "uncertainty",
+          "label": "**Uncertainty**",
+          "description": "Effectiveness of managing risks, ambiguity, and complexity",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

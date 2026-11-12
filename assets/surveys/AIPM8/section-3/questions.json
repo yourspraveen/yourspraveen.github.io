@@ -1,0 +1,56 @@
+{
+  "section": {
+    "id": 3,
+    "title": "AI Use Across Project Phases",
+    "description": "This section focuses on project management phases (often referred to as process groups). For each phase below, indicate how frequently you use AI tools to support related activities."
+  },
+  "questions": [
+    {
+      "id": "focus_areas_frequency",
+      "type": "likert-table",
+      "text": "For each project phase below, indicate how often you use AI tools to assist with activities in that phase.",
+      "hint": "Consider both standalone AI tools and AI features embedded in project management or delivery tools. Select one option per row.",
+      "required_rows": "all",
+      "scale_type": "frequency",
+      "scale_options": [
+        { "label": "Never", "value": "never" },
+        { "label": "Rarely", "value": "rarely" },
+        { "label": "Sometimes", "value": "sometimes" },
+        { "label": "Often", "value": "often" },
+        { "label": "Always", "value": "always" }
+      ],
+      "rows": [
+        {
+          "id": "initiating",
+          "label": "**Initiating**",
+          "description": "Defining a new project or phase; establishing project vision, objectives, and stakeholder alignment",
+          "required": true
+        },
+        {
+          "id": "planning",
+          "label": "**Planning**",
+          "description": "Defining scope and objectives; developing plans, estimates, schedules, and risk responses",
+          "required": true
+        },
+        {
+          "id": "executing",
+          "label": "**Executing**",
+          "description": "Performing the work defined in the plan; coordinating teams, stakeholders, and resources",
+          "required": true
+        },
+        {
+          "id": "monitoring",
+          "label": "**Monitoring & Controlling**",
+          "description": "Tracking progress, assessing performance, and managing changes to maintain alignment with the plan",
+          "required": true
+        },
+        {
+          "id": "closing",
+          "label": "**Closing**",
+          "description": "Finalizing activities, completing deliverables, capturing lessons learned, and formally closing the project or phase",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

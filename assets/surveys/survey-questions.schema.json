@@ -1,0 +1,406 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://yourspraveen.github.io/assets/surveys/survey-questions.schema.json",
+  "title": "Survey Questions Schema",
+  "description": "JSON Schema for validating survey question files",
+  "type": "object",
+  "required": ["section", "questions"],
+  "properties": {
+    "section": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Unique section identifier"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Section title displayed to user"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Optional section description"
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": {
+        "oneOf": [
+          { "$ref": "#/definitions/radioQuestion" },
+          { "$ref": "#/definitions/checkboxQuestion" },
+          { "$ref": "#/definitions/textQuestion" },
+          { "$ref": "#/definitions/emailQuestion" },
+          { "$ref": "#/definitions/numberQuestion" },
+          { "$ref": "#/definitions/textareaQuestion" },
+          { "$ref": "#/definitions/selectQuestion" },
+          { "$ref": "#/definitions/likertTableQuestion" }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "baseQuestion": {
+      "type": "object",
+      "required": ["id", "type", "text", "required"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_]+$",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Unique question identifier (alphanumeric and underscore only)"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["radio", "checkbox", "text", "email", "number", "textarea", "select", "likert-table"],
+          "description": "Question type"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000,
+          "description": "Question text displayed to user"
+        },
+        "hint": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Optional hint text shown below question"
+        },
+        "required": {
+          "type": "boolean",
+          "description": "Whether the question must be answered"
+        }
+      }
+    },
+    "radioQuestion": {
+      "allOf": [
+        { "$ref": "#/definitions/baseQuestion" },
+        {
+          "properties": {
+            "type": { "const": "radio" },
+            "options": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 20,
+              "items": {
+                "$ref": "#/definitions/option"
+              }
+            }
+          },
+          "required": ["options"]
+        }
+      ]
+    },
+    "checkboxQuestion": {
+      "allOf": [
+        { "$ref": "#/definitions/baseQuestion" },
+        {
+          "properties": {
+            "type": { "const": "checkbox" },
+            "options": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 20,
+              "items": {
+                "$ref": "#/definitions/option"
+              }
+            },
+            "min_selections": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Minimum number of selections required"
+            },
+            "max_selections": {
+              "type": ["integer", "null"],
+              "minimum": 1,
+              "description": "Maximum number of selections allowed (null = unlimited)"
+            }
+          },
+          "required": ["options"]
+        }
+      ]
+    },
+    "textQuestion": {
+      "allOf": [
+        { "$ref": "#/definitions/baseQuestion" },
+        {
+          "properties": {
+            "type": { "const": "text" },
+            "max_chars": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5000,
+              "default": 500,
+              "description": "Maximum character limit"
+            },
+            "placeholder": {
+              "type": "string",
+              "maxLength": 100,
+              "description": "Placeholder text for input"
+            }
+          }
+        }
+      ]
+    },
+    "emailQuestion": {
+      "allOf": [
+        { "$ref": "#/definitions/baseQuestion" },
+        {
+          "properties": {
+            "type": { "const": "email" },
+            "max_chars": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 500,
+              "default": 200,
+              "description": "Maximum character limit"
+            },
+            "placeholder": {
+              "type": "string",
+              "maxLength": 100,
+              "description": "Placeholder text for email input"
+            }
+          }
+        }
+      ]
+    },
+    "numberQuestion": {
+      "allOf": [
+        { "$ref": "#/definitions/baseQuestion" },
+        {
+          "properties": {
+            "type": { "const": "number" },
+            "min": {
+              "type": "number",
+              "description": "Minimum value allowed"
+            },
+            "max": {
+              "type": "number",
+              "description": "Maximum value allowed"
+            },
+            "step": {
+              "type": "number",
+              "minimum": 0,
+              "default": 1,
+              "description": "Step increment for number input"
+            },
+            "placeholder": {
+              "type": "string",
+              "maxLength": 100,
+              "description": "Placeholder text for number input"
+            }
+          }
+        }
+      ]
+    },
+    "selectQuestion": {
+      "allOf": [
+        { "$ref": "#/definitions/baseQuestion" },
+        {
+          "properties": {
+            "type": { "const": "select" },
+            "options": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 50,
+              "items": {
+                "$ref": "#/definitions/option"
+              },
+              "description": "Dropdown options"
+            },
+            "placeholder": {
+              "type": "string",
+              "maxLength": 100,
+              "description": "Placeholder text for select dropdown"
+            }
+          },
+          "required": ["options"]
+        }
+      ]
+    },
+    "textareaQuestion": {
+      "allOf": [
+        { "$ref": "#/definitions/baseQuestion" },
+        {
+          "properties": {
+            "type": { "const": "textarea" },
+            "min_chars": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5000,
+              "default": 0,
+              "description": "Minimum character requirement"
+            },
+            "max_chars": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5000,
+              "default": 2000,
+              "description": "Maximum character limit"
+            },
+            "default_rows": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 20,
+              "default": 4,
+              "description": "Initial textarea height in rows"
+            },
+            "show_char_count": {
+              "type": "boolean",
+              "default": false,
+              "description": "Display character counter"
+            },
+            "guidance": {
+              "type": "string",
+              "maxLength": 200,
+              "description": "Guidance text shown below textarea"
+            },
+            "placeholder": {
+              "type": "string",
+              "maxLength": 100,
+              "description": "Placeholder text for textarea"
+            }
+          }
+        }
+      ]
+    },
+    "likertTableQuestion": {
+      "allOf": [
+        { "$ref": "#/definitions/baseQuestion" },
+        {
+          "properties": {
+            "type": { "const": "likert-table" },
+            "required_rows": {
+              "type": "string",
+              "enum": ["all", "partial", "none"],
+              "description": "Row validation requirement"
+            },
+            "scale_type": {
+              "type": "string",
+              "enum": ["frequency", "agreement", "impact", "concern"],
+              "description": "Type of scale being used"
+            },
+            "scale_options": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 10,
+              "items": {
+                "$ref": "#/definitions/scaleOption"
+              },
+              "description": "Scale options (columns)"
+            },
+            "rows": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "$ref": "#/definitions/likertRow"
+              },
+              "description": "Table rows"
+            }
+          },
+          "required": ["scale_options", "rows"]
+        }
+      ]
+    },
+    "option": {
+      "type": "object",
+      "required": ["label", "value"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "description": "Option label displayed to user"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+$",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Option value stored in database"
+        },
+        "has_text_input": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show text input when selected (for 'Other' options)"
+        },
+        "text_placeholder": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Placeholder for text input (when has_text_input is true)"
+        },
+        "exclusive": {
+          "type": "boolean",
+          "default": false,
+          "description": "Deselect all other options when selected (for 'None' options in checkboxes)"
+        }
+      },
+      "dependencies": {
+        "text_placeholder": ["has_text_input"]
+      }
+    },
+    "scaleOption": {
+      "type": "object",
+      "required": ["label", "value"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Scale option label (column header)"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+$",
+          "minLength": 1,
+          "maxLength": 50,
+          "description": "Scale option value"
+        },
+        "skip_option": {
+          "type": "boolean",
+          "default": false,
+          "description": "Marks this as a skip option (e.g., 'Did Not Use')"
+        }
+      }
+    },
+    "likertRow": {
+      "type": "object",
+      "required": ["id", "label"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_]+$",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Unique row identifier"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "description": "Row label (can include markdown formatting)"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Optional row description"
+        },
+        "required": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether this row must be answered"
+        }
+      }
+    }
+  }
+}
