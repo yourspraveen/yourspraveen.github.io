@@ -1,0 +1,43 @@
+{
+  "survey": {
+    "code": "CUFB1",
+    "title": "Customer Feedback Survey",
+    "subtitle": "Help us improve our services",
+    "version": "1.0",
+    "description": "Quick feedback survey to understand your experience with our service",
+    "estimated_time": "5-7 minutes",
+    "sections": [
+      {
+        "id": 1,
+        "name": "demographics",
+        "title": "Demographics",
+        "description": "Tell us a bit about yourself"
+      },
+      {
+        "id": 2,
+        "name": "experience",
+        "title": "Your Experience",
+        "description": "Tell us about your experience with our service"
+      },
+      {
+        "id": 3,
+        "name": "satisfaction",
+        "title": "Satisfaction",
+        "description": "Help us understand your satisfaction with our service"
+      }
+    ],
+    "researchers": [
+      {
+        "name": "Praveen Palaniswamy",
+        "email": "Praveen.Palaniswamy@gmail.com"
+      }
+    ],
+    "settings": {
+      "allow_multiple_submissions": true,
+      "require_consent": false,
+      "sequential_navigation": true,
+      "auto_save": true,
+      "show_progress": true
+    }
+  }
+}

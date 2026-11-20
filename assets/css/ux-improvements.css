@@ -1,0 +1,24 @@
+/* --- UX Improvements: Glassmorphism --- */
+.navbar-custom,
+.post-preview,
+.blog-card,
+.about-box,
+#aboutme-section,
+#contactme-section,
+.tag-filter-container,
+.achievement-card {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    background-color: rgba(255, 255, 255, 0.65) !important;
+}
+
+[data-theme="dark"] .navbar-custom,
+[data-theme="dark"] .post-preview,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .about-box,
+[data-theme="dark"] #aboutme-section,
+[data-theme="dark"] #contactme-section,
+[data-theme="dark"] .tag-filter-container,
+[data-theme="dark"] .achievement-card {
+    background-color: rgba(30, 30, 30, 0.65) !important;
+}

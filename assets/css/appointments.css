@@ -1,0 +1,33 @@
+/* Appointments section with consistent styling for both light and dark modes */
+#appointments-section {
+    font-size: 1.1875rem;
+    margin-top: 1.25rem;
+    width: 100%;
+    border: 1px solid var(--card-border, #D2D2D7);
+    border-radius: 12px;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: var(--card-shadow, 0 1px 3px rgba(0, 0, 0, 0.06));
+    transition: all 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+#appointments-section #inline-widget-meet-with-praveen-palaniswamy {
+    min-height: 600px;
+    width: 100%;
+}
+
+/* Ensure section aligns with page content width */
+@media (min-width: 1200px) {
+    #appointments-section {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #appointments-section {
+        max-width: 100%;
+    }
+}
