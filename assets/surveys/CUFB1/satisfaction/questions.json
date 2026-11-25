@@ -1,0 +1,82 @@
+{
+  "section": {
+    "id": 3,
+    "title": "Satisfaction",
+    "description": "Help us understand your satisfaction with our service"
+  },
+  "questions": [
+    {
+      "id": "overall_satisfaction",
+      "type": "radio",
+      "text": "How satisfied are you with our service overall?",
+      "required": true,
+      "options": [
+        { "label": "Very Satisfied", "value": "very_satisfied" },
+        { "label": "Satisfied", "value": "satisfied" },
+        { "label": "Neutral", "value": "neutral" },
+        { "label": "Dissatisfied", "value": "dissatisfied" },
+        { "label": "Very Dissatisfied", "value": "very_dissatisfied" }
+      ]
+    },
+    {
+      "id": "recommendation_likelihood",
+      "type": "number",
+      "text": "How likely are you to recommend our service to others? (0-10)",
+      "required": true,
+      "min": 0,
+      "max": 10,
+      "placeholder": "Enter a number from 0 to 10"
+    },
+    {
+      "id": "best_aspects",
+      "type": "textarea",
+      "text": "What do you like most about our service?",
+      "required": false,
+      "min_chars": 0,
+      "max_chars": 1000,
+      "default_rows": 4,
+      "show_char_count": false,
+      "placeholder": "Tell us what you love..."
+    },
+    {
+      "id": "improvement_areas",
+      "type": "textarea",
+      "text": "What areas could we improve?",
+      "required": true,
+      "min_chars": 10,
+      "max_chars": 1000,
+      "default_rows": 4,
+      "show_char_count": false,
+      "placeholder": "Your feedback helps us improve"
+    },
+    {
+      "id": "additional_features",
+      "type": "textarea",
+      "text": "What additional features would you like to see?",
+      "required": false,
+      "min_chars": 0,
+      "max_chars": 1000,
+      "default_rows": 4,
+      "show_char_count": false,
+      "placeholder": "Share your ideas with us"
+    },
+    {
+      "id": "contact_permission",
+      "type": "radio",
+      "text": "May we contact you for follow-up regarding your feedback?",
+      "required": true,
+      "options": [
+        { "label": "Yes", "value": "yes" },
+        { "label": "No", "value": "no" }
+      ]
+    },
+    {
+      "id": "email_for_followup",
+      "type": "email",
+      "text": "If yes, please provide your email address",
+      "required": false,
+      "max_chars": 200,
+      "placeholder": "your.email@example.com"
+    }
+  ]
+}

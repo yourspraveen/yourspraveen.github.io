@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    
+    <title>Praveen K Palaniswamy</title>
+    
+    
+    <description>This website is a virtual proof that I&apos;m awesome</description>
+    
+    <link>https://www.yourspraveen.com/</link>
+    <atom:link href="https://www.yourspraveen.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+      <item>
+        <title>The local-first system I actually run</title>
+        
+        <dc:creator><![CDATA[ Praveen K Palaniswamy ]]></dc:creator>
+        
+        <description>
+          
+          Everyone argues about local-first in the abstract. I run one without calling it that, and the vault I am writing this in is the system the post describes. So instead of making the case for it, here is what it has cost and what it has paid back, with dates....
+        </description>
+        <pubDate>Tue, 17 Nov 2026 00:00:00 -0500</pubDate>
+        <link>https://www.yourspraveen.com/blogs/2026-11-17-the-local-first-system-i-actually-run/</link>
+        <guid isPermaLink="true">https://www.yourspraveen.com/blogs/2026-11-17-the-local-first-system-i-actually-run/</guid>
+      </item>
+    
+      <item>
+        <title>A Green Build Is Not a Published Post</title>
+        
+        <dc:creator><![CDATA[ Praveen K Palaniswamy ]]></dc:creator>
+        
+        <description>
+          
+          This blog published nothing for its entire existence, and every signal said it was fine. That is the post. What happened There was exactly one post in the repository: a hand-written welcome post at _posts/2025/12/05/welcome-to-my-blog.md. It had been there since December It had never been published on the site. Anyone...
+        </description>
+        <pubDate>Wed, 11 Nov 2026 00:00:00 -0500</pubDate>
+        <link>https://www.yourspraveen.com/blogs/2026-11-11-a-green-build-is-not-a-published-post/</link>
+        <guid isPermaLink="true">https://www.yourspraveen.com/blogs/2026-11-11-a-green-build-is-not-a-published-post/</guid>
+      </item>
+    
+      <item>
+        <title>Welcome to My Blog: A Journey into Technology and Innovation</title>
+        
+        <dc:creator><![CDATA[ Praveen K Palaniswamy ]]></dc:creator>
+        
+        <description>
+          
+          Summary Welcome to my personal blog! This space is dedicated to sharing insights, tutorials, and thoughts on technology, cybersecurity, software development, and innovation. Whether you’re a seasoned professional or just starting your journey in tech, I hope you’ll find valuable content here that inspires and educates. Table of Contents Introduction...
+        </description>
+        <pubDate>Fri, 05 Dec 2025 00:00:00 -0500</pubDate>
+        <link>https://www.yourspraveen.com/blogs/2025-12-05-welcome-to-my-blog/</link>
+        <guid isPermaLink="true">https://www.yourspraveen.com/blogs/2025-12-05-welcome-to-my-blog/</guid>
+      </item>
+    
+  </channel>
+</rss>

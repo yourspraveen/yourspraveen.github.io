@@ -1,0 +1,124 @@
+[ 
+ 
+{ 
+"title"    : "The local-first system I actually run", 
+"desc"     : "The local-first system I actually run", 
+"category" : "local-first, git, markdown, obsidian, llm-agents, homelab", 
+"url"      : "/blogs/2026-11-17-the-local-first-system-i-actually-run/", 
+"date"     : "November 17, 2026" 
+}, 
+ 
+{ 
+"title"    : "A Green Build Is Not a Published Post", 
+"desc"     : "A Green Build Is Not a Published Post", 
+"category" : "engineering, automation, jekyll", 
+"url"      : "/blogs/2026-11-11-a-green-build-is-not-a-published-post/", 
+"date"     : "November 11, 2026" 
+}, 
+ 
+{ 
+"title"    : "Welcome to My Blog: A Journey into Technology and Innovation", 
+"desc"     : "Welcome to My Blog: A Journey into Technology and Innovation", 
+"category" : "welcome, technology, cybersecurity", 
+"url"      : "/blogs/2025-12-05-welcome-to-my-blog/", 
+"date"     : "December  5, 2025" 
+}, 
+ 
+ 
+{ 
+"title"    : "", 
+"desc"     : "", 
+"category" : "page", 
+"url"      : "/2025-12-05-welcome-to-my-blog/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "", 
+"desc"     : "", 
+"category" : "page", 
+"url"      : "/2026-11-11-a-green-build-is-not-a-published-post/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Praveen K Palaniswamy", 
+"desc"     : "Praveen K Palaniswamy", 
+"category" : "page", 
+"url"      : "/aboutme/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Recognitions", 
+"desc"     : "Recognitions", 
+"category" : "page", 
+"url"      : "/achievements/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Appointments", 
+"desc"     : "Appointments", 
+"category" : "page", 
+"url"      : "/appointments/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Contact Me", 
+"desc"     : "Contact Me", 
+"category" : "page", 
+"url"      : "/contact/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Blogs", 
+"desc"     : "Blogs", 
+"category" : "page", 
+"url"      : "/blogs/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Praveen K Palaniswamy", 
+"desc"     : "Praveen K Palaniswamy", 
+"category" : "page", 
+"url"      : "/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "", 
+"desc"     : "", 
+"category" : "page", 
+"url"      : "/posts/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Resume", 
+"desc"     : "Resume", 
+"category" : "page", 
+"url"      : "/resume/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Survey Portal", 
+"desc"     : "Survey Portal", 
+"category" : "page", 
+"url"      : "/survey/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Tag Index", 
+"desc"     : "Tag Index", 
+"category" : "page", 
+"url"      : "/tags/", 
+"date"     : "January 1, 1970" 
+} 
+ 
+]
